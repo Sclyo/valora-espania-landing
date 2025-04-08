@@ -39,7 +39,16 @@ const Contact = () => {
   const onSubmit = async (values: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      await submitContactForm(values);
+      // Ensure all required fields are present
+      const formDataToSubmit = {
+        name: values.name,
+        company: values.company,
+        email: values.email,
+        phone: values.phone,
+        message: values.message,
+      };
+      
+      await submitContactForm(formDataToSubmit);
       toast({
         title: "Formulario enviado",
         description: "Nos pondremos en contacto contigo pronto.",
