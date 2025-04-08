@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import StockTickerWidget from './StockTickerWidget';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +13,11 @@ const Navbar = () => {
         <a href="#" className="flex items-center">
           <span className="text-2xl font-merriweather font-bold text-valoraBlue">Valora<span className="text-valoraGold">España</span></span>
         </a>
+        
+        {/* Stock ticker - visible on tablet and desktop */}
+        <div className="hidden md:block">
+          <StockTickerWidget />
+        </div>
         
         {/* Mobile menu button */}
         <div className="md:hidden">
@@ -51,6 +57,11 @@ const Navbar = () => {
               </Button>
               
               <div className="flex flex-col space-y-6 items-center">
+                {/* Stock ticker - visible on mobile inside menu */}
+                <div className="py-2">
+                  <StockTickerWidget />
+                </div>
+                
                 <a 
                   href="#servicios" 
                   className="text-valoraBlue text-lg font-medium" 
