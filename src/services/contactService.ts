@@ -1,5 +1,5 @@
 
-import { supabase, isSupabaseConnected } from '@/lib/supabase';
+import { supabase } from '@/lib/supabase';
 
 export interface ContactFormData {
   name: string;
@@ -12,12 +12,6 @@ export interface ContactFormData {
 
 export const submitContactForm = async (formData: Omit<ContactFormData, 'createdAt'>) => {
   try {
-    // Check if Supabase is connected
-    if (!isSupabaseConnected()) {
-      console.error('Supabase is not properly connected. Cannot submit form data.');
-      throw new Error('Database connection error. Please try again later.');
-    }
-
     // Add the current timestamp
     const contactData: ContactFormData = {
       ...formData,
