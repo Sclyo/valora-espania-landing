@@ -7,6 +7,7 @@ export { supabase };
 
 // Helper function to check if Supabase is properly connected
 export const isSupabaseConnected = () => {
-  // The client from integrations is already configured with the URL and key
+  // Log connection details for debugging
+  console.log('Supabase client initialized with URL:', supabase.supabaseUrl);
   return true;
 };

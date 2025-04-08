@@ -37,6 +37,7 @@ const Contact = () => {
   });
 
   const onSubmit = async (values: ContactFormValues) => {
+    console.log('Form submitted with values:', values);
     setIsSubmitting(true);
     try {
       // Ensure all required fields are present
@@ -48,14 +49,17 @@ const Contact = () => {
         message: values.message,
       };
       
+      console.log('Sending data to contactService:', formDataToSubmit);
       await submitContactForm(formDataToSubmit);
+      console.log('Form submission successful');
+      
       toast({
         title: "Formulario enviado",
         description: "Nos pondremos en contacto contigo pronto.",
       });
       form.reset();
     } catch (error) {
-      console.error(error);
+      console.error('Error in form submission:', error);
       toast({
         title: "Error",
         description: "Ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo.",

@@ -12,6 +12,8 @@ export interface ContactFormData {
 
 export const submitContactForm = async (formData: Omit<ContactFormData, 'createdAt'>) => {
   try {
+    console.log('Submitting form data to Supabase:', formData);
+    
     // Add the current timestamp
     const contactData: ContactFormData = {
       ...formData,
@@ -27,6 +29,7 @@ export const submitContactForm = async (formData: Omit<ContactFormData, 'created
       throw error;
     }
 
+    console.log('Form submitted successfully:', data);
     return { success: true, data };
   } catch (error) {
     console.error('Error submitting contact form:', error);
