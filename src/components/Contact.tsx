@@ -1,20 +1,60 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { submitContactForm } from '@/services/contactService';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+
+// Create a schema for form validation
+const contactFormSchema = z.object({
+  name: z.string().min(2, { message: 'El nombre debe tener al menos 2 caracteres' }),
+  company: z.string().min(1, { message: 'La empresa es obligatoria' }),
+  email: z.string().email({ message: 'Email inválido' }),
+  phone: z.string().optional(),
+  message: z.string().min(10, { message: 'El mensaje debe tener al menos 10 caracteres' }),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // In a real application, you would handle the form submission to your backend
-    toast({
-      title: "Formulario enviado",
-      description: "Nos pondremos en contacto contigo pronto.",
-    });
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      company: '',
+      email: '',
+      phone: '',
+      message: '',
+    },
+  });
+
+  const onSubmit = async (values: ContactFormValues) => {
+    setIsSubmitting(true);
+    try {
+      await submitContactForm(values);
+      toast({
+        title: "Formulario enviado",
+        description: "Nos pondremos en contacto contigo pronto.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Error",
+        description: "Ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -60,42 +100,93 @@ const Contact = () => {
           
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold text-valoraBlue mb-6">Solicite información</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-gray-700 font-medium">Nombre</label>
-                  <Input id="name" placeholder="Su nombre" required />
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem className="space-y-2">
+                        <FormLabel className="text-gray-700 font-medium">Nombre</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Su nombre" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                      <FormItem className="space-y-2">
+                        <FormLabel className="text-gray-700 font-medium">Empresa</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Nombre de su empresa" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="company" className="text-gray-700 font-medium">Empresa</label>
-                  <Input id="company" placeholder="Nombre de su empresa" required />
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem className="space-y-2">
+                        <FormLabel className="text-gray-700 font-medium">Email</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="su@email.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem className="space-y-2">
+                        <FormLabel className="text-gray-700 font-medium">Teléfono</FormLabel>
+                        <FormControl>
+                          <Input placeholder="+34 XXX XXX XXX" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-gray-700 font-medium">Email</label>
-                  <Input id="email" type="email" placeholder="su@email.com" required />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-gray-700 font-medium">Teléfono</label>
-                  <Input id="phone" placeholder="+34 XXX XXX XXX" />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-gray-700 font-medium">Mensaje</label>
-                <Textarea id="message" placeholder="¿Cómo podemos ayudarle?" rows={5} required />
-              </div>
-              
-              <Button type="submit" className="w-full bg-valoraBlue hover:bg-valoraBlue-light text-white py-6">
-                Enviar mensaje
-              </Button>
-              
-              <p className="text-xs text-gray-500 text-center mt-4">
-                Al enviar este formulario, acepta nuestra política de privacidad y el tratamiento de sus datos.
-              </p>
-            </form>
+                
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem className="space-y-2">
+                      <FormLabel className="text-gray-700 font-medium">Mensaje</FormLabel>
+                      <FormControl>
+                        <Textarea placeholder="¿Cómo podemos ayudarle?" rows={5} {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit" 
+                  className="w-full bg-valoraBlue hover:bg-valoraBlue-light text-white py-6"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                </Button>
+                
+                <p className="text-xs text-gray-500 text-center mt-4">
+                  Al enviar este formulario, acepta nuestra política de privacidad y el tratamiento de sus datos.
+                </p>
+              </form>
+            </Form>
           </div>
         </div>
       </div>
