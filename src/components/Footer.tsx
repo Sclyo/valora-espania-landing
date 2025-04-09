@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -12,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <a href="#" className="inline-block mb-4">
-              <span className="text-2xl font-merriweather font-bold">Valor<span className="text-valoraGold">España</span></span>
+              <span className="text-2xl font-playfair font-bold">Valor<span className="text-valoraGold">España</span></span>
             </a>
             <p className="text-white/80 mb-6 max-w-md">
               {t('companyDescription')}

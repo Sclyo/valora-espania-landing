@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -109,8 +108,8 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out'
 			},
 			fontFamily: {
-				'montserrat': ['Montserrat', 'sans-serif'],
-				'merriweather': ['Merriweather', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
 			}
 		}
 	},
