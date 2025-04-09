@@ -29,7 +29,7 @@ const About = () => {
       <div className="container-fluid">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="heading-lg text-valoraBlue mb-6">{t('whyChooseUs')}</h2>
+            <h2 className="heading-lg text-valoraBurgundy mb-6">{t('whyChooseUs')}</h2>
             <p className="text-lg text-gray-700 mb-8">
               {t('aboutUsDescription')}
             </p>
@@ -47,7 +47,7 @@ const About = () => {
                 <div key={index} className="flex items-start">
                   <div className="mr-4 mt-1">{feature.icon}</div>
                   <div>
-                    <h3 className="text-xl font-bold text-valoraBlue mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-bold text-valoraBurgundy mb-2">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ const About = () => {
           
           <div className="bg-gray-100 p-8 rounded-lg">
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-valoraBlue mb-4">{t('ourMethodology')}</h3>
+              <h3 className="text-2xl font-bold text-valoraBurgundy mb-4">{t('ourMethodology')}</h3>
               <p className="text-gray-700 mb-4">
                 {t('methodologyDescription')}
               </p>
@@ -65,22 +65,22 @@ const About = () => {
             
             <div className="space-y-4">
               <div className="bg-white p-4 rounded shadow-sm">
-                <h4 className="font-bold text-valoraBlue mb-1">{t('fundamentalAnalysis')}</h4>
+                <h4 className="font-bold text-valoraBurgundy mb-1">{t('fundamentalAnalysis')}</h4>
                 <p className="text-sm text-gray-600">{t('fundamentalAnalysisDesc')}</p>
               </div>
               
               <div className="bg-white p-4 rounded shadow-sm">
-                <h4 className="font-bold text-valoraBlue mb-1">{t('multipleValuation')}</h4>
+                <h4 className="font-bold text-valoraBurgundy mb-1">{t('multipleValuation')}</h4>
                 <p className="text-sm text-gray-600">{t('multipleValuationDesc')}</p>
               </div>
               
               <div className="bg-white p-4 rounded shadow-sm">
-                <h4 className="font-bold text-valoraBlue mb-1">{t('discountedCashFlow')}</h4>
+                <h4 className="font-bold text-valoraBurgundy mb-1">{t('discountedCashFlow')}</h4>
                 <p className="text-sm text-gray-600">{t('discountedCashFlowDesc')}</p>
               </div>
               
               <div className="bg-white p-4 rounded shadow-sm">
-                <h4 className="font-bold text-valoraBlue mb-1">{t('qualitativeAnalysis')}</h4>
+                <h4 className="font-bold text-valoraBurgundy mb-1">{t('qualitativeAnalysis')}</h4>
                 <p className="text-sm text-gray-600">{t('qualitativeAnalysisDesc')}</p>
               </div>
             </div>

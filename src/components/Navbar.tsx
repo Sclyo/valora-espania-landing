@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container-fluid flex justify-between items-center">
         <div className="flex items-center gap-2">
           <a href="#" className="flex items-center">
-            <span className="text-2xl font-merriweather font-bold text-valoraBlue">Valor<span className="text-valoraGold">España</span></span>
+            <span className="text-2xl font-merriweather font-bold text-valoraBurgundy">Valor<span className="text-valoraGold">España</span></span>
           </a>
           {/* Language Selector positioned right after the logo */}
           <div className="ml-2">
@@ -30,11 +30,11 @@ const Navbar = () => {
         
         {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-6">
-          <a href="#servicios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('services')}</a>
-          <a href="#nosotros" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('about')}</a>
-          <a href="#testimonios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('testimonials')}</a>
+          <a href="#servicios" className="text-valoraBurgundy hover:text-valoraGold transition-colors font-medium">{t('services')}</a>
+          <a href="#nosotros" className="text-valoraBurgundy hover:text-valoraGold transition-colors font-medium">{t('about')}</a>
+          <a href="#testimonios" className="text-valoraBurgundy hover:text-valoraGold transition-colors font-medium">{t('testimonials')}</a>
           <a href="#contacto">
-            <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
+            <Button className="bg-valoraBurgundy hover:bg-valoraBurgundy-light text-white">
               {t('contactButton')}
             </Button>
           </a>
@@ -46,7 +46,7 @@ const Navbar = () => {
             variant="ghost" 
             size="sm" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-valoraBlue"
+            className="text-valoraBurgundy"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 variant="ghost" 
                 size="sm" 
                 onClick={() => setIsMenuOpen(false)}
-                className="absolute top-4 right-4 text-valoraBlue"
+                className="absolute top-4 right-4 text-valoraBurgundy"
               >
                 <X size={24} />
               </Button>
@@ -78,21 +78,21 @@ const Navbar = () => {
                 
                 <a 
                   href="#servicios" 
-                  className="text-valoraBlue text-lg font-medium" 
+                  className="text-valoraBurgundy text-lg font-medium" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t('services')}
                 </a>
                 <a 
                   href="#nosotros" 
-                  className="text-valoraBlue text-lg font-medium" 
+                  className="text-valoraBurgundy text-lg font-medium" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t('about')}
                 </a>
                 <a 
                   href="#testimonios" 
-                  className="text-valoraBlue text-lg font-medium" 
+                  className="text-valoraBurgundy text-lg font-medium" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t('testimonials')}
@@ -101,7 +101,7 @@ const Navbar = () => {
                   href="#contacto" 
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white w-full">
+                  <Button className="bg-valoraBurgundy hover:bg-valoraBurgundy-light text-white w-full">
                     {t('contactButton')}
                   </Button>
                 </a>

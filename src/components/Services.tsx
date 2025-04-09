@@ -9,22 +9,22 @@ const Services = () => {
   
   const servicesData = [
     {
-      icon: <Calculator className="h-10 w-10 text-valoraBlue" />,
+      icon: <Calculator className="h-10 w-10 text-valoraBurgundy" />,
       title: t('businessValuation'),
       description: t('businessValuationDesc')
     },
     {
-      icon: <Briefcase className="h-10 w-10 text-valoraBlue" />,
+      icon: <Briefcase className="h-10 w-10 text-valoraBurgundy" />,
       title: t('financialDueDiligence'),
       description: t('financialDueDiligenceDesc')
     },
     {
-      icon: <ChartBar className="h-10 w-10 text-valoraBlue" />,
+      icon: <ChartBar className="h-10 w-10 text-valoraBurgundy" />,
       title: t('financialAnalysis'),
       description: t('financialAnalysisDesc')
     },
     {
-      icon: <Users className="h-10 w-10 text-valoraBlue" />,
+      icon: <Users className="h-10 w-10 text-valoraBurgundy" />,
       title: t('strategicAdvisory'),
       description: t('strategicAdvisoryDesc')
     }
@@ -34,7 +34,7 @@ const Services = () => {
     <section id="servicios" className="section-padding bg-gray-50">
       <div className="container-fluid">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="heading-lg text-valoraBlue mb-4">{t('servicesTitle')}</h2>
+          <h2 className="heading-lg text-valoraBurgundy mb-4">{t('servicesTitle')}</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             {t('servicesSubtitle')}
           </p>
@@ -45,7 +45,7 @@ const Services = () => {
             <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
               <CardHeader className="pb-2">
                 <div className="mb-3">{service.icon}</div>
-                <CardTitle className="text-xl text-valoraBlue">{service.title}</CardTitle>
+                <CardTitle className="text-xl text-valoraBurgundy">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 text-base">
