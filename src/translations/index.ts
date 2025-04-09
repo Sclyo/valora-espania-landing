@@ -1,4 +1,3 @@
-
 // Define the structure for our translations
 export type TranslationKey = 
   // Navbar
@@ -88,8 +87,8 @@ export const es = {
   strategicAdvisoryDesc: 'Consultoría especializada para optimizar su estructura financiera y preparar su empresa para futuras oportunidades de crecimiento.',
   
   // About section
-  whyChooseUs: '¿Por qué elegir Valora España?',
-  aboutUsDescription: 'En Valora España entendemos las necesidades únicas de las PYMEs en el mercado español. Combinamos conocimiento técnico avanzado con un profundo entendimiento del tejido empresarial español para ofrecer valoraciones que realmente reflejen el potencial de su negocio.',
+  whyChooseUs: '¿Por qué elegir Valor España?',
+  aboutUsDescription: 'En Valor España entendemos las necesidades únicas de las PYMEs en el mercado español. Combinamos conocimiento técnico avanzado con un profundo entendimiento del tejido empresarial español para ofrecer valoraciones que realmente reflejen el potencial de su negocio.',
   experienceAndTrust: 'Experiencia y confianza',
   experienceAndTrustDesc: 'Más de 15 años valorando empresas españolas con metodologías probadas y adaptadas al mercado local.',
   customizedApproach: 'Enfoque personalizado',
@@ -104,7 +103,7 @@ export const es = {
   multipleValuationDesc: 'Comparativas sectoriales contextualizadas al mercado español.',
   discountedCashFlow: '3. Descuento de flujos',
   discountedCashFlowDesc: 'Proyecciones financieras realistas adaptadas a su sector.',
-  qualitativeAnalysis: '4. Análisis cualitativo',
+  qualitativeAnalysis: '4. Análisis cualitativa',
   qualitativeAnalysisDesc: 'Evaluación de factores intangibles y posicionamiento competitivo.',
   
   // Testimonials section
@@ -150,8 +149,8 @@ export const en = {
   strategicAdvisoryDesc: 'Specialized consulting to optimize your financial structure and prepare your company for future growth opportunities.',
   
   // About section
-  whyChooseUs: 'Why Choose Valora España?',
-  aboutUsDescription: 'At Valora España we understand the unique needs of SMEs in the Spanish market. We combine advanced technical knowledge with a deep understanding of the Spanish business fabric to offer valuations that truly reflect the potential of your business.',
+  whyChooseUs: 'Why Choose Valor España?',
+  aboutUsDescription: 'At Valor España we understand the unique needs of SMEs in the Spanish market. We combine advanced technical knowledge with a deep understanding of the Spanish business fabric to offer valuations that truly reflect the potential of your business.',
   experienceAndTrust: 'Experience and Trust',
   experienceAndTrustDesc: 'Over 15 years valuing Spanish companies with proven methodologies adapted to the local market.',
   customizedApproach: 'Customized Approach',
@@ -212,8 +211,8 @@ export const ca = {
   strategicAdvisoryDesc: 'Consultoria especialitzada per optimitzar la seva estructura financera i preparar la seva empresa per a futures oportunitats de creixement.',
   
   // About section
-  whyChooseUs: 'Per què escollir Valora España?',
-  aboutUsDescription: 'A Valora España entenem les necessitats úniques de les PIMES al mercat català. Combinem coneixement tècnic avançat amb una profunda comprensió del teixit empresarial català per oferir valoracions que realment reflecteixin el potencial del seu negoci.',
+  whyChooseUs: 'Per què escollir Valor España?',
+  aboutUsDescription: 'A Valor España entenem les necessitats úniques de les PIMES al mercat català. Combinem coneixement tècnic avançat amb una profunda comprensió del teixit empresarial català per oferir valoracions que realment reflecteixin el potencial del seu negoci.',
   experienceAndTrust: 'Experiència i confiança',
   experienceAndTrustDesc: 'Més de 15 anys valorant empreses catalanes amb metodologies provades i adaptades al mercat local.',
   customizedApproach: 'Enfocament personalitzat',
@@ -274,8 +273,8 @@ export const val = {
   strategicAdvisoryDesc: 'Consultoria especialitzada per a optimitzar la seua estructura financera i preparar la seua empresa per a futures oportunitats de creixement.',
   
   // About section
-  whyChooseUs: 'Per què triar Valora España?',
-  aboutUsDescription: 'En Valora España entenem les necessitats úniques de les PIMES al mercat valencià. Combinem coneixement tècnic avançat amb una profunda comprensió del teixit empresarial valencià per a oferir valoracions que realment reflectisquen el potencial del seu negoci.',
+  whyChooseUs: 'Per què triar Valor España?',
+  aboutUsDescription: 'En Valor España entenem les necessitats úniques de les PIMES al mercat valencià. Combinem coneixement tècnic avançat amb una profunda comprensió del teixit empresarial valencià per a oferir valoracions que realment reflectisquen el potencial del seu negoci.',
   experienceAndTrust: 'Experiència i confiança',
   experienceAndTrustDesc: 'Més de 15 anys valorant empreses valencianes amb metodologies provades i adaptades al mercat local.',
   customizedApproach: 'Enfocament personalitzat',
@@ -336,8 +335,8 @@ export const gl = {
   strategicAdvisoryDesc: 'Consultoría especializada para optimizar a súa estrutura financeira e preparar a súa empresa para futuras oportunidades de crecemento.',
   
   // About section
-  whyChooseUs: 'Por que escoller Valora España?',
-  aboutUsDescription: 'En Valora España entendemos as necesidades únicas das PEMES no mercado galego. Combinamos coñecemento técnico avanzado cun profundo entendemento do tecido empresarial galego para ofrecer valoracións que realmente reflictan o potencial do seu negocio.',
+  whyChooseUs: 'Por que escoller Valor España?',
+  aboutUsDescription: 'En Valor España entendemos as necesidades únicas das PEMES no mercado galego. Combinamos coñecemento técnico avanzado cun profundo entendemento do tecido empresarial galego para ofrecer valoracións que realmente reflictan o potencial do seu negocio.',
   experienceAndTrust: 'Experiencia e confianza',
   experienceAndTrustDesc: 'Máis de 15 anos valorando empresas galegas con metodoloxías probadas e adaptadas ao mercado local.',
   customizedApproach: 'Enfoque personalizado',
@@ -367,7 +366,7 @@ export const gl = {
   privacyPolicy: 'Política de privacidade',
   termsOfService: 'Termos de servizo',
   cookies: 'Cookies',
-  allRightsReserved: 'Todos os dereitos reservados.'
+  allRightsReserved: 'Tódolos dereitos reservados.'
 };
 
 // Basque translations
@@ -398,8 +397,8 @@ export const eu = {
   strategicAdvisoryDesc: 'Aholkularitza espezializatua zure egitura finantzarioa optimizatzeko eta zure enpresa etorkizuneko hazkunde aukeretarako prestatzeko.',
   
   // About section
-  whyChooseUs: 'Zergatik aukeratu Valora España?',
-  aboutUsDescription: 'Valora España-n, merkatuko ETEen behar bereziak ulertzen ditugu. Ezagutza tekniko aurreratua eta bertako enpresa-sarearen ulermen sakona konbinatzen ditugu, zure negozioaren potentziala benetan islatzen duten balorazioak eskaintzeko.',
+  whyChooseUs: 'Zergatik aukeratu Valor España?',
+  aboutUsDescription: 'Valor España-n, merkatuko ETEen behar bereziak ulertzen ditugu. Ezagutza tekniko aurreratua eta bertako enpresa-sarearen ulermen sakona konbinatzen ditugu, zure negozioaren potentziala benetan islatzen duten balorazioak eskaintzeko.',
   experienceAndTrust: 'Esperientzia eta konfiantza',
   experienceAndTrustDesc: '15 urte baino gehiago enpresak baloratzen, tokiko merkatura egokitutako metodologia frogatuekin.',
   customizedApproach: 'Ikuspegi pertsonalizatua',
