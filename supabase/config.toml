@@ -1,1 +1,11 @@
+
 project_id = "vctxmcojstcvxlxuklxi"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage"]
+
+[functions]
+[functions.stock-data]
+verify_jwt = false

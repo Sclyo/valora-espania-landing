@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, TrendingDown, Euro } from 'lucide-react';
 import { toast } from 'sonner';
+import { supabase } from '@/lib/supabase';
 
 const StockTickerWidget = () => {
   const [stockData, setStockData] = useState<{
@@ -38,10 +39,39 @@ const StockTickerWidget = () => {
     const fetchStockData = async () => {
       setIsLoading(true);
       try {
-        // In a production environment, this would connect to a real stock API
-        // For this demo, we'll use simulated data instead of attempting to call
-        // the Yahoo Finance API which will fail due to CORS restrictions
+        // Use Supabase Edge Function to fetch real data while avoiding CORS issues
+        const { data, error } = await supabase.functions.invoke('stock-data', {
+          body: { symbols: ['^IBEX', 'SIE.MC'] }, // SIE.MC as proxy for BME
+        });
+
+        if (error) {
+          console.error("Error invoking Edge Function:", error);
+          throw new Error('Failed to fetch stock data from API');
+        }
+
+        // Process the data returned from our Edge Function
+        if (data && data['^IBEX'] && data['SIE.MC']) {
+          setStockData({
+            ibex: {
+              ...data['^IBEX'],
+              symbol: 'IBEX'
+            },
+            bme: {
+              ...data['SIE.MC'],
+              symbol: 'BME'
+            }
+          });
+        } else {
+          throw new Error('Invalid data format received from API');
+        }
+      } catch (err) {
+        console.error("Failed to fetch stock data:", err);
+        // Fallback to mock data if the API call fails
         generateMockStockData();
+        
+        toast.error("Using simulated market data. Check your connection.", {
+          description: "Could not connect to real-time market data"
+        });
       } finally {
         setIsLoading(false);
       }
@@ -54,7 +84,7 @@ const StockTickerWidget = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  // Generate realistic-looking mock data for the stock ticker
+  // Generate realistic-looking mock data for the stock ticker as fallback
   const generateMockStockData = () => {
     // IBEX 35 data (Spanish market index)
     const mockIbexPrice = 9500 + Math.random() * 100;
