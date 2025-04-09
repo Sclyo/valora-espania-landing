@@ -4,9 +4,11 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import StockTickerWidget from './StockTickerWidget';
 import LanguageSelector from './LanguageSelector';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <nav className="py-4 px-4 sm:px-6 bg-white shadow-sm sticky top-0 z-50">
@@ -28,12 +30,12 @@ const Navbar = () => {
         
         {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-6">
-          <a href="#servicios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Servicios</a>
-          <a href="#nosotros" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Nosotros</a>
-          <a href="#testimonios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Testimonios</a>
+          <a href="#servicios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('services')}</a>
+          <a href="#nosotros" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('about')}</a>
+          <a href="#testimonios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('testimonials')}</a>
           <a href="#contacto">
             <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
-              Contactar
+              {t('contactButton')}
             </Button>
           </a>
         </div>
@@ -79,28 +81,28 @@ const Navbar = () => {
                   className="text-valoraBlue text-lg font-medium" 
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Servicios
+                  {t('services')}
                 </a>
                 <a 
                   href="#nosotros" 
                   className="text-valoraBlue text-lg font-medium" 
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Nosotros
+                  {t('about')}
                 </a>
                 <a 
                   href="#testimonios" 
                   className="text-valoraBlue text-lg font-medium" 
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Testimonios
+                  {t('testimonials')}
                 </a>
                 <a 
                   href="#contacto" 
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white w-full">
-                    Contactar
+                    {t('contactButton')}
                   </Button>
                 </a>
               </div>

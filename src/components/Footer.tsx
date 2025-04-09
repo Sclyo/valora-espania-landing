@@ -1,7 +1,9 @@
 
 import React from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -13,7 +15,7 @@ const Footer = () => {
               <span className="text-2xl font-merriweather font-bold">Valora<span className="text-valoraGold">España</span></span>
             </a>
             <p className="text-white/80 mb-6 max-w-md">
-              Servicio profesional de valoración financiera especializado en pequeñas y medianas empresas del mercado español.
+              {t('companyDescription')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-valoraGold transition-colors">
@@ -32,35 +34,35 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Servicios</h3>
+            <h3 className="text-lg font-bold mb-4">{t('servicesFooter')}</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Valoración de empresas</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Due diligence financiera</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Análisis financiero</a></li>
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Asesoramiento estratégico</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors">{t('businessValuation')}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors">{t('financialDueDiligence')}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors">{t('financialAnalysis')}</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors">{t('strategicAdvisory')}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Enlaces rápidos</h3>
+            <h3 className="text-lg font-bold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/80 hover:text-white transition-colors">Inicio</a></li>
-              <li><a href="#servicios" className="text-white/80 hover:text-white transition-colors">Servicios</a></li>
-              <li><a href="#nosotros" className="text-white/80 hover:text-white transition-colors">Nosotros</a></li>
-              <li><a href="#testimonios" className="text-white/80 hover:text-white transition-colors">Testimonios</a></li>
-              <li><a href="#contacto" className="text-white/80 hover:text-white transition-colors">Contacto</a></li>
+              <li><a href="#" className="text-white/80 hover:text-white transition-colors">{t('home')}</a></li>
+              <li><a href="#servicios" className="text-white/80 hover:text-white transition-colors">{t('services')}</a></li>
+              <li><a href="#nosotros" className="text-white/80 hover:text-white transition-colors">{t('about')}</a></li>
+              <li><a href="#testimonios" className="text-white/80 hover:text-white transition-colors">{t('testimonials')}</a></li>
+              <li><a href="#contacto" className="text-white/80 hover:text-white transition-colors">{t('contact')}</a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © {currentYear} Valora España. Todos los derechos reservados.
+            © {currentYear} Valora España. {t('allRightsReserved')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Política de privacidad</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Términos de servicio</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Cookies</a>
+            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{t('privacyPolicy')}</a>
+            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{t('termsOfService')}</a>
+            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{t('cookies')}</a>
           </div>
         </div>
       </div>

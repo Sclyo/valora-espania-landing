@@ -1,41 +1,150 @@
 
 import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
-
-const testimonials = [
-  {
-    quote: "La valoración realizada por Valora España nos permitió negociar nuestra ronda de financiación desde una posición mucho más sólida. Su análisis detallado impresionó a los inversores.",
-    author: "María Sánchez",
-    position: "CEO, TechnoMadrid S.L.",
-    company: "Sector Tecnológico"
-  },
-  {
-    quote: "Cuando decidimos vender parte de nuestra empresa familiar, necesitábamos una valoración en la que pudiéramos confiar. El equipo de Valora España nos proporcionó exactamente eso, con explicaciones claras y un proceso transparente.",
-    author: "Javier Rodríguez",
-    position: "Director General",
-    company: "Industrias Mediterráneo"
-  },
-  {
-    quote: "Su conocimiento del sector retail español es impresionante. Nos ayudaron a entender el verdadero valor de nuestro negocio y las áreas con mayor potencial de crecimiento.",
-    author: "Ana Martín",
-    position: "Fundadora",
-    company: "Modas Barcelona"
-  }
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Testimonials = () => {
+  const { t, language } = useLanguage();
+
+  // Define testimonials per language
+  const testimonials = {
+    es: [
+      {
+        quote: "La valoración realizada por Valora España nos permitió negociar nuestra ronda de financiación desde una posición mucho más sólida. Su análisis detallado impresionó a los inversores.",
+        author: "María Sánchez",
+        position: "CEO, TechnoMadrid S.L.",
+        company: "Sector Tecnológico"
+      },
+      {
+        quote: "Cuando decidimos vender parte de nuestra empresa familiar, necesitábamos una valoración en la que pudiéramos confiar. El equipo de Valora España nos proporcionó exactamente eso, con explicaciones claras y un proceso transparente.",
+        author: "Javier Rodríguez",
+        position: "Director General",
+        company: "Industrias Mediterráneo"
+      },
+      {
+        quote: "Su conocimiento del sector retail español es impresionante. Nos ayudaron a entender el verdadero valor de nuestro negocio y las áreas con mayor potencial de crecimiento.",
+        author: "Ana Martín",
+        position: "Fundadora",
+        company: "Modas Barcelona"
+      }
+    ],
+    en: [
+      {
+        quote: "The valuation carried out by Valora España allowed us to negotiate our financing round from a much stronger position. Their detailed analysis impressed the investors.",
+        author: "María Sánchez",
+        position: "CEO, TechnoMadrid S.L.",
+        company: "Technology Sector"
+      },
+      {
+        quote: "When we decided to sell part of our family business, we needed a valuation we could trust. The Valora España team provided exactly that, with clear explanations and a transparent process.",
+        author: "Javier Rodríguez",
+        position: "General Director",
+        company: "Mediterranean Industries"
+      },
+      {
+        quote: "Their knowledge of the Spanish retail sector is impressive. They helped us understand the true value of our business and the areas with the greatest growth potential.",
+        author: "Ana Martín",
+        position: "Founder",
+        company: "Barcelona Fashion"
+      }
+    ],
+    ca: [
+      {
+        quote: "La valoració realitzada per Valora España ens va permetre negociar la nostra ronda de finançament des d'una posició molt més sòlida. La seva anàlisi detallada va impressionar als inversors.",
+        author: "Maria Sánchez",
+        position: "CEO, TechnoBarcelona S.L.",
+        company: "Sector Tecnològic"
+      },
+      {
+        quote: "Quan vam decidir vendre part de la nostra empresa familiar, necessitàvem una valoració en la qual poguéssim confiar. L'equip de Valora España ens va proporcionar exactament això, amb explicacions clares i un procés transparent.",
+        author: "Xavier Rodríguez",
+        position: "Director General",
+        company: "Indústries Mediterrani"
+      },
+      {
+        quote: "El seu coneixement del sector retail català és impressionant. Ens van ajudar a entendre el veritable valor del nostre negoci i les àrees amb major potencial de creixement.",
+        author: "Anna Martí",
+        position: "Fundadora",
+        company: "Modes Barcelona"
+      }
+    ],
+    val: [
+      {
+        quote: "La valoració realitzada per Valora España ens va permetre negociar la nostra ronda de finançament des d'una posició molt més sòlida. La seua anàlisi detallada va impressionar als inversors.",
+        author: "Maria Sánchez",
+        position: "CEO, TechnoValència S.L.",
+        company: "Sector Tecnològic"
+      },
+      {
+        quote: "Quan vam decidir vendre part de la nostra empresa familiar, necessitàvem una valoració en la qual poguérem confiar. L'equip de Valora España ens va proporcionar exactament això, amb explicacions clares i un procés transparent.",
+        author: "Xavier Rodríguez",
+        position: "Director General",
+        company: "Indústries Mediterrani"
+      },
+      {
+        quote: "El seu coneixement del sector retail valencià és impressionant. Ens van ajudar a entendre el vertader valor del nostre negoci i les àrees amb major potencial de creixement.",
+        author: "Anna Martí",
+        position: "Fundadora",
+        company: "Modes València"
+      }
+    ],
+    gl: [
+      {
+        quote: "A valoración realizada por Valora España permitiunos negociar a nosa rolda de financiamento desde unha posición moito máis sólida. A súa análise detallada impresionou aos investidores.",
+        author: "María Sánchez",
+        position: "CEO, TechnoGalicia S.L.",
+        company: "Sector Tecnolóxico"
+      },
+      {
+        quote: "Cando decidimos vender parte da nosa empresa familiar, precisábamos unha valoración na que puidésemos confiar. O equipo de Valora España proporcionounos exactamente iso, con explicacións claras e un proceso transparente.",
+        author: "Xabier Rodríguez",
+        position: "Director Xeral",
+        company: "Industrias Atlántico"
+      },
+      {
+        quote: "O seu coñecemento do sector retail galego é impresionante. Axudáronnos a entender o verdadeiro valor do noso negocio e as áreas con maior potencial de crecemento.",
+        author: "Ana Martín",
+        position: "Fundadora",
+        company: "Modas Galicia"
+      }
+    ],
+    eu: [
+      {
+        quote: "Valora España-k egindako balorazioak finantzaketa txanda gure posizioa askoz indartsuagotik negoziatzeko aukera eman zigun. Haien analisi zehatzak inbertsoreak harritu zituen.",
+        author: "Maria Sánchez",
+        position: "CEO, TechnoEuskal S.L.",
+        company: "Teknologia Sektorea"
+      },
+      {
+        quote: "Gure familiako enpresaren zati bat saltzea erabaki genuenean, fidatu ahal izango genuen balorazio bat behar genuen. Valora España taldeak hori eskaini zigun, azalpen argiekin eta prozesu garden batekin.",
+        author: "Xabier Rodriguez",
+        position: "Zuzendari Nagusia",
+        company: "Industrias Cantábrico"
+      },
+      {
+        quote: "Euskal retail sektoreari buruzko ezagutza harrigarria da. Gure negozioaren benetako balioa eta hazkunde potentzial handieneko arloak ulertzen lagundu ziguten.",
+        author: "Ane Martin",
+        position: "Sortzailea",
+        company: "Euskal Modak"
+      }
+    ]
+  };
+
+  // Get current language testimonials or default to Spanish
+  const currentTestimonials = testimonials[language as keyof typeof testimonials] || testimonials.es;
+
   return (
     <section id="testimonios" className="section-padding valora-gradient-bg text-white">
       <div className="container-fluid">
         <div className="text-center mb-12">
-          <h2 className="heading-lg mb-4">Lo que dicen nuestros clientes</h2>
+          <h2 className="heading-lg mb-4">{t('testimonialsTitle')}</h2>
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
-            Hemos ayudado a cientos de PYMEs españolas a entender y maximizar su valor empresarial.
+            {t('testimonialsSubtitle')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+          {currentTestimonials.map((testimonial, index) => (
             <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardContent className="pt-6">
                 <div className="mb-4 text-valoraGold">
