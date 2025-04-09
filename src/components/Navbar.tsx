@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container-fluid flex justify-between items-center">
         <div className="flex items-center gap-2">
           <a href="#" className="flex items-center">
-            <span className="text-2xl font-merriweather font-bold text-valoraBlue">Valor<span className="text-valoraGold">España</span></span>
+            <span className="text-2xl font-lora font-bold text-valoraBlue">Valor<span className="text-valoraGold">España</span></span>
           </a>
           {/* Language Selector positioned right after the logo */}
           <div className="ml-2">
