@@ -11,25 +11,25 @@ const Navbar = () => {
   return (
     <nav className="py-4 px-4 sm:px-6 bg-white shadow-sm sticky top-0 z-50">
       <div className="container-fluid flex justify-between items-center">
-        <a href="#" className="flex items-center">
-          <span className="text-2xl font-merriweather font-bold text-valoraBlue">Valora<span className="text-valoraGold">España</span></span>
-        </a>
+        <div className="flex items-center gap-2">
+          <a href="#" className="flex items-center">
+            <span className="text-2xl font-merriweather font-bold text-valoraBlue">Valora<span className="text-valoraGold">España</span></span>
+          </a>
+          {/* Language Selector positioned right after the logo */}
+          <div className="ml-2">
+            <LanguageSelector />
+          </div>
+        </div>
         
         {/* Stock ticker - visible on tablet and desktop */}
         <div className="hidden md:block">
           <StockTickerWidget />
         </div>
         
-        {/* Desktop menu with language selector positioned in the middle */}
+        {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-6">
           <a href="#servicios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Servicios</a>
           <a href="#nosotros" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Nosotros</a>
-          
-          {/* Language Selector - placed between menu items */}
-          <div className="mx-2">
-            <LanguageSelector />
-          </div>
-          
           <a href="#testimonios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Testimonios</a>
           <a href="#contacto">
             <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
@@ -38,9 +38,8 @@ const Navbar = () => {
           </a>
         </div>
         
-        {/* Mobile menu button with language selector */}
-        <div className="md:hidden flex items-center gap-2">
-          <LanguageSelector />
+        {/* Mobile menu button */}
+        <div className="md:hidden flex items-center">
           <Button 
             variant="ghost" 
             size="sm" 
