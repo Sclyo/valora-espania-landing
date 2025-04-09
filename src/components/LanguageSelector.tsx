@@ -23,6 +23,9 @@ const LanguageSelector = () => {
   
   const currentLanguage = languages.find(lang => lang.code === language) || languages[0];
 
+  console.log('Current language:', language);
+  console.log('Current language object:', currentLanguage);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-gray-100 transition-colors">
