@@ -32,7 +32,7 @@ const LanguageSelector = () => {
         <img 
           src={currentLanguage.flag} 
           alt={currentLanguage.name} 
-          className="w-6 h-4 object-cover rounded-sm"
+          className="w-8 h-5 object-cover rounded-sm"
           aria-hidden="true"
         />
         <span className="sr-only">Change language. Current language: {currentLanguage.name}</span>
@@ -47,7 +47,7 @@ const LanguageSelector = () => {
             <img 
               src={lang.flag} 
               alt={lang.name}
-              className="w-6 h-4 object-cover rounded-sm" 
+              className="w-8 h-5 object-cover rounded-sm" 
               aria-hidden="true"
             />
             <span>{lang.name}</span>
