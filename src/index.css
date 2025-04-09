@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 0 70% 33%; /* Changed to burgundy tone */
+    --primary: 221 73% 22%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -57,7 +57,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 0 70% 33%; /* Changed to burgundy tone */
+    --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -102,7 +102,7 @@
 
 @layer components {
   .valora-gradient-bg {
-    @apply bg-gradient-to-r from-valoraBurgundy to-valoraBurgundy-light;
+    @apply bg-gradient-to-r from-valoraBlue to-valoraBlue-light;
   }
   
   .section-padding {

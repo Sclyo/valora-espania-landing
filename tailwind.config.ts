@@ -64,15 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				valoraBlue: {
-					DEFAULT: '#8B1A1A', // Changed from dark blue to burgundy
-					light: '#C63535', // Changed from light blue to lighter burgundy
+					DEFAULT: '#0A2463', // Dark blue
+					light: '#3E92CC', // Light blue
 				},
-				valoraGold: '#D4AF37', // Gold accent (kept the same)
-				valoraGray: '#8E9196', // Neutral gray (kept the same)
-				valoraBurgundy: {
-					DEFAULT: '#8B1A1A', // Added burgundy as a new color
-					light: '#C63535',
-				},
+				valoraGold: '#D4AF37', // Gold accent
+				valoraGray: '#8E9196', // Neutral gray
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
