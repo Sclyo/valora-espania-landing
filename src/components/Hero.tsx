@@ -34,6 +34,11 @@ const Hero = () => {
               </Button>
             </a>
           </div>
+          
+          {/* IESE Logo */}
+          <div className="mt-12">
+            <img src="/iese-logo.svg" alt="IESE Business School" className="h-10" />
+          </div>
         </div>
       </div>
     </div>
