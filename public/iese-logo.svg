@@ -1,6 +1,6 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
-  <rect width="120" height="40" fill="#002855" />
+  <rect width="120" height="40" fill="#8B1A1A" />
   <g fill="#FFFFFF">
     <!-- IESE Text -->
     <path d="M20,12 h4 v16 h-4 z" />
