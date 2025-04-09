@@ -20,13 +20,27 @@ const Navbar = () => {
           <StockTickerWidget />
         </div>
         
-        {/* Language Selector - always visible */}
-        <div className="flex items-center">
-          <LanguageSelector />
+        {/* Desktop menu with language selector positioned in the middle */}
+        <div className="hidden md:flex items-center space-x-6">
+          <a href="#servicios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Servicios</a>
+          <a href="#nosotros" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Nosotros</a>
+          
+          {/* Language Selector - placed between menu items */}
+          <div className="mx-2">
+            <LanguageSelector />
+          </div>
+          
+          <a href="#testimonios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Testimonios</a>
+          <a href="#contacto">
+            <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
+              Contactar
+            </Button>
+          </a>
         </div>
         
-        {/* Mobile menu button */}
-        <div className="md:hidden">
+        {/* Mobile menu button with language selector */}
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSelector />
           <Button 
             variant="ghost" 
             size="sm" 
@@ -35,18 +49,6 @@ const Navbar = () => {
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
-        </div>
-        
-        {/* Desktop menu */}
-        <div className="hidden md:flex items-center space-x-6">
-          <a href="#servicios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Servicios</a>
-          <a href="#nosotros" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Nosotros</a>
-          <a href="#testimonios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">Testimonios</a>
-          <a href="#contacto">
-            <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
-              Contactar
-            </Button>
-          </a>
         </div>
         
         {/* Mobile menu panel */}
