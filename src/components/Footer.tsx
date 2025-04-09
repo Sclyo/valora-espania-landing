@@ -20,9 +20,6 @@ const Footer = () => {
             
             {/* IESE Affiliation */}
             <div className="flex items-center mb-6">
-              <div className="bg-white p-2 rounded mr-3">
-                <img src="/iese-logo.svg" alt="IESE Business School" className="h-8" />
-              </div>
               <p className="text-white/80 text-sm">
                 Formados en IESE Business School
               </p>
