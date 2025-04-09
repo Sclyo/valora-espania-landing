@@ -23,12 +23,16 @@ const Hero = () => {
             {t('heroSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white text-lg px-6 py-6">
-              {t('requestValuation')}
-            </Button>
-            <Button variant="outline" className="border-valoraBlue text-valoraBlue hover:bg-valoraBlue/5 text-lg px-6 py-6">
-              {t('ourServices')} <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>
+            <a href="#contacto">
+              <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white text-lg px-6 py-6">
+                {t('requestValuation')}
+              </Button>
+            </a>
+            <a href="#servicios">
+              <Button variant="outline" className="border-valoraBlue text-valoraBlue hover:bg-valoraBlue/5 text-lg px-6 py-6">
+                {t('ourServices')} <ChevronRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>

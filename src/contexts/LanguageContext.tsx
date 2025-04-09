@@ -22,16 +22,12 @@ export const useLanguage = () => {
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(() => {
-    // Try to get language from localStorage or use browser language or default to Spanish
+    // Try to get language from localStorage
     const savedLanguage = localStorage.getItem('valoraLanguage') as Language;
     if (savedLanguage) return savedLanguage;
     
-    const browserLanguage = navigator.language.split('-')[0];
-    if (['es', 'en', 'ca', 'val', 'gl', 'eu'].includes(browserLanguage)) {
-      return browserLanguage as Language;
-    }
-    
-    return 'es'; // Default to Spanish
+    // Default to Spanish instead of using browser language
+    return 'es';
   });
 
   useEffect(() => {

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TrendingUp, TrendingDown, Euro } from 'lucide-react';
-import { toast } from 'sonner';
 import { supabase } from '@/lib/supabase';
 
 const StockTickerWidget = () => {
@@ -69,9 +68,7 @@ const StockTickerWidget = () => {
         // Fallback to mock data if the API call fails
         generateMockStockData();
         
-        toast.error("Using simulated market data. Check your connection.", {
-          description: "Could not connect to real-time market data"
-        });
+        // Remove toast notification about using simulated data
       } finally {
         setIsLoading(false);
       }
