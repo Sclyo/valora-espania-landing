@@ -7,8 +7,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Globe } from 'lucide-react';
 
+// Define language information with real flag images
 const languages = [
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
@@ -26,7 +26,12 @@ const LanguageSelector = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-gray-100 transition-colors">
-        <span className="text-lg" aria-hidden="true">{currentLanguage.flag}</span>
+        <img 
+          src={`/flags/${currentLanguage.code}.png`} 
+          alt={currentLanguage.name} 
+          className="w-5 h-3.5 object-cover"
+          aria-hidden="true"
+        />
         <span className="sr-only">Change language. Current language: {currentLanguage.name}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="bg-white">
@@ -36,7 +41,12 @@ const LanguageSelector = () => {
             onClick={() => setLanguage(lang.code as any)}
             className={`flex items-center gap-3 ${language === lang.code ? 'bg-gray-100' : ''}`}
           >
-            <span className="text-lg" aria-hidden="true">{lang.flag}</span>
+            <img 
+              src={`/flags/${lang.code}.png`} 
+              alt={lang.name}
+              className="w-5 h-3.5 object-cover" 
+              aria-hidden="true"
+            />
             <span>{lang.name}</span>
           </DropdownMenuItem>
         ))}
