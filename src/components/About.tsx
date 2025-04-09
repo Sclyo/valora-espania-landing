@@ -36,7 +36,7 @@ const About = () => {
             
             {/* IESE Affiliation Badge */}
             <div className="mb-8 flex items-center">
-              <img src="/iese-logo.svg" alt="IESE Business School" className="h-12 mr-3" />
+              <img src="/lovable-uploads/3ad1ed50-1e28-42d4-80de-8894a034c6ad.png" alt="IESE Business School" className="h-16 mr-3" />
               <p className="text-sm text-gray-600 italic">
                 Profesionales formados en IESE Business School
               </p>
