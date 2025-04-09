@@ -1,20 +1,13 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
-  <rect width="120" height="40" fill="#8B1A1A" />
+  <rect width="120" height="40" fill="#002855" />
   <g fill="#FFFFFF">
-    <!-- Shield/Crest -->
-    <path d="M15,10 h15 a10,10 0 0 1 0,20 h-15 a10,10 0 0 1 0,-20 z" />
-    <rect x="18" y="12" width="2.5" height="16" />
-    <rect x="22" y="12" width="2.5" height="16" />
-    <rect x="26" y="12" width="2.5" height="16" />
-    <circle cx="20.5" cy="16" r="1.5" />
-    <circle cx="20.5" cy="24" r="1.5" />
     <!-- IESE Text -->
-    <path d="M40,14 h4 v12 h-4 z" />
-    <path d="M48,14 h10 c4,0 6,2 6,6 s-2,6 -6,6 h-10 z M52,18 v8 h6 c2,0 2,-1 2,-4 s0,-4 -2,-4 z" />
-    <path d="M68,14 h10 c4,0 6,2 6,6 s-2,6 -6,6 h-10 z M72,18 v8 h6 c2,0 2,-1 2,-4 s0,-4 -2,-4 z" />
-    <path d="M88,14 h14 v4 h-5 v8 h-4 v-8 h-5 z" />
+    <path d="M20,12 h4 v16 h-4 z" />
+    <path d="M30,12 h12 q5,0 5,5 v6 q0,5 -5,5 h-12 v-16 z M34,16 v8 h8 q1,0 1,-1 v-6 q0,-1 -1,-1 z" />
+    <path d="M53,12 h12 q5,0 5,5 v6 q0,5 -5,5 h-12 v-16 z M57,16 v8 h8 q1,0 1,-1 v-6 q0,-1 -1,-1 z" />
+    <path d="M76,12 h16 v4 h-6 v12 h-4 v-12 h-6 z" />
   </g>
   <!-- Business School Text -->
-  <text x="42" y="35" font-family="Arial, sans-serif" font-size="8" fill="#FFFFFF">Business School</text>
+  <text x="22" y="35" font-family="Arial, sans-serif" font-size="9" fill="#FFFFFF">Business School</text>
 </svg>
