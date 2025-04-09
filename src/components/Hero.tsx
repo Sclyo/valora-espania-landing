@@ -37,7 +37,7 @@ const Hero = () => {
           
           {/* IESE Logo */}
           <div className="mt-12">
-            <img src="/iese-logo.svg" alt="IESE Business School" className="h-10" />
+            <img src="/lovable-uploads/3ad1ed50-1e28-42d4-80de-8894a034c6ad.png" alt="IESE Business School" className="h-16" />
           </div>
         </div>
       </div>
