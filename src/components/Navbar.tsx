@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import StockTickerWidget from './StockTickerWidget';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,6 +18,11 @@ const Navbar = () => {
         {/* Stock ticker - visible on tablet and desktop */}
         <div className="hidden md:block">
           <StockTickerWidget />
+        </div>
+        
+        {/* Language Selector - always visible */}
+        <div className="flex items-center">
+          <LanguageSelector />
         </div>
         
         {/* Mobile menu button */}
@@ -60,6 +66,11 @@ const Navbar = () => {
                 {/* Stock ticker - visible on mobile inside menu */}
                 <div className="py-2">
                   <StockTickerWidget />
+                </div>
+                
+                {/* Language selector in mobile menu */}
+                <div className="py-2">
+                  <LanguageSelector />
                 </div>
                 
                 <a 
