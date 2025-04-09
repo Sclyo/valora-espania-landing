@@ -34,6 +34,14 @@ const About = () => {
               {t('aboutUsDescription')}
             </p>
             
+            {/* IESE Affiliation Badge */}
+            <div className="mb-8 flex items-center">
+              <img src="/iese-logo.svg" alt="IESE Business School" className="h-12 mr-3" />
+              <p className="text-sm text-gray-600 italic">
+                Profesionales formados en IESE Business School
+              </p>
+            </div>
+            
             <div className="space-y-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start">

@@ -12,11 +12,22 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <a href="#" className="inline-block mb-4">
-              <span className="text-2xl font-merriweather font-bold">Valora<span className="text-valoraGold">España</span></span>
+              <span className="text-2xl font-merriweather font-bold">Valor<span className="text-valoraGold">España</span></span>
             </a>
             <p className="text-white/80 mb-6 max-w-md">
               {t('companyDescription')}
             </p>
+            
+            {/* IESE Affiliation */}
+            <div className="flex items-center mb-6">
+              <div className="bg-white p-2 rounded mr-3">
+                <img src="/iese-logo.svg" alt="IESE Business School" className="h-8" />
+              </div>
+              <p className="text-white/80 text-sm">
+                Formados en IESE Business School
+              </p>
+            </div>
+            
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-valoraGold transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
@@ -57,7 +68,7 @@ const Footer = () => {
         
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm">
-            © {currentYear} Valora España. {t('allRightsReserved')}
+            © {currentYear} Valor España. {t('allRightsReserved')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{t('privacyPolicy')}</a>
