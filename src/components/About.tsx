@@ -31,12 +31,24 @@ const About = () => {
     {
       name: "Cristobal Pharose",
       role: "Asesor en valoración y fusiones/adquisiciones de empresas",
-      image: "/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png"
+      image: "/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png",
+      description: `Con más de 20 años de experiencia en la valoración y asesoramiento de empresas, 
+      nos especializamos en empresas con facturación entre tres y cinco millones de euros. 
+      Nuestro enfoque se centra en propietarios que están planificando su jubilación 
+      y buscan una estrategia de sucesión o venta exitosa.
+      
+      Ofrecemos un servicio totalmente confidencial, entendiendo la importancia 
+      de la discreción en estos procesos críticos. Nuestra formación en IESE Business School 
+      nos proporciona las herramientas y conocimientos necesarios para asegurar 
+      transiciones exitosas y maximizar el valor de su negocio.`
     },
     {
       name: "Leo Scapino",
       role: "Consultor en valoración y compraventa de empresas",
-      image: "/lovable-uploads/7f88e8bb-2f0d-4faa-a5da-aaa0f28dd6fe.png"
+      image: "/lovable-uploads/7f88e8bb-2f0d-4faa-a5da-aaa0f28dd6fe.png",
+      description: `Consultor senior especializado en estrategia, producto y valoración de empresas, con más de 20 años de experiencia combinada en los sectores financiero y tecnológico. Gracias a su formación en finanzas corporativas y dirección de proyectos (MBA IESE), así como su paso por grandes corporaciones y scale-ups tecnológicas, Lyonel aporta una capacidad única para diagnosticar rápidamente el valor de una empresa y traducirlo en una narrativa comprensible para potenciales compradores.
+
+      Con conocimiento práctico en procesos de valoración, project finance, startup valuation, y negociación, Lyonel está especialmente capacitado para acompañar a empresas familiares que enfrentan retos de sucesión, ofreciendo no solo una evaluación técnica precisa, sino también empatía y visión estratégica para asegurar la continuidad del legado empresarial.`
     }
   ];
 
@@ -71,17 +83,8 @@ const About = () => {
                     <Card>
                       <CardContent className="pt-6">
                         <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional</h3>
-                        <p className="text-gray-700 mb-4">
-                          Con más de 20 años de experiencia en la valoración y asesoramiento de empresas, 
-                          nos especializamos en empresas con facturación entre tres y cinco millones de euros. 
-                          Nuestro enfoque se centra en propietarios que están planificando su jubilación 
-                          y buscan una estrategia de sucesión o venta exitosa.
-                        </p>
-                        <p className="text-gray-700">
-                          Ofrecemos un servicio totalmente confidencial, entendiendo la importancia 
-                          de la discreción en estos procesos críticos. Nuestra formación en IESE Business School 
-                          nos proporciona las herramientas y conocimientos necesarios para asegurar 
-                          transiciones exitosas y maximizar el valor de su negocio.
+                        <p className="text-gray-700 mb-4 whitespace-pre-line">
+                          {consultant.description}
                         </p>
                       </CardContent>
                     </Card>
