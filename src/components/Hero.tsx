@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="relative container-fluid py-20 md:py-32 z-10">
         <div className="max-w-2xl animate-fade-in">
           <h1 className="heading-xl text-valoraBlue mb-4">
-            {t('heroTitle')}
+            Valoración confidencial para empresas de 3-5M€ de facturación anual
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-4">
             {t('heroSubtitle')}
