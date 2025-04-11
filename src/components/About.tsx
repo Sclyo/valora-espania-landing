@@ -30,12 +30,12 @@ const About = () => {
   const consultants = [
     {
       name: "Cristobal Pharose",
-      role: "Asesor en valoración y fusiones/adquisiciones de PYMEs",
+      role: "Asesor en valoración y fusiones/adquisiciones de empresas con facturación entre tres y cinco millones de euros",
       image: "/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png"
     },
     {
       name: "Leo Scapino",
-      role: "Consultor en valoración y compraventa de PYMEs",
+      role: "Consultor en valoración y compraventa de empresas con facturación entre tres y cinco millones de euros",
       image: "/lovable-uploads/7f88e8bb-2f0d-4faa-a5da-aaa0f28dd6fe.png"
     }
   ];
@@ -50,7 +50,7 @@ const About = () => {
             {consultants.map((consultant, index) => (
               <div key={index}>
                 <div className="flex flex-col md:flex-row gap-8 items-start">
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center md:w-1/4">
                     <div className="rounded-full overflow-hidden shadow-lg mb-4 w-40 h-40">
                       <img 
                         src={consultant.image} 
@@ -67,7 +67,7 @@ const About = () => {
                       <p className="text-sm text-valoraGray">{consultant.role}</p>
                     </div>
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 md:w-3/4">
                     <Card>
                       <CardContent className="pt-6">
                         <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional</h3>
