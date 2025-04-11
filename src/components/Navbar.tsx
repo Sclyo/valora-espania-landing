@@ -5,11 +5,25 @@ import { Menu, X } from 'lucide-react';
 import StockTickerWidget from './StockTickerWidget';
 import LanguageSelector from './LanguageSelector';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const location = useLocation();
+
+  // Function to handle smooth scrolling to sections
+  const scrollToSection = (sectionId: string) => {
+    setIsMenuOpen(false);
+    
+    // If already on home page, scroll to the section
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <nav className="py-4 px-4 sm:px-6 bg-white shadow-sm sticky top-0 z-50">
@@ -31,14 +45,77 @@ const Navbar = () => {
         
         {/* Desktop menu */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/#servicios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('services')}</Link>
-          <Link to="/#nosotros" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('about')}</Link>
-          <Link to="/#testimonios" className="text-valoraBlue hover:text-valoraGold transition-colors font-medium">{t('testimonials')}</Link>
-          <Link to="/#contacto">
-            <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
-              {t('contactButton')}
-            </Button>
-          </Link>
+          {location.pathname === '/' ? (
+            <>
+              <a 
+                href="#servicios" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('servicios');
+                }}
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                {t('services')}
+              </a>
+              <a 
+                href="#nosotros" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('nosotros');
+                }}
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                {t('about')}
+              </a>
+              <a 
+                href="#testimonios" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('testimonios');
+                }}
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                {t('testimonials')}
+              </a>
+              <a 
+                href="#contacto"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('contacto');
+                }}
+              >
+                <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
+                  {t('contactButton')}
+                </Button>
+              </a>
+            </>
+          ) : (
+            <>
+              <Link 
+                to="/#servicios"
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                {t('services')}
+              </Link>
+              <Link 
+                to="/#nosotros"
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                {t('about')}
+              </Link>
+              <Link 
+                to="/#testimonios"
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                {t('testimonials')}
+              </Link>
+              <Link to="/#contacto">
+                <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
+                  {t('contactButton')}
+                </Button>
+              </Link>
+            </>
+          )}
         </div>
         
         {/* Mobile menu button */}
@@ -77,35 +154,83 @@ const Navbar = () => {
                   <LanguageSelector />
                 </div>
                 
-                <Link 
-                  to="/#servicios" 
-                  className="text-valoraBlue text-lg font-medium" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t('services')}
-                </Link>
-                <Link 
-                  to="/#nosotros" 
-                  className="text-valoraBlue text-lg font-medium" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t('about')}
-                </Link>
-                <Link 
-                  to="/#testimonios" 
-                  className="text-valoraBlue text-lg font-medium" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {t('testimonials')}
-                </Link>
-                <Link 
-                  to="/#contacto" 
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white w-full">
-                    {t('contactButton')}
-                  </Button>
-                </Link>
+                {location.pathname === '/' ? (
+                  <>
+                    <a 
+                      href="#servicios"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('servicios');
+                      }}
+                    >
+                      {t('services')}
+                    </a>
+                    <a 
+                      href="#nosotros"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('nosotros');
+                      }}
+                    >
+                      {t('about')}
+                    </a>
+                    <a 
+                      href="#testimonios"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('testimonios');
+                      }}
+                    >
+                      {t('testimonials')}
+                    </a>
+                    <a 
+                      href="#contacto"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('contacto');
+                      }}
+                    >
+                      <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white w-full">
+                        {t('contactButton')}
+                      </Button>
+                    </a>
+                  </>
+                ) : (
+                  <>
+                    <Link 
+                      to="/#servicios"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {t('services')}
+                    </Link>
+                    <Link 
+                      to="/#nosotros"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {t('about')}
+                    </Link>
+                    <Link 
+                      to="/#testimonios"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {t('testimonials')}
+                    </Link>
+                    <Link 
+                      to="/#contacto"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white w-full">
+                        {t('contactButton')}
+                      </Button>
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </div>
