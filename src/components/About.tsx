@@ -56,6 +56,10 @@ const About = () => {
                         src={consultant.image} 
                         alt={consultant.name} 
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          console.error(`Error loading image: ${consultant.image}`);
+                          e.currentTarget.src = '/placeholder.svg';
+                        }}
                       />
                     </div>
                     <div className="text-center">
