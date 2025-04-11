@@ -77,15 +77,11 @@ const About = () => {
                           Nuestro enfoque se centra en propietarios que están planificando su jubilación 
                           y buscan una estrategia de sucesión o venta exitosa.
                         </p>
-                        <p className="text-gray-700 mb-4">
+                        <p className="text-gray-700">
                           Ofrecemos un servicio totalmente confidencial, entendiendo la importancia 
                           de la discreción en estos procesos críticos. Nuestra formación en IESE Business School 
                           nos proporciona las herramientas y conocimientos necesarios para asegurar 
                           transiciones exitosas y maximizar el valor de su negocio.
-                        </p>
-                        <p className="text-gray-700 font-semibold">
-                          Ofrecemos la valoración sin coste si contamos con un contrato de exclusividad. 
-                          Garantizamos la venta de su empresa en menos de 6 meses.
                         </p>
                       </CardContent>
                     </Card>

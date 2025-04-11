@@ -24,10 +24,18 @@ const Hero = () => {
           </p>
           
           {/* New confidentiality note */}
-          <div className="flex items-center bg-valoraBlue/10 p-3 rounded-md mb-8 border-l-4 border-valoraBlue">
+          <div className="flex items-center bg-valoraBlue/10 p-3 rounded-md mb-4 border-l-4 border-valoraBlue">
             <Lock className="h-5 w-5 text-valoraBlue mr-2 flex-shrink-0" />
             <p className="text-sm md:text-base text-valoraBlue font-medium">
               {t('confidentialityNote')}
+            </p>
+          </div>
+          
+          {/* Added special offer note */}
+          <div className="bg-valoraGold/10 p-4 rounded-md mb-8 border-l-4 border-valoraGold">
+            <p className="text-sm md:text-base text-valoraBlue font-semibold">
+              Ofrecemos la valoración sin coste si contamos con un contrato de exclusividad. 
+              Garantizamos la venta de su empresa en menos de 6 meses.
             </p>
           </div>
           
