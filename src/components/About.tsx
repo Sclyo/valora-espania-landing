@@ -70,18 +70,22 @@ const About = () => {
                   <div className="flex-1 md:w-3/4">
                     <Card>
                       <CardContent className="pt-6">
-                        <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional</h3>
+                        <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional - Especialista en empresas de 3-5M€ de ingresos</h3>
                         <p className="text-gray-700 mb-4">
                           Con más de 20 años de experiencia en la valoración y asesoramiento de empresas, 
                           nos especializamos en empresas con facturación entre tres y cinco millones de euros. 
                           Nuestro enfoque se centra en propietarios que están planificando su jubilación 
                           y buscan una estrategia de sucesión o venta exitosa.
                         </p>
-                        <p className="text-gray-700">
+                        <p className="text-gray-700 mb-4">
                           Ofrecemos un servicio totalmente confidencial, entendiendo la importancia 
                           de la discreción en estos procesos críticos. Nuestra formación en IESE Business School 
                           nos proporciona las herramientas y conocimientos necesarios para asegurar 
                           transiciones exitosas y maximizar el valor de su negocio.
+                        </p>
+                        <p className="text-gray-700 font-semibold">
+                          Ofrecemos la valoración sin coste si contamos con un contrato de exclusividad. 
+                          Garantizamos la venta de su empresa en menos de 6 meses.
                         </p>
                       </CardContent>
                     </Card>
