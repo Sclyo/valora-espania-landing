@@ -17,13 +17,13 @@ const Hero = () => {
       <div className="relative container-fluid py-20 md:py-32 z-10">
         <div className="max-w-2xl animate-fade-in">
           <h1 className="heading-xl text-valoraBlue mb-4">
-            Valoración confidencial para empresas de 3-5M€ de facturación anual
+            {t('heroTitle')}
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-4">
             {t('heroSubtitle')}
           </p>
           
-          {/* New confidentiality note */}
+          {/* Confidentiality note */}
           <div className="flex items-center bg-valoraBlue/10 p-3 rounded-md mb-4 border-l-4 border-valoraBlue">
             <Lock className="h-5 w-5 text-valoraBlue mr-2 flex-shrink-0" />
             <p className="text-sm md:text-base text-valoraBlue font-medium">
@@ -31,11 +31,10 @@ const Hero = () => {
             </p>
           </div>
           
-          {/* Added special offer note */}
+          {/* Special offer note */}
           <div className="bg-valoraGold/10 p-4 rounded-md mb-8 border-l-4 border-valoraGold">
             <p className="text-sm md:text-base text-valoraBlue font-semibold">
-              Ofrecemos la valoración sin coste si contamos con un contrato de exclusividad. 
-              Garantizamos la venta de su empresa en menos de 6 meses.
+              {t('specialOffer')}
             </p>
           </div>
           

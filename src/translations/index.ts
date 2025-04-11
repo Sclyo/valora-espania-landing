@@ -14,6 +14,7 @@ export type TranslationKey =
   | 'confidentialityNote'
   | 'requestValuation'
   | 'ourServices'
+  | 'specialOffer'
   
   // Services section
   | 'servicesTitle'
@@ -53,6 +54,27 @@ export type TranslationKey =
   | 'testimonialsTitle'
   | 'testimonialsSubtitle'
   
+  // Contact section
+  | 'contactTitle'
+  | 'contactSubtitle'
+  | 'contactInfo'
+  | 'phone'
+  | 'email'
+  | 'address'
+  | 'requestInfoTitle'
+  | 'nameLabel'
+  | 'companyLabel'
+  | 'emailLabel'
+  | 'phoneLabel'
+  | 'messageLabel'
+  | 'submitButton'
+  | 'submittingButton'
+  | 'privacyNotice'
+  | 'formSuccessTitle'
+  | 'formSuccessDesc'
+  | 'formErrorTitle'
+  | 'formErrorDesc'
+  
   // Footer
   | 'companyDescription'
   | 'servicesFooter'
@@ -73,11 +95,12 @@ export const es = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoración confidencial para empresas de 3-5M€',
+  heroTitle: 'Valoración confidencial para empresas de 3-5M€ de facturación anual',
   heroSubtitle: 'Especialistas en asesorar a propietarios que se acercan a la jubilación o planean la sucesión de su negocio.',
   confidentialityNote: 'Garantizamos 100% de confidencialidad en todo el proceso',
   requestValuation: 'Solicitar valoración',
   ourServices: 'Nuestros servicios',
+  specialOffer: 'Ofrecemos la valoración sin coste si contamos con un contrato de exclusividad. Garantizamos la venta de su empresa en menos de 6 meses.',
   
   // Services section
   servicesTitle: 'Nuestros Servicios',
@@ -117,6 +140,27 @@ export const es = {
   testimonialsTitle: 'Lo que dicen nuestros clientes',
   testimonialsSubtitle: 'Hemos ayudado a numerosos propietarios de empresas a planificar su jubilación mediante procesos confidenciales de valoración y venta.',
   
+  // Contact section
+  contactTitle: 'Hablemos sobre el valor de su empresa',
+  contactSubtitle: 'Complete el formulario y uno de nuestros especialistas en valoración se pondrá en contacto con usted para discutir cómo podemos ayudarle.',
+  contactInfo: 'Información de contacto',
+  phone: '644116796',
+  email: 'info@instituto-valor-espana.com',
+  address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
+  requestInfoTitle: 'Solicite información',
+  nameLabel: 'Nombre',
+  companyLabel: 'Empresa',
+  emailLabel: 'Email',
+  phoneLabel: 'Teléfono',
+  messageLabel: 'Mensaje',
+  submitButton: 'Enviar mensaje',
+  submittingButton: 'Enviando...',
+  privacyNotice: 'Al enviar este formulario, acepta nuestra política de privacidad y el tratamiento de sus datos.',
+  formSuccessTitle: 'Formulario enviado',
+  formSuccessDesc: 'Nos pondremos en contacto contigo pronto.',
+  formErrorTitle: 'Error',
+  formErrorDesc: 'Ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo.',
+
   // Footer
   companyDescription: 'Servicio especializado en valoración y venta de empresas con facturación de 3-5M€, enfocado en procesos confidenciales para propietarios próximos a la jubilación.',
   servicesFooter: 'Servicios',
@@ -138,11 +182,12 @@ export const en = {
   contactButton: 'Contact Us',
   
   // Hero
-  heroTitle: 'Confidential Valuation for 3-5M€ Companies',
+  heroTitle: 'Confidential Valuation for 3-5M€ Annual Revenue Companies',
   heroSubtitle: 'Specialists in advising business owners approaching retirement or planning business succession.',
   confidentialityNote: 'We guarantee 100% confidentiality throughout the entire process',
   requestValuation: 'Request Valuation',
   ourServices: 'Our Services',
+  specialOffer: 'We offer the valuation at no cost with an exclusivity contract. We guarantee the sale of your company in less than 6 months.',
   
   // Services section
   servicesTitle: 'Our Services',
@@ -182,6 +227,27 @@ export const en = {
   testimonialsTitle: 'What Our Clients Say',
   testimonialsSubtitle: 'We have helped numerous business owners plan their retirement through confidential valuation and sale processes.',
   
+  // Contact section
+  contactTitle: 'Let\'s Talk About Your Company\'s Value',
+  contactSubtitle: 'Complete the form and one of our valuation specialists will contact you to discuss how we can help.',
+  contactInfo: 'Contact Information',
+  phone: '644116796',
+  email: 'info@instituto-valor-espana.com',
+  address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
+  requestInfoTitle: 'Request Information',
+  nameLabel: 'Name',
+  companyLabel: 'Company',
+  emailLabel: 'Email',
+  phoneLabel: 'Phone',
+  messageLabel: 'Message',
+  submitButton: 'Send Message',
+  submittingButton: 'Sending...',
+  privacyNotice: 'By submitting this form, you agree to our privacy policy and the processing of your data.',
+  formSuccessTitle: 'Form Submitted',
+  formSuccessDesc: 'We will contact you soon.',
+  formErrorTitle: 'Error',
+  formErrorDesc: 'An error occurred while submitting the form. Please try again.',
+  
   // Footer
   companyDescription: 'Specialized service in valuation and sale of companies with revenues of 3-5M€, focused on confidential processes for owners approaching retirement.',
   servicesFooter: 'Services',
@@ -203,11 +269,12 @@ export const ca = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoració confidencial per a empreses de 3-5M€',
+  heroTitle: 'Valoració confidencial per a empreses de 3-5M€ de facturació anual',
   heroSubtitle: 'Especialistes en assessorar propietaris que s\'acosten a la jubilació o planegen la successió del seu negoci.',
   confidentialityNote: 'Garantim 100% de confidencialitat en tot el procés',
   requestValuation: 'Sol·licitar valoració',
   ourServices: 'Els nostres serveis',
+  specialOffer: 'Oferim la valoració sense cost si comptem amb un contracte d\'exclusivitat. Garantim la venda de la seva empresa en menys de 6 mesos.',
   
   // Services section
   servicesTitle: 'Els nostres serveis',
@@ -247,6 +314,27 @@ export const ca = {
   testimonialsTitle: 'El que diuen els nostres clients',
   testimonialsSubtitle: 'Hem ajudat a nombrosos propietaris d\'empreses a planificar la seva jubilació mitjançant processos confidencials de valoració i venda.',
   
+  // Contact section
+  contactTitle: 'Parlem sobre el valor de la seva empresa',
+  contactSubtitle: 'Completi el formulari i un dels nostres especialistes en valoració es posarà en contacte amb vostè per discutir com podem ajudar-lo.',
+  contactInfo: 'Informació de contacte',
+  phone: '644116796',
+  email: 'info@instituto-valor-espana.com',
+  address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
+  requestInfoTitle: 'Sol·liciti informació',
+  nameLabel: 'Nom',
+  companyLabel: 'Empresa',
+  emailLabel: 'Email',
+  phoneLabel: 'Telèfon',
+  messageLabel: 'Missatge',
+  submitButton: 'Enviar missatge',
+  submittingButton: 'Enviant...',
+  privacyNotice: 'En enviar aquest formulari, accepta la nostra política de privacitat i el tractament de les seves dades.',
+  formSuccessTitle: 'Formulari enviat',
+  formSuccessDesc: 'Ens posarem en contacte amb vostè aviat.',
+  formErrorTitle: 'Error',
+  formErrorDesc: 'S\'ha produït un error en enviar el formulari. Si us plau, intenti-ho de nou.',
+  
   // Footer
   companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 3-5M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
   servicesFooter: 'Serveis',
@@ -268,11 +356,12 @@ export const val = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoració confidencial per a empreses de 3-5M€',
+  heroTitle: 'Valoració confidencial per a empreses de 3-5M€ de facturació anual',
   heroSubtitle: 'Especialistes en assessorar propietaris que s\'acosten a la jubilació o planegen la successió del seu negoci.',
   confidentialityNote: 'Garantim 100% de confidencialitat en tot el procés',
   requestValuation: 'Sol·licitar valoració',
   ourServices: 'Els nostres servicis',
+  specialOffer: 'Oferim la valoració sense cost si comptem amb un contracte d\'exclusivitat. Garantim la venda de la seua empresa en menys de 6 mesos.',
   
   // Services section
   servicesTitle: 'Els nostres servicis',
@@ -312,6 +401,27 @@ export const val = {
   testimonialsTitle: 'El que diuen els nostres clients',
   testimonialsSubtitle: 'Hem ajudat a nombrosos propietaris d\'empreses a planificar la seua jubilació mitjançant processos confidencials de valoració i venda.',
   
+  // Contact section
+  contactTitle: 'Parlem sobre el valor de la seua empresa',
+  contactSubtitle: 'Complete el formulari i un dels nostres especialistes en valoració es posarà en contacte amb vosté per a discutir com podem ajudar-lo.',
+  contactInfo: 'Informació de contacte',
+  phone: '644116796',
+  email: 'info@instituto-valor-espana.com',
+  address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
+  requestInfoTitle: 'Sol·licite informació',
+  nameLabel: 'Nom',
+  companyLabel: 'Empresa',
+  emailLabel: 'Email',
+  phoneLabel: 'Telèfon',
+  messageLabel: 'Missatge',
+  submitButton: 'Enviar missatge',
+  submittingButton: 'Enviant...',
+  privacyNotice: 'En enviar aquest formulari, accepta la nostra política de privacitat i el tractament de les seues dades.',
+  formSuccessTitle: 'Formulari enviat',
+  formSuccessDesc: 'Ens posarem en contacte amb vosté prompte.',
+  formErrorTitle: 'Error',
+  formErrorDesc: 'S\'ha produït un error en enviar el formulari. Per favor, intente-ho de nou.',
+  
   // Footer
   companyDescription: 'Servici especialitzat en valoració i venda d\'empreses amb facturació de 3-5M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
   servicesFooter: 'Servicis',
@@ -333,11 +443,12 @@ export const gl = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoración confidencial para empresas de 3-5M€',
+  heroTitle: 'Valoración confidencial para empresas de 3-5M€ de facturación anual',
   heroSubtitle: 'Especialistas en asesorar a propietarios que se achegan á xubilación ou planean a sucesión do seu negocio.',
   confidentialityNote: 'Garantimos 100% de confidencialidade en todo o proceso',
   requestValuation: 'Solicitar valoración',
   ourServices: 'Os nosos servizos',
+  specialOffer: 'Ofrecemos a valoración sen custo se contamos cun contrato de exclusividade. Garantimos a venda da súa empresa en menos de 6 meses.',
   
   // Services section
   servicesTitle: 'Os nosos servizos',
@@ -377,6 +488,27 @@ export const gl = {
   testimonialsTitle: 'O que din os nosos clientes',
   testimonialsSubtitle: 'Axudamos a numerosos propietarios de empresas a planificar a súa xubilación mediante procesos confidenciais de valoración e venda.',
   
+  // Contact section
+  contactTitle: 'Falemos sobre o valor da súa empresa',
+  contactSubtitle: 'Complete o formulario e un dos nosos especialistas en valoración poñerase en contacto con vostede para discutir como podemos axudarlle.',
+  contactInfo: 'Información de contacto',
+  phone: '644116796',
+  email: 'info@instituto-valor-espana.com',
+  address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
+  requestInfoTitle: 'Solicite información',
+  nameLabel: 'Nome',
+  companyLabel: 'Empresa',
+  emailLabel: 'Email',
+  phoneLabel: 'Teléfono',
+  messageLabel: 'Mensaxe',
+  submitButton: 'Enviar mensaxe',
+  submittingButton: 'Enviando...',
+  privacyNotice: 'Ao enviar este formulario, acepta a nosa política de privacidade e o tratamento dos seus datos.',
+  formSuccessTitle: 'Formulario enviado',
+  formSuccessDesc: 'Poñerémonos en contacto con vostede pronto.',
+  formErrorTitle: 'Erro',
+  formErrorDesc: 'Produciuse un erro ao enviar o formulario. Por favor, inténteo de novo.',
+  
   // Footer
   companyDescription: 'Servizo especializado en valoración e venda de empresas con facturación de 3-5M€, enfocado en procesos confidenciais para propietarios próximos á xubilación.',
   servicesFooter: 'Servizos',
@@ -398,11 +530,12 @@ export const eu = {
   contactButton: 'Kontaktatu',
   
   // Hero
-  heroTitle: '3-5M€-ko enpresentzako balorazio konfidentziala',
+  heroTitle: '3-5M€-ko urteko fakturazioa duten enpresentzako balorazio konfidentziala',
   heroSubtitle: 'Jubilatzera hurbiltzen ari diren edo negozioaren ondorengotza planifikatzen ari diren enpresaburuei aholkuak ematen espezialistak.',
   confidentialityNote: 'Prozesu osoan %100eko konfidentzialtasuna bermatzen dugu',
   requestValuation: 'Balorazioa eskatu',
   ourServices: 'Gure zerbitzuak',
+  specialOffer: 'Balorazioa doan eskaintzen dugu esklusibitate-kontratua badugu. Zure enpresaren salmenta 6 hilabete baino gutxiagotan bermatzen dugu.',
   
   // Services section
   servicesTitle: 'Gure zerbitzuak',
@@ -441,6 +574,27 @@ export const eu = {
   // Testimonials section
   testimonialsTitle: 'Gure bezeroek diotena',
   testimonialsSubtitle: 'Enpresa-jabe askori lagundu diegu erretiroa planifikatzen, balorazio- eta salmenta-prozesu konfidentzialen bidez.',
+  
+  // Contact section
+  contactTitle: 'Hitz egin dezagun zure enpresaren balioari buruz',
+  contactSubtitle: 'Bete ezazu formularioa eta gure balorazio-espezialistetako bat zurekin harremanetan jarriko da nola lagundu ahal dizugun eztabaidatzeko.',
+  contactInfo: 'Harremanetarako informazioa',
+  phone: '644116796',
+  email: 'info@instituto-valor-espana.com',
+  address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
+  requestInfoTitle: 'Eskatu informazioa',
+  nameLabel: 'Izena',
+  companyLabel: 'Enpresa',
+  emailLabel: 'Emaila',
+  phoneLabel: 'Telefonoa',
+  messageLabel: 'Mezua',
+  submitButton: 'Mezua bidali',
+  submittingButton: 'Bidaltzen...',
+  privacyNotice: 'Formulario hau bidaliz, gure pribatutasun politika eta zure datuen tratamendua onartzen dituzu.',
+  formSuccessTitle: 'Formularioa bidali da',
+  formSuccessDesc: 'Laster jarriko gara zurekin harremanetan.',
+  formErrorTitle: 'Errorea',
+  formErrorDesc: 'Errore bat gertatu da formularioa bidaltzean. Mesedez, saiatu berriro.',
   
   // Footer
   companyDescription: '3-5M€-ko fakturazioa duten enpresen balorazioan eta salmentan zerbitzu espezializatua, jubilatzera hurbiltzen ari diren jabeentzako prozesu konfidentzialetan zentratuta.',
