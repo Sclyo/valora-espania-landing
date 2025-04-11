@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <footer className="bg-valoraBlue text-white">
       <div className="container-fluid py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="col-span-1">
             <a href="#" className="inline-block mb-4">
               <span className="text-2xl font-lora font-bold">Valor<span className="text-valoraGold">España</span></span>
             </a>
@@ -24,21 +24,6 @@ const Footer = () => {
               <p className="text-white/80 text-sm">
                 Profesionales formados en IESE Business School
               </p>
-            </div>
-            
-            <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-valoraGold transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </a>
-              <a href="#" className="text-white hover:text-valoraGold transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                </svg>
-              </a>
             </div>
           </div>
           
@@ -69,9 +54,9 @@ const Footer = () => {
             © {currentYear} Valor España. {t('allRightsReserved')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{t('privacyPolicy')}</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{t('termsOfService')}</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">{t('cookies')}</a>
+            <a href="/politica-privacidad" className="text-white/60 hover:text-white text-sm transition-colors">{t('privacyPolicy')}</a>
+            <a href="/terminos-servicio" className="text-white/60 hover:text-white text-sm transition-colors">{t('termsOfService')}</a>
+            <a href="/politica-cookies" className="text-white/60 hover:text-white text-sm transition-colors">{t('cookies')}</a>
           </div>
         </div>
       </div>
