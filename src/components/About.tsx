@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, PiggyBank, BarChart } from 'lucide-react';
+import { Shield, PiggyBank, Lock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
@@ -18,9 +18,9 @@ const About = () => {
       description: t('customizedApproachDesc')
     },
     {
-      icon: <BarChart className="h-10 w-10 text-valoraGold" />,
-      title: t('actionableResults'),
-      description: t('actionableResultsDesc')
+      icon: <Lock className="h-10 w-10 text-valoraGold" />,
+      title: t('confidentiality'),
+      description: t('confidentialityDesc')
     }
   ];
 
@@ -82,6 +82,11 @@ const About = () => {
               <div className="bg-white p-4 rounded shadow-sm">
                 <h4 className="font-bold text-valoraBlue mb-1">{t('qualitativeAnalysis')}</h4>
                 <p className="text-sm text-gray-600">{t('qualitativeAnalysisDesc')}</p>
+              </div>
+              
+              <div className="bg-white p-4 rounded shadow-sm">
+                <h4 className="font-bold text-valoraBlue mb-1">{t('successionPlanning')}</h4>
+                <p className="text-sm text-gray-600">{t('successionPlanningDesc')}</p>
               </div>
             </div>
           </div>

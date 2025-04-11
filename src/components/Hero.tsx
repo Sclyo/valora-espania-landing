@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Lock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
@@ -19,9 +19,18 @@ const Hero = () => {
           <h1 className="heading-xl text-valoraBlue mb-4">
             {t('heroTitle')}
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-8">
+          <p className="text-lg md:text-xl text-gray-700 mb-4">
             {t('heroSubtitle')}
           </p>
+          
+          {/* New confidentiality note */}
+          <div className="flex items-center bg-valoraBlue/10 p-3 rounded-md mb-8 border-l-4 border-valoraBlue">
+            <Lock className="h-5 w-5 text-valoraBlue mr-2 flex-shrink-0" />
+            <p className="text-sm md:text-base text-valoraBlue font-medium">
+              {t('confidentialityNote')}
+            </p>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contacto">
               <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white text-lg px-6 py-6">
