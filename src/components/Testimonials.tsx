@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -10,10 +9,10 @@ const Testimonials = () => {
   const testimonials = {
     es: [
       {
-        quote: "La valoración realizada por Valora España nos permitió negociar nuestra ronda de financiación desde una posición mucho más sólida. Su análisis detallado impresionó a los inversores.",
-        author: "María Sánchez",
-        position: "CEO, TechnoMadrid S.L.",
-        company: "Sector Tecnológico"
+        quote: "Después de 35 años dirigiendo nuestra bodega familiar, el proceso de valoración con Valora España fue excepcional. Entendieron perfectamente las particularidades de nuestro negocio tradicional y nos ayudaron a planificar una jubilación tranquila con la venta de la empresa.",
+        author: "Carlos Mendoza",
+        position: "Ex-Propietario",
+        company: "Bodegas Mendoza, S.L."
       },
       {
         quote: "Cuando decidimos vender parte de nuestra empresa familiar, necesitábamos una valoración en la que pudiéramos confiar. El equipo de Valora España nos proporcionó exactamente eso, con explicaciones claras y un proceso transparente.",
@@ -30,10 +29,10 @@ const Testimonials = () => {
     ],
     en: [
       {
-        quote: "The valuation carried out by Valora España allowed us to negotiate our financing round from a much stronger position. Their detailed analysis impressed the investors.",
-        author: "María Sánchez",
-        position: "CEO, TechnoMadrid S.L.",
-        company: "Technology Sector"
+        quote: "After 35 years running our family winery, the valuation process with Valora España was exceptional. They perfectly understood the particularities of our traditional business and helped us plan a peaceful retirement with the sale of the company.",
+        author: "Carlos Mendoza",
+        position: "Former Owner",
+        company: "Bodegas Mendoza, S.L."
       },
       {
         quote: "When we decided to sell part of our family business, we needed a valuation we could trust. The Valora España team provided exactly that, with clear explanations and a transparent process.",
@@ -50,10 +49,10 @@ const Testimonials = () => {
     ],
     ca: [
       {
-        quote: "La valoració realitzada per Valora España ens va permetre negociar la nostra ronda de finançament des d'una posició molt més sòlida. La seva anàlisi detallada va impressionar als inversors.",
-        author: "Maria Sánchez",
-        position: "CEO, TechnoBarcelona S.L.",
-        company: "Sector Tecnològic"
+        quote: "Després de 35 anys dirigint el nostre celler familiar, el procés de valoració amb Valora España va ser excepcional. Van entendre perfectament les particularitats del nostre negoci tradicional i ens van ajudar a planificar una jubilació tranquil·la amb la venda de l'empresa.",
+        author: "Carles Mendoza",
+        position: "Ex-Propietari",
+        company: "Cellers Mendoza, S.L."
       },
       {
         quote: "Quan vam decidir vendre part de la nostra empresa familiar, necessitàvem una valoració en la qual poguéssim confiar. L'equip de Valora España ens va proporcionar exactament això, amb explicacions clares i un procés transparent.",
@@ -70,10 +69,10 @@ const Testimonials = () => {
     ],
     val: [
       {
-        quote: "La valoració realitzada per Valora España ens va permetre negociar la nostra ronda de finançament des d'una posició molt més sòlida. La seua anàlisi detallada va impressionar als inversors.",
-        author: "Maria Sánchez",
-        position: "CEO, TechnoValència S.L.",
-        company: "Sector Tecnològic"
+        quote: "Després de 35 anys dirigint el nostre celler familiar, el procés de valoració amb Valora España va ser excepcional. Van entendre perfectament les particularitats del nostre negoci tradicional i ens van ajudar a planificar una jubilació tranquil·la amb la venda de l'empresa.",
+        author: "Carles Mendoza",
+        position: "Ex-Propietari",
+        company: "Cellers Mendoza, S.L."
       },
       {
         quote: "Quan vam decidir vendre part de la nostra empresa familiar, necessitàvem una valoració en la qual poguérem confiar. L'equip de Valora España ens va proporcionar exactament això, amb explicacions clares i un procés transparent.",
@@ -90,10 +89,10 @@ const Testimonials = () => {
     ],
     gl: [
       {
-        quote: "A valoración realizada por Valora España permitiunos negociar a nosa rolda de financiamento desde unha posición moito máis sólida. A súa análise detallada impresionou aos investidores.",
-        author: "María Sánchez",
-        position: "CEO, TechnoGalicia S.L.",
-        company: "Sector Tecnolóxico"
+        quote: "Despois de 35 anos dirixindo a nosa adega familiar, o proceso de valoración con Valora España foi excepcional. Entenderon perfectamente as particularidades do noso negocio tradicional e axudáronnos a planificar unha xubilación tranquila coa venda da empresa.",
+        author: "Carlos Mendoza",
+        position: "Ex-Propietario",
+        company: "Adegas Mendoza, S.L."
       },
       {
         quote: "Cando decidimos vender parte da nosa empresa familiar, precisábamos unha valoración na que puidésemos confiar. O equipo de Valora España proporcionounos exactamente iso, con explicacións claras e un proceso transparente.",
@@ -110,10 +109,10 @@ const Testimonials = () => {
     ],
     eu: [
       {
-        quote: "Valora España-k egindako balorazioak finantzaketa txanda gure posizioa askoz indartsuagotik negoziatzeko aukera eman zigun. Haien analisi zehatzak inbertsoreak harritu zituen.",
-        author: "Maria Sánchez",
-        position: "CEO, TechnoEuskal S.L.",
-        company: "Teknologia Sektorea"
+        quote: "Gure familia ardotegia 35 urtez zuzendu ondoren, Valora España-rekin egindako balorazio prozesua bikaina izan zen. Gure negozio tradizionalaren berezitasunak ezin hobeto ulertu zituzten eta enpresaren salmentarekin erretiro lasai bat planifikatzen lagundu ziguten.",
+        author: "Carlos Mendoza",
+        position: "Aurreko Jabea",
+        company: "Mendoza Upategiak, S.L."
       },
       {
         quote: "Gure familiako enpresaren zati bat saltzea erabaki genuenean, fidatu ahal izango genuen balorazio bat behar genuen. Valora España taldeak hori eskaini zigun, azalpen argiekin eta prozesu garden batekin.",
