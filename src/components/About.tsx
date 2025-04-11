@@ -35,7 +35,7 @@ const About = () => {
             <div className="md:col-span-4 flex flex-col items-center">
               <div className="rounded-full overflow-hidden shadow-lg mb-4 w-48 h-48">
                 <img 
-                  src="/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png" 
+                  src="/lovable-uploads/12cb83b1-f481-4dd9-885a-8f3ece7764a5.png" 
                   alt="Perfil profesional" 
                   className="w-full h-full object-cover"
                 />
