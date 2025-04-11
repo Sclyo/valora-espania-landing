@@ -3,6 +3,7 @@ import React from 'react';
 import { Shield, PiggyBank, Lock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const About = () => {
   const { t } = useLanguage();
@@ -28,16 +29,20 @@ const About = () => {
   return (
     <section id="nosotros" className="section-padding bg-white">
       <div className="container-fluid">
-        {/* Profile Section - New */}
+        {/* Profile Section */}
         <div className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-4">
-              <div className="rounded-lg overflow-hidden shadow-md">
+            <div className="md:col-span-4 flex flex-col items-center">
+              <div className="rounded-full overflow-hidden shadow-lg mb-4 w-48 h-48">
                 <img 
-                  src="/lovable-uploads/3ad1ed50-1e28-42d4-80de-8894a034c6ad.png" 
+                  src="/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png" 
                   alt="Perfil profesional" 
-                  className="w-full h-auto"
+                  className="w-full h-full object-cover"
                 />
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-valoraBlue">Antonio Martínez</h3>
+                <p className="text-sm text-valoraGray">Consultor Senior</p>
               </div>
             </div>
             <div className="md:col-span-8">
