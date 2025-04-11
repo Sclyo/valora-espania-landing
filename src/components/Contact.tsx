@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,7 +9,6 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-// Create a schema for form validation
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'El nombre debe tener al menos 2 caracteres' }),
   company: z.string().min(1, { message: 'La empresa es obligatoria' }),
@@ -40,7 +38,6 @@ const Contact = () => {
     console.log('Form submitted with values:', values);
     setIsSubmitting(true);
     try {
-      // Ensure all required fields are present
       const formDataToSubmit = {
         name: values.name,
         company: values.company,
@@ -165,7 +162,7 @@ const Contact = () => {
                       <FormItem className="space-y-2">
                         <FormLabel className="text-gray-700 font-medium">Teléfono</FormLabel>
                         <FormControl>
-                          <Input placeholder="+34 XXX XXX XXX" {...field} />
+                          <Input placeholder="XXX XXX XXX" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
