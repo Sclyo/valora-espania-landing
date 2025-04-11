@@ -1,3 +1,4 @@
+
 // Define the structure for our translations
 export type TranslationKey = 
   // Navbar
@@ -95,7 +96,7 @@ export const es = {
   aboutUsDescription: 'En Valor España nos especializamos en empresas con facturación entre 3 y 5 millones de euros, cuyos propietarios están considerando una venta por jubilación o planificación de sucesión. Nuestro proceso garantiza total confidencialidad en cada etapa.',
   experienceAndTrust: 'Experiencia y confianza',
   experienceAndTrustDesc: 'Más de 15 años asesorando empresas familiares en procesos de venta confidenciales por jubilación.',
-  customizedApproach: 'Enfoque para PYMES de 3-5M€',
+  customizedApproach: 'Enfoque para PYMES de 3-5M€ de facturación',
   customizedApproachDesc: 'Soluciones específicas para negocios con facturación entre 3 y 5 millones, adaptadas a cada sector y circunstancia.',
   confidentiality: 'Confidencialidad absoluta',
   confidentialityDesc: 'Garantizamos total discreción y estrictos protocolos de confidencialidad en todo el proceso de valoración y asesoramiento.',
@@ -160,7 +161,7 @@ export const en = {
   aboutUsDescription: 'At Valor España, we specialize in companies with revenues between 3 and 5 million euros, whose owners are considering a sale due to retirement or succession planning. Our process guarantees complete confidentiality at every stage.',
   experienceAndTrust: 'Experience and Trust',
   experienceAndTrustDesc: 'Over 15 years advising family businesses in confidential sale processes due to retirement.',
-  customizedApproach: 'Focus on 3-5M€ SMEs',
+  customizedApproach: 'Focus on 3-5M€ revenue SMEs',
   customizedApproachDesc: 'Specific solutions for businesses with revenues between 3 and 5 million, adapted to each sector and circumstance.',
   confidentiality: 'Absolute Confidentiality',
   confidentialityDesc: 'We guarantee total discretion and strict confidentiality protocols throughout the valuation and advisory process.',
@@ -225,7 +226,7 @@ export const ca = {
   aboutUsDescription: 'A Valor España ens especialitzem en empreses amb facturació entre 3 i 5 milions d\'euros, els propietaris de les quals estan considerant una venda per jubilació o planificació de successió. El nostre procés garanteix total confidencialitat en cada etapa.',
   experienceAndTrust: 'Experiència i confiança',
   experienceAndTrustDesc: 'Més de 15 anys assessorant empreses familiars en processos de venda confidencials per jubilació.',
-  customizedApproach: 'Enfocament per a PIMES de 3-5M€',
+  customizedApproach: 'Enfocament per a PIMES de 3-5M€ de facturació',
   customizedApproachDesc: 'Solucions específiques per a negocis amb facturació entre 3 i 5 milions, adaptades a cada sector i circumstància.',
   confidentiality: 'Confidencialitat absoluta',
   confidentialityDesc: 'Garantim total discreció i estrictes protocols de confidencialitat en tot el procés de valoració i assessorament.',
@@ -290,7 +291,7 @@ export const val = {
   aboutUsDescription: 'En Valor España ens especialitzem en empreses amb facturació entre 3 i 5 milions d\'euros, els propietaris de les quals estan considerant una venda per jubilació o planificació de successió. El nostre procés garanteix total confidencialitat en cada etapa.',
   experienceAndTrust: 'Experiència i confiança',
   experienceAndTrustDesc: 'Més de 15 anys assessorant empreses familiars en processos de venda confidencials per jubilació.',
-  customizedApproach: 'Enfocament per a PIMES de 3-5M€',
+  customizedApproach: 'Enfocament per a PIMES de 3-5M€ de facturació',
   customizedApproachDesc: 'Solucions específiques per a negocis amb facturació entre 3 i 5 milions, adaptades a cada sector i circumstància.',
   confidentiality: 'Confidencialitat absoluta',
   confidentialityDesc: 'Garantim total discreció i estrictes protocols de confidencialitat en tot el procés de valoració i assessorament.',
@@ -355,7 +356,7 @@ export const gl = {
   aboutUsDescription: 'En Valor España especializámonos en empresas con facturación entre 3 e 5 millóns de euros, cuxos propietarios están a considerar unha venda por xubilación ou planificación de sucesión. O noso proceso garante total confidencialidade en cada etapa.',
   experienceAndTrust: 'Experiencia e confianza',
   experienceAndTrustDesc: 'Máis de 15 anos asesorando empresas familiares en procesos de venda confidenciais por xubilación.',
-  customizedApproach: 'Enfoque para PEMES de 3-5M€',
+  customizedApproach: 'Enfoque para PEMES de 3-5M€ de facturación',
   customizedApproachDesc: 'Solucións específicas para negocios con facturación entre 3 e 5 millóns, adaptadas a cada sector e circunstancia.',
   confidentiality: 'Confidencialidade absoluta',
   confidentialityDesc: 'Garantimos total discreción e estritos protocolos de confidencialidade en todo o proceso de valoración e asesoramento.',
@@ -420,7 +421,7 @@ export const eu = {
   aboutUsDescription: 'Valor España-n, 3 eta 5 milioi euro arteko diru-sarrerak dituzten enpresetan espezializatuta gaude, eta haien jabeak erretiroagatik edo ondorengotza planifikatzeagatik salmenta bat kontuan hartzen ari dira. Gure prozesuak konfidentzialtasun osoa bermatzen du etapa guztietan.',
   experienceAndTrust: 'Esperientzia eta konfiantza',
   experienceAndTrustDesc: '15 urte baino gehiago familia-enpresei aholkuak ematen, erretiroagatik salmenta-prozesu konfidentzialetan.',
-  customizedApproach: '3-5M€-ko ETEei arreta',
+  customizedApproach: '3-5M€-ko fakturazioa duten ETEei arreta',
   customizedApproachDesc: '3 eta 5 milioi arteko diru-sarrerak dituzten negozioentzako soluzio espezifikoak, sektore eta inguruabar bakoitzera egokituta.',
   confidentiality: 'Konfidentzialtasun absolutua',
   confidentialityDesc: 'Diskrezio osoa eta konfidentzialtasun-protokolo zorrotzak bermatzen ditugu balorazio- eta aholkularitza-prozesu osoan.',
