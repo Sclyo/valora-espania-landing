@@ -36,7 +36,7 @@ const About = () => {
     {
       name: "Leo Scapino",
       role: "Consultor Senior",
-      image: "/lovable-uploads/image-1712754918273.png"
+      image: "/lovable-uploads/bc360d02-97e9-4190-a8c6-407e6120f67f.png"
     }
   ];
 
