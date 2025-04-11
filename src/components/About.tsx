@@ -70,7 +70,7 @@ const About = () => {
                   <div className="flex-1 md:w-3/4">
                     <Card>
                       <CardContent className="pt-6">
-                        <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional - Especialista en empresas de 3-5M€ de ingresos</h3>
+                        <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional</h3>
                         <p className="text-gray-700 mb-4">
                           Con más de 20 años de experiencia en la valoración y asesoramiento de empresas, 
                           nos especializamos en empresas con facturación entre tres y cinco millones de euros. 
