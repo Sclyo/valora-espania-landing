@@ -73,7 +73,7 @@ const About = () => {
                         <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional</h3>
                         <p className="text-gray-700 mb-4">
                           Con más de 20 años de experiencia en la valoración y asesoramiento de empresas, 
-                          nos especializamos en negocios con ingresos entre 3 y 5 millones de euros. 
+                          nos especializamos en empresas con facturación entre tres y cinco millones de euros. 
                           Nuestro enfoque se centra en propietarios que están planificando su jubilación 
                           y buscan una estrategia de sucesión o venta exitosa.
                         </p>
