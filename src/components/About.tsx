@@ -41,7 +41,7 @@ const About = () => {
                 />
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-valoraBlue">Antonio Martínez</h3>
+                <h3 className="text-xl font-bold text-valoraBlue">Cristobal Pharose</h3>
                 <p className="text-sm text-valoraGray">Consultor Senior</p>
               </div>
             </div>
