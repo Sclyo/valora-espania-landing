@@ -30,12 +30,12 @@ const About = () => {
   const consultants = [
     {
       name: "Cristobal Pharose",
-      role: "Consultor Senior",
+      role: "Asesor en valoración y fusiones/adquisiciones de PYMEs",
       image: "/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png"
     },
     {
       name: "Leo Scapino",
-      role: "Consultor Senior",
+      role: "Consultor en valoración y compraventa de PYMEs",
       image: "/lovable-uploads/7f88e8bb-2f0d-4faa-a5da-aaa0f28dd6fe.png"
     }
   ];
