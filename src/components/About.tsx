@@ -26,44 +26,62 @@ const About = () => {
     }
   ];
 
+  const consultants = [
+    {
+      name: "Cristobal Pharose",
+      role: "Consultor Senior",
+      image: "/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png"
+    },
+    {
+      name: "Leo Scapino",
+      role: "Consultor Senior",
+      image: "/lovable-uploads/image-1712754918273.png"
+    }
+  ];
+
   return (
     <section id="nosotros" className="section-padding bg-white">
       <div className="container-fluid">
         {/* Profile Section */}
         <div className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-4 flex flex-col items-center">
-              <div className="rounded-full overflow-hidden shadow-lg mb-4 w-48 h-48">
-                <img 
-                  src="/lovable-uploads/36921a1a-4f17-4b0e-9dcf-eeb7c9393097.png" 
-                  alt="Perfil profesional" 
-                  className="w-full h-full object-cover"
-                />
+          <h2 className="heading-lg text-valoraBlue mb-8 text-center">Nuestros Consultores</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {consultants.map((consultant, index) => (
+              <div key={index} className="flex flex-col md:flex-row gap-8 items-center">
+                <div className="flex flex-col items-center">
+                  <div className="rounded-full overflow-hidden shadow-lg mb-4 w-40 h-40">
+                    <img 
+                      src={consultant.image} 
+                      alt={consultant.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-valoraBlue">{consultant.name}</h3>
+                    <p className="text-sm text-valoraGray">{consultant.role}</p>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <Card>
+                    <CardContent className="pt-6">
+                      <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional</h3>
+                      <p className="text-gray-700 mb-4">
+                        Con más de 20 años de experiencia en la valoración y asesoramiento de empresas, 
+                        nos especializamos en negocios con ingresos entre 3 y 5 millones de euros. 
+                        Nuestro enfoque se centra en propietarios que están planificando su jubilación 
+                        y buscan una estrategia de sucesión o venta exitosa.
+                      </p>
+                      <p className="text-gray-700">
+                        Ofrecemos un servicio totalmente confidencial, entendiendo la importancia 
+                        de la discreción en estos procesos críticos. Nuestra formación en IESE Business School 
+                        nos proporciona las herramientas y conocimientos necesarios para asegurar 
+                        transiciones exitosas y maximizar el valor de su negocio.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-valoraBlue">Cristobal Pharose</h3>
-                <p className="text-sm text-valoraGray">Consultor Senior</p>
-              </div>
-            </div>
-            <div className="md:col-span-8">
-              <Card>
-                <CardContent className="pt-6">
-                  <h3 className="text-2xl font-bold text-valoraBlue mb-4">Perfil Profesional</h3>
-                  <p className="text-gray-700 mb-4">
-                    Con más de 20 años de experiencia en la valoración y asesoramiento de empresas, 
-                    nos especializamos en negocios con ingresos entre 3 y 5 millones de euros. 
-                    Nuestro enfoque se centra en propietarios que están planificando su jubilación 
-                    y buscan una estrategia de sucesión o venta exitosa.
-                  </p>
-                  <p className="text-gray-700">
-                    Ofrecemos un servicio totalmente confidencial, entendiendo la importancia 
-                    de la discreción en estos procesos críticos. Nuestra formación en IESE Business School 
-                    nos proporciona las herramientas y conocimientos necesarios para asegurar 
-                    transiciones exitosas y maximizar el valor de su negocio.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            ))}
           </div>
         </div>
 
