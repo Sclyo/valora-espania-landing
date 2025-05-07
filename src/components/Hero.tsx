@@ -8,7 +8,7 @@ const Hero = () => {
   const { t } = useLanguage();
   
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div id="inicio" className="relative bg-white overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-valoraBlue opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-valoraBlue/80 to-transparent"></div>

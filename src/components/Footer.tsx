@@ -22,7 +22,7 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-valoraBlue text-white">
+    <footer id="footer" className="bg-valoraBlue text-white">
       <div className="container-fluid py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-1">
