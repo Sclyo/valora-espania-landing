@@ -28,13 +28,38 @@ const Navbar = () => {
     }
   };
 
+  // Function to scroll to top
+  const scrollToTop = () => {
+    // Clear hash or set to "inicio"
+    window.location.hash = "inicio";
+    
+    // Scroll to top with smooth behavior
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <nav className="py-4 px-4 sm:px-6 bg-white shadow-sm sticky top-0 z-50">
       <div className="container-fluid flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-lora font-bold text-valoraBlue">Valor<span className="text-valoraGold">España</span></span>
-          </Link>
+          {location.pathname === '/' ? (
+            <a 
+              href="#inicio"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToTop();
+              }}
+              className="flex items-center cursor-pointer"
+            >
+              <span className="text-2xl font-lora font-bold text-valoraBlue">Valor<span className="text-valoraGold">España</span></span>
+            </a>
+          ) : (
+            <Link to="/" className="flex items-center">
+              <span className="text-2xl font-lora font-bold text-valoraBlue">Valor<span className="text-valoraGold">España</span></span>
+            </Link>
+          )}
           {/* Language Selector positioned right after the logo */}
           <div className="ml-2">
             <LanguageSelector />

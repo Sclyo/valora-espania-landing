@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link, useLocation } from 'react-router-dom';
@@ -24,14 +23,40 @@ const Footer = () => {
     }
   };
   
+  // Function to scroll to top
+  const scrollToTop = (e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      
+      // Set hash to inicio
+      window.location.hash = "inicio";
+      
+      // Scroll to top with smooth behavior
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
+  
   return (
     <footer id="footer" className="bg-valoraBlue text-white">
       <div className="container-fluid py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-1">
-            <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl font-lora font-bold">Valor<span className="text-valoraGold">España</span></span>
-            </Link>
+            {location.pathname === '/' ? (
+              <a 
+                href="#inicio" 
+                onClick={scrollToTop}
+                className="inline-block mb-4"
+              >
+                <span className="text-2xl font-lora font-bold">Valor<span className="text-valoraGold">España</span></span>
+              </a>
+            ) : (
+              <Link to="/" className="inline-block mb-4">
+                <span className="text-2xl font-lora font-bold">Valor<span className="text-valoraGold">España</span></span>
+              </Link>
+            )}
             <p className="text-white/80 mb-6 max-w-md">
               {t('companyDescription')}
             </p>
