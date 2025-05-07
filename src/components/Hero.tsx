@@ -7,6 +7,20 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const Hero = () => {
   const { t } = useLanguage();
   
+  // Function to handle smooth scrolling and update URL hash
+  const scrollToSection = (sectionId: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Update URL hash
+    window.location.hash = sectionId;
+    
+    // Smooth scroll to section
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <div id="inicio" className="relative bg-white overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -39,12 +53,18 @@ const Hero = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="#contacto">
+            <a 
+              href="#contacto"
+              onClick={(e) => scrollToSection('contacto', e)}
+            >
               <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white text-lg px-6 py-6">
                 {t('requestValuation')}
               </Button>
             </a>
-            <a href="#servicios">
+            <a 
+              href="#servicios"
+              onClick={(e) => scrollToSection('servicios', e)}
+            >
               <Button variant="outline" className="border-valoraBlue text-valoraBlue hover:bg-valoraBlue/5 text-lg px-6 py-6">
                 {t('ourServices')} <ChevronRight className="ml-2 h-5 w-5" />
               </Button>

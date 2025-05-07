@@ -8,9 +8,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
   
-  // Function to handle smooth scrolling to sections
+  // Function to handle smooth scrolling to sections and update URL hash
   const scrollToSection = (sectionId: string, e: React.MouseEvent) => {
     e.preventDefault();
+    
+    // Update URL hash
+    window.location.hash = sectionId;
     
     // If already on home page, scroll to the section
     if (location.pathname === '/') {
