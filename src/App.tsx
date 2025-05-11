@@ -11,6 +11,7 @@ import StockTracker from "./pages/StockTracker";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiesPolicy from "./pages/CookiesPolicy";
+import ContactFormSuccess from "./pages/ContactFormSuccess";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
             <Route path="/terminos-servicio" element={<TermsOfService />} />
             <Route path="/politica-cookies" element={<CookiesPolicy />} />
+            <Route path="/contacto-enviado" element={<ContactFormSuccess />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

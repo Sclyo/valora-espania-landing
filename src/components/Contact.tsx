@@ -10,6 +10,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'El nombre debe tener al menos 2 caracteres' }),
@@ -25,6 +26,7 @@ const Contact = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -53,10 +55,9 @@ const Contact = () => {
       await submitContactForm(formDataToSubmit);
       console.log('Form submission successful');
       
-      toast({
-        title: t('formSuccessTitle'),
-        description: t('formSuccessDesc'),
-      });
+      // Instead of just showing toast, redirect to success page
+      navigate('/contacto-enviado');
+      
       form.reset();
     } catch (error) {
       console.error('Error in form submission:', error);
