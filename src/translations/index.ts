@@ -1,3 +1,4 @@
+
 // Define the structure for our translations
 export type TranslationKey = 
   // Navbar
@@ -84,6 +85,11 @@ export type TranslationKey =
   | 'termsOfService'
   | 'cookies'
   | 'allRightsReserved';
+
+// Define the type for translations
+export type Translations = {
+  [key in TranslationKey]: string;
+};
 
 // Spanish translations (default)
 export const es = {
@@ -611,4 +617,14 @@ export const eu = {
   termsOfService: 'Zerbitzu baldintzak',
   cookies: 'Cookieak',
   allRightsReserved: 'Eskubide guztiak erreserbatuak.'
+};
+
+// Export all translations in a single object
+export const translations = {
+  es,
+  en,
+  ca,
+  val,
+  gl,
+  eu
 };
