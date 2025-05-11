@@ -1,8 +1,6 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Toaster } from '@/components/ui/toaster';
 
 const CookiesPolicy = () => {
   return (
@@ -69,7 +67,6 @@ const CookiesPolicy = () => {
         </div>
       </main>
       <Footer />
-      <Toaster />
     </div>
   );
 };
