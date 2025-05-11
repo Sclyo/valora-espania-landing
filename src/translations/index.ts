@@ -1,4 +1,3 @@
-
 // Define the structure for our translations
 export type TranslationKey = 
   // Navbar
@@ -74,6 +73,7 @@ export type TranslationKey =
   | 'formSuccessDesc'
   | 'formErrorTitle'
   | 'formErrorDesc'
+  | 'backToHome'
   
   // Footer
   | 'companyDescription'
@@ -160,6 +160,7 @@ export const es = {
   formSuccessDesc: 'Nos pondremos en contacto contigo pronto.',
   formErrorTitle: 'Error',
   formErrorDesc: 'Ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo.',
+  backToHome: 'Volver al inicio',
 
   // Footer
   companyDescription: 'Servicio especializado en valoración y venta de empresas con facturación de 2-10M€, enfocado en procesos confidenciales para propietarios próximos a la jubilación.',
@@ -247,6 +248,7 @@ export const en = {
   formSuccessDesc: 'We will contact you soon.',
   formErrorTitle: 'Error',
   formErrorDesc: 'An error occurred while submitting the form. Please try again.',
+  backToHome: 'Back to Home',
   
   // Footer
   companyDescription: 'Specialized service in valuation and sale of companies with revenues of 2-10M€, focused on confidential processes for owners approaching retirement.',
@@ -334,6 +336,7 @@ export const ca = {
   formSuccessDesc: 'Ens posarem en contacte amb vostè aviat.',
   formErrorTitle: 'Error',
   formErrorDesc: 'S\'ha produït un error en enviar el formulari. Si us plau, intenti-ho de nou.',
+  backToHome: 'Tornar a l\'inici',
   
   // Footer
   companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 2-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
@@ -421,6 +424,7 @@ export const val = {
   formSuccessDesc: 'Ens posarem en contacte amb vosté prompte.',
   formErrorTitle: 'Error',
   formErrorDesc: 'S\'ha produït un error en enviar el formulari. Per favor, intente-ho de nou.',
+  backToHome: 'Tornar a l\'inici',
   
   // Footer
   companyDescription: 'Servici especialitzat en valoració i venda d\'empreses amb facturació de 2-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
@@ -508,6 +512,7 @@ export const gl = {
   formSuccessDesc: 'Poñerémonos en contacto con vostede pronto.',
   formErrorTitle: 'Erro',
   formErrorDesc: 'Produciuse un erro ao enviar o formulario. Por favor, inténteo de novo.',
+  backToHome: 'Volver ao inicio',
   
   // Footer
   companyDescription: 'Servizo especializado en valoración e venda de empresas con facturación de 2-10M€, enfocado en procesos confidenciais para propietarios próximos á xubilación.',
@@ -551,70 +556,4 @@ export const eu = {
   
   // About section
   whyChooseUs: 'Zergatik aukeratu Valor España?',
-  aboutUsDescription: 'Valor España-n, 2 eta 10 milioi euro arteko diru-sarrerak dituzten enpresetan espezializatuta gaude, eta haien jabeak erretiroagatik edo ondorengotza planifikatzeagatik salmenta bat kontuan hartzen ari dira. Gure prozesuak konfidentzialtasun osoa bermatzen du etapa guztietan.',
-  experienceAndTrust: 'Esperientzia eta konfiantza',
-  experienceAndTrustDesc: '15 urte baino gehiago familia-enpresei aholkuak ematen, erretiroagatik salmenta-prozesu konfidentzialetan.',
-  customizedApproach: '2-10M€-ko fakturazioa duten ETEei arreta',
-  customizedApproachDesc: '2 eta 10 milioi arteko diru-sarrerak dituzten negozioentzako soluzio espezifikoak, sektore eta inguruabar bakoitzera egokituta.',
-  confidentiality: 'Konfidentzialtasun absolutua',
-  confidentialityDesc: 'Diskrezio osoa eta konfidentzialtasun-protokolo zorrotzak bermatzen ditugu balorazio- eta aholkularitza-prozesu osoan.',
-  ourMethodology: 'Gure metodologia',
-  methodologyDescription: 'Ondorengotza-fasean edo erretiroagatik salmenta duten enpresentzako prozesu espezializatua:',
-  fundamentalAnalysis: '1. Analisi konfidentziala',
-  fundamentalAnalysisDesc: 'Finantza-egoeren eta funtsezko adierazleen ebaluazio diskretua, merkatua edo langileak ohartarazi gabe.',
-  multipleValuation: '2. Balorazio anizkoitza',
-  multipleValuationDesc: '2-10M€-ko enpresentzako konparazio espezifikoak, ondorengotza- edo salmenta-prozesuetan.',
-  discountedCashFlow: '3. Deskontatutako diru-fluxua',
-  discountedCashFlowDesc: 'Erretiroagatik edo familiaren ondorengotzagatik trantsizio-eszenaarioetara egokitutako proiekzioak.',
-  qualitativeAnalysis: '4. Analisi kualitatiboa',
-  qualitativeAnalysisDesc: 'Faktore ukiezinen eta posizionamendu lehiakorraren ebaluazioa, balizko erosleentzat.',
-  successionPlanning: '5. Ondorengotza planifikatzea',
-  successionPlanningDesc: 'Negozioaren trantsiziorako estrategia pertsonalizatuak, bai senideentzat, bai hirugarrenei salduz.',
-  
-  // Testimonials section
-  testimonialsTitle: 'Gure bezeroek diotena',
-  testimonialsSubtitle: 'Enpresa-jabe askori lagundu diegu erretiroa planifikatzen, balorazio- eta salmenta-prozesu konfidentzialen bidez.',
-  
-  // Contact section
-  contactTitle: 'Hitz egin dezagun zure enpresaren balioari buruz',
-  contactSubtitle: 'Bete ezazu formularioa eta gure balorazio-espezialistetako bat zurekin harremanetan jarriko da nola lagundu ahal dizugun eztabaidatzeko.',
-  contactInfo: 'Harremanetarako informazioa',
-  phone: '644116796',
-  email: 'info@instituto-valor-espana.com',
-  address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
-  requestInfoTitle: 'Eskatu informazioa',
-  nameLabel: 'Izena',
-  companyLabel: 'Enpresa',
-  emailLabel: 'Emaila',
-  phoneLabel: 'Telefonoa',
-  messageLabel: 'Mezua',
-  submitButton: 'Mezua bidali',
-  submittingButton: 'Bidaltzen...',
-  privacyNotice: 'Formulario hau bidaliz, gure pribatutasun politika eta zure datuen tratamendua onartzen dituzu.',
-  formSuccessTitle: 'Formularioa bidali da',
-  formSuccessDesc: 'Laster jarriko gara zurekin harremanetan.',
-  formErrorTitle: 'Errorea',
-  formErrorDesc: 'Errore bat gertatu da formularioa bidaltzean. Mesedez, saiatu berriro.',
-  
-  // Footer
-  companyDescription: '2-10M€-ko fakturazioa duten enpresen balorazioan eta salmentan zerbitzu espezializatua, jubilatzera hurbiltzen ari diren jabeentzako prozesu konfidentzialetan zentratuta.',
-  servicesFooter: 'Zerbitzuak',
-  quickLinks: 'Esteka azkarrak',
-  home: 'Hasiera',
-  privacyPolicy: 'Pribatutasun politika',
-  termsOfService: 'Zerbitzu baldintzak',
-  cookies: 'Cookieak',
-  allRightsReserved: 'Eskubide guztiak erreserbatuak.'
-};
-
-// Export all translations
-export const translations = {
-  es,
-  en,
-  ca,
-  val,
-  gl,
-  eu
-};
-
-export type Translations = typeof es;
+  aboutUsDescription: 'Valor España-n, 2
