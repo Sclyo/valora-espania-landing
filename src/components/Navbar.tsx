@@ -96,6 +96,16 @@ const Navbar = () => {
                 {t('about')}
               </a>
               <a 
+                href="#faq" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('faq');
+                }}
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                FAQ
+              </a>
+              <a 
                 href="#testimonios" 
                 onClick={(e) => {
                   e.preventDefault();
@@ -130,6 +140,12 @@ const Navbar = () => {
                 className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
               >
                 {t('about')}
+              </Link>
+              <Link 
+                to="/#faq"
+                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
+              >
+                FAQ
               </Link>
               <Link 
                 to="/#testimonios"
@@ -205,6 +221,16 @@ const Navbar = () => {
                       {t('about')}
                     </a>
                     <a 
+                      href="#faq"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection('faq');
+                      }}
+                    >
+                      FAQ
+                    </a>
+                    <a 
                       href="#testimonios"
                       className="text-valoraBlue text-lg font-medium"
                       onClick={(e) => {
@@ -241,6 +267,13 @@ const Navbar = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {t('about')}
+                    </Link>
+                    <Link 
+                      to="/#faq"
+                      className="text-valoraBlue text-lg font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      FAQ
                     </Link>
                     <Link 
                       to="/#testimonios"
