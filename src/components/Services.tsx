@@ -5,28 +5,44 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Services = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  // Custom service descriptions that override translations when in Spanish
+  const customSpanishDescriptions = {
+    businessValuationDesc: "Valoramos su empresa de forma exhaustiva y completamente confidencial, ideal para propietarios que se acercan a la jubilación. Sin coste inicial: solo si decide vender con nosotros.",
+    financialDueDiligenceDesc: "Revisamos en profundidad su situación financiera para garantizar que su empresa esté lista para atraer compradores serios y cerrar una operación exitosa.",
+    financialAnalysisDesc: "¿Sucesión familiar o venta? Le ayudamos a evaluar cada opción con objetividad y discreción, para que tome la mejor decisión sin presión.",
+    strategicAdvisoryDesc: "Optimizamos el valor de su empresa y buscamos compradores en un plazo máximo de seis meses. Exclusividad, compromiso y cero costes hasta el éxito."
+  };
+  
+  // Determine which descriptions to use based on language
+  const getDescription = (key: string) => {
+    if (language === 'es' && key in customSpanishDescriptions) {
+      return customSpanishDescriptions[key as keyof typeof customSpanishDescriptions];
+    }
+    return t(key);
+  };
   
   const servicesData = [
     {
       icon: <Calculator className="h-10 w-10 text-valoraBlue" />,
       title: t('businessValuation'),
-      description: t('businessValuationDesc')
+      description: getDescription('businessValuationDesc')
     },
     {
       icon: <Briefcase className="h-10 w-10 text-valoraBlue" />,
       title: t('financialDueDiligence'),
-      description: t('financialDueDiligenceDesc')
+      description: getDescription('financialDueDiligenceDesc')
     },
     {
       icon: <ChartBar className="h-10 w-10 text-valoraBlue" />,
       title: t('financialAnalysis'),
-      description: t('financialAnalysisDesc')
+      description: getDescription('financialAnalysisDesc')
     },
     {
       icon: <Users className="h-10 w-10 text-valoraBlue" />,
       title: t('strategicAdvisory'),
-      description: t('strategicAdvisoryDesc')
+      description: getDescription('strategicAdvisoryDesc')
     }
   ];
 
