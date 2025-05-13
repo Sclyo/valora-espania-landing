@@ -7,6 +7,7 @@ import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import FAQ from '@/components/FAQ';
 
 // Fallback component for loading states
 const LoadingFallback = () => (
@@ -55,6 +56,10 @@ const Index = () => {
         
         <ErrorBoundary>
           <About />
+        </ErrorBoundary>
+        
+        <ErrorBoundary>
+          <FAQ />
         </ErrorBoundary>
         
         <ErrorBoundary>
