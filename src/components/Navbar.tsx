@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -105,16 +106,6 @@ const Navbar = () => {
                 Preguntas frecuentes
               </a>
               <a 
-                href="#testimonios" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('testimonios');
-                }}
-                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
-              >
-                {t('testimonials')}
-              </a>
-              <a 
                 href="#contacto"
                 onClick={(e) => {
                   e.preventDefault();
@@ -145,12 +136,6 @@ const Navbar = () => {
                 className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
               >
                 Preguntas frecuentes
-              </Link>
-              <Link 
-                to="/#testimonios"
-                className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
-              >
-                {t('testimonials')}
               </Link>
               <Link to="/#contacto">
                 <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white">
@@ -230,16 +215,6 @@ const Navbar = () => {
                       Preguntas frecuentes
                     </a>
                     <a 
-                      href="#testimonios"
-                      className="text-valoraBlue text-lg font-medium"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        scrollToSection('testimonios');
-                      }}
-                    >
-                      {t('testimonials')}
-                    </a>
-                    <a 
                       href="#contacto"
                       onClick={(e) => {
                         e.preventDefault();
@@ -273,13 +248,6 @@ const Navbar = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       Preguntas frecuentes
-                    </Link>
-                    <Link 
-                      to="/#testimonios"
-                      className="text-valoraBlue text-lg font-medium"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {t('testimonials')}
                     </Link>
                     <Link 
                       to="/#contacto"
