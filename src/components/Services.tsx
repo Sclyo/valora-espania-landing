@@ -3,6 +3,7 @@ import React from 'react';
 import { Calculator, Briefcase, ChartBar, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { TranslationKey } from '@/translations';
 
 const Services = () => {
   const { t, language } = useLanguage();
@@ -16,7 +17,7 @@ const Services = () => {
   };
   
   // Determine which descriptions to use based on language
-  const getDescription = (key: string) => {
+  const getDescription = (key: TranslationKey) => {
     if (language === 'es' && key in customSpanishDescriptions) {
       return customSpanishDescriptions[key as keyof typeof customSpanishDescriptions];
     }
