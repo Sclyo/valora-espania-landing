@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -103,7 +102,7 @@ const Navbar = () => {
                 }}
                 className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
               >
-                FAQ
+                Preguntas frecuentes
               </a>
               <a 
                 href="#testimonios" 
@@ -145,7 +144,7 @@ const Navbar = () => {
                 to="/#faq"
                 className="text-valoraBlue hover:text-valoraGold transition-colors font-medium"
               >
-                FAQ
+                Preguntas frecuentes
               </Link>
               <Link 
                 to="/#testimonios"
@@ -228,7 +227,7 @@ const Navbar = () => {
                         scrollToSection('faq');
                       }}
                     >
-                      FAQ
+                      Preguntas frecuentes
                     </a>
                     <a 
                       href="#testimonios"
@@ -273,7 +272,7 @@ const Navbar = () => {
                       className="text-valoraBlue text-lg font-medium"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      FAQ
+                      Preguntas frecuentes
                     </Link>
                     <Link 
                       to="/#testimonios"
