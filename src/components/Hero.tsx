@@ -161,9 +161,11 @@ const Hero = () => {
                   className="bg-white"
                   disabled={isSubmitting}
                 />
-                <span className="text-xs text-gray-500 whitespace-nowrap">
-                  {phoneNumber.length}/9
-                </span>
+                {phoneNumber.length > 0 && (
+                  <span className="text-xs text-gray-500 whitespace-nowrap">
+                    {phoneNumber.length}/9
+                  </span>
+                )}
               </div>
               {phoneNumber.length > 0 && phoneNumber.length < 9 && (
                 <p className="text-amber-500 text-xs mt-1">
