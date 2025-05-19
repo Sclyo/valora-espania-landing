@@ -51,9 +51,9 @@ const Services = () => {
     <section id="servicios" className="section-padding bg-gray-50">
       <div className="container-fluid">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="heading-lg text-valoraBlue mb-4">{t('servicesTitle')}</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            {t('servicesSubtitle')}
+          <h2 className="heading-lg text-valoraBlue mb-4">Valoración confidencial para empresas de 2-10M€ de facturación anual</h2>
+          <p className="text-xl text-valoraBlue font-semibold mb-4">
+            Venta garantizada en 6 meses
           </p>
         </div>
         
