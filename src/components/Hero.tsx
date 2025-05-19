@@ -73,10 +73,10 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Contact CTA Banner - Now positioned on the right */}
+          {/* Contact CTA Banner - Now more rectangular */}
           <div className="mt-8 md:mt-0 md:self-start flex-shrink-0">
-            <div className="bg-valoraBlue p-6 rounded-lg text-white max-w-xs">
-              <div className="flex items-center gap-3 mb-2">
+            <div className="bg-valoraBlue p-7 rounded-md text-white w-64">
+              <div className="flex items-center gap-3 mb-3">
                 <Phone className="h-8 w-8 text-white animate-pulse" />
                 <p className="font-medium text-lg">¿Consulta inmediata?</p>
               </div>
