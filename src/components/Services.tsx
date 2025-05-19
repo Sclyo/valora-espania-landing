@@ -52,9 +52,6 @@ const Services = () => {
       <div className="container-fluid">
         <div className="text-center mb-12 md:mb-16">
           <h1 className="heading-lg text-valoraBlue mb-4">Venta garantizada en 6 meses: Valoración confidencial para empresas de 2-10M€ de facturación anual</h1>
-          <p className="text-xl text-valoraBlue font-semibold mb-4">
-            Venta garantizada en 6 meses
-          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
