@@ -29,55 +29,64 @@ const Hero = () => {
       </div>
       
       <div className="relative container-fluid py-20 md:py-32 z-10">
-        <div className="max-w-2xl animate-fade-in">
-          <h1 className="heading-xl text-valoraBlue mb-4" data-lov-id>
-            Venta garantizada & Valoración confidencial para empresas de 2-10M€ de facturación anual
-          </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-4">
-            {t('heroSubtitle')}
-          </p>
-          
-          {/* Contact CTA Banner */}
-          <div className="flex items-center gap-4 bg-valoraBlue p-4 rounded-md mb-6 text-white">
-            <Phone className="h-6 w-6 text-white animate-pulse" />
-            <div>
-              <p className="font-medium">¿Consulta inmediata?</p>
-              <a href="tel:+34900000000" className="text-xl font-bold hover:underline">+34 900 000 000</a>
+        <div className="flex flex-col md:flex-row md:gap-8 md:justify-between">
+          <div className="max-w-2xl animate-fade-in">
+            <h1 className="heading-xl text-valoraBlue mb-4" data-lov-id>
+              Venta garantizada & Valoración confidencial para empresas de 2-10M€ de facturación anual
+            </h1>
+            <p className="text-lg md:text-xl text-gray-700 mb-4">
+              {t('heroSubtitle')}
+            </p>
+            
+            {/* Confidentiality note */}
+            <div className="flex items-center bg-valoraBlue/10 p-3 rounded-md mb-4 border-l-4 border-valoraBlue">
+              <Lock className="h-5 w-5 text-valoraBlue mr-2 flex-shrink-0" />
+              <p className="text-sm md:text-base text-valoraBlue font-medium">
+                {t('confidentialityNote')}
+              </p>
+            </div>
+            
+            {/* Special offer note */}
+            <div className="bg-valoraGold/10 p-4 rounded-md mb-8 border-l-4 border-valoraGold">
+              <p className="text-sm md:text-base text-valoraBlue font-semibold">
+                {t('specialOffer')}
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="#contacto"
+                onClick={(e) => scrollToSection('contacto', e)}
+              >
+                <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white text-lg px-6 py-6">
+                  {t('requestValuation')}
+                </Button>
+              </a>
+              <a 
+                href="#servicios"
+                onClick={(e) => scrollToSection('servicios', e)}
+              >
+                <Button variant="outline" className="border-valoraBlue text-valoraBlue hover:bg-valoraBlue/5 text-lg px-6 py-6">
+                  {t('ourServices')} <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
           
-          {/* Confidentiality note */}
-          <div className="flex items-center bg-valoraBlue/10 p-3 rounded-md mb-4 border-l-4 border-valoraBlue">
-            <Lock className="h-5 w-5 text-valoraBlue mr-2 flex-shrink-0" />
-            <p className="text-sm md:text-base text-valoraBlue font-medium">
-              {t('confidentialityNote')}
-            </p>
-          </div>
-          
-          {/* Special offer note */}
-          <div className="bg-valoraGold/10 p-4 rounded-md mb-8 border-l-4 border-valoraGold">
-            <p className="text-sm md:text-base text-valoraBlue font-semibold">
-              {t('specialOffer')}
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href="#contacto"
-              onClick={(e) => scrollToSection('contacto', e)}
-            >
-              <Button className="bg-valoraBlue hover:bg-valoraBlue-light text-white text-lg px-6 py-6">
-                {t('requestValuation')}
-              </Button>
-            </a>
-            <a 
-              href="#servicios"
-              onClick={(e) => scrollToSection('servicios', e)}
-            >
-              <Button variant="outline" className="border-valoraBlue text-valoraBlue hover:bg-valoraBlue/5 text-lg px-6 py-6">
-                {t('ourServices')} <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
-            </a>
+          {/* Contact CTA Banner - Now positioned on the right */}
+          <div className="mt-8 md:mt-0 md:self-start flex-shrink-0">
+            <div className="bg-valoraBlue p-6 rounded-lg text-white max-w-xs">
+              <div className="flex items-center gap-3 mb-2">
+                <Phone className="h-8 w-8 text-white animate-pulse" />
+                <p className="font-medium text-lg">¿Consulta inmediata?</p>
+              </div>
+              <a href="tel:644116796" className="text-3xl font-bold hover:underline block">
+                644 116 796
+              </a>
+              <p className="mt-2 text-sm text-white/80">
+                Respuesta en menos de 24h
+              </p>
+            </div>
           </div>
         </div>
       </div>
