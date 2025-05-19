@@ -1,13 +1,19 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Lock, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Input } from '@/components/ui/input';
+import { submitContactForm } from '@/services/contactService';
+import { useToast } from '@/hooks/use-toast';
 
 const Hero = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
+  const { toast } = useToast();
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Function to handle smooth scrolling and update URL hash
   const scrollToSection = (sectionId: string, e: React.MouseEvent) => {
@@ -20,6 +26,49 @@ const Hero = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+  // Function to handle phone number input changes
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Only allow numbers
+    const value = e.target.value.replace(/[^\d]/g, '');
+    // Limit to 9 digits
+    setPhoneNumber(value.slice(0, 9));
+  };
+  
+  // Function to handle form submission when input loses focus
+  const handleBlur = async () => {
+    // Only submit if 9 digits have been entered
+    if (phoneNumber.length === 9 && !isSubmitting) {
+      setIsSubmitting(true);
+      try {
+        // Submit minimalist form with just phone number
+        await submitContactForm({
+          name: "Consulta rápida telefónica",
+          company: "Pendiente de contacto",
+          email: "pendiente@example.com",
+          phone: phoneNumber,
+          message: "Solicitud de llamada desde formulario rápido",
+        });
+        
+        toast({
+          title: "Número recibido",
+          description: "Te llamaremos lo antes posible",
+        });
+        
+        // Reset form after successful submission
+        setPhoneNumber("");
+      } catch (error) {
+        console.error('Error submitting phone number:', error);
+        toast({
+          title: "Error",
+          description: "No se pudo enviar el número. Inténtalo más tarde.",
+          variant: "destructive"
+        });
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
   
@@ -95,6 +144,33 @@ const Hero = () => {
                 </p>
               </div>
             </a>
+            
+            {/* Quick phone number submission form */}
+            <div className="mt-4 bg-white p-5 rounded-md shadow-md border border-gray-200">
+              <p className="text-valoraBlue font-medium text-sm mb-2">
+                O déjanos tu número y te llamamos
+              </p>
+              <div className="flex items-center gap-2">
+                <Input
+                  type="tel"
+                  placeholder="Tu número de teléfono"
+                  value={phoneNumber}
+                  onChange={handlePhoneChange}
+                  onBlur={handleBlur}
+                  maxLength={9}
+                  className="bg-white"
+                  disabled={isSubmitting}
+                />
+                <span className="text-xs text-gray-500 whitespace-nowrap">
+                  {phoneNumber.length}/9
+                </span>
+              </div>
+              {phoneNumber.length > 0 && phoneNumber.length < 9 && (
+                <p className="text-amber-500 text-xs mt-1">
+                  Introduce 9 dígitos para enviar
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
