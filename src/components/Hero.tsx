@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ChevronRight, Lock } from 'lucide-react';
+import { ChevronRight, Lock, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
@@ -36,6 +36,15 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-gray-700 mb-4">
             {t('heroSubtitle')}
           </p>
+          
+          {/* Contact CTA Banner */}
+          <div className="flex items-center gap-4 bg-valoraBlue p-4 rounded-md mb-6 text-white">
+            <Phone className="h-6 w-6 text-white animate-pulse" />
+            <div>
+              <p className="font-medium">¿Consulta inmediata?</p>
+              <a href="tel:+34900000000" className="text-xl font-bold hover:underline">+34 900 000 000</a>
+            </div>
+          </div>
           
           {/* Confidentiality note */}
           <div className="flex items-center bg-valoraBlue/10 p-3 rounded-md mb-4 border-l-4 border-valoraBlue">
