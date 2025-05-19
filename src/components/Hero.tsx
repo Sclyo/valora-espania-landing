@@ -3,9 +3,11 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Lock, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
   
   // Function to handle smooth scrolling and update URL hash
   const scrollToSection = (sectionId: string, e: React.MouseEvent) => {
@@ -73,20 +75,26 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Contact CTA Banner - Now wider */}
+          {/* Contact CTA Banner - Now wider and clickable on mobile */}
           <div className="mt-8 md:mt-0 md:self-start flex-shrink-0">
-            <div className="bg-valoraBlue p-7 rounded-md text-white w-128">
-              <div className="flex items-center gap-3 mb-3">
-                <Phone className="h-8 w-8 text-white animate-pulse" />
-                <p className="font-medium text-lg">¿Consulta inmediata?</p>
+            <a 
+              href="tel:644116796" 
+              className="block no-underline hover:no-underline"
+              aria-label="Llamar a 644 116 796"
+            >
+              <div className="bg-valoraBlue p-7 rounded-md text-white w-128 transition-all duration-200 hover:bg-valoraBlue-light">
+                <div className="flex items-center gap-3 mb-3">
+                  <Phone className="h-8 w-8 text-white animate-pulse" />
+                  <p className="font-medium text-lg">¿Consulta inmediata?</p>
+                </div>
+                <div className="text-3xl font-bold">
+                  644 116 796
+                </div>
+                <p className="mt-2 text-sm text-white/80">
+                  {isMobile ? "Toca para llamar ahora" : "Respuesta en menos de 24h"}
+                </p>
               </div>
-              <a href="tel:644116796" className="text-3xl font-bold hover:underline block">
-                644 116 796
-              </a>
-              <p className="mt-2 text-sm text-white/80">
-                Respuesta en menos de 24h
-              </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
