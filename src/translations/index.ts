@@ -1,5 +1,3 @@
-
-// Define the structure for our translations
 export type TranslationKey = 
   // Navbar
   | 'services' 
@@ -75,6 +73,18 @@ export type TranslationKey =
   | 'formErrorTitle'
   | 'formErrorDesc'
   | 'backToHome'
+  // Form placeholders and validation messages
+  | 'namePlaceholder'
+  | 'nameRequired'
+  | 'companyPlaceholder'
+  | 'companyRequired'
+  | 'emailPlaceholder'
+  | 'emailRequired'
+  | 'emailInvalid'
+  | 'phonePlaceholder'
+  | 'messagePlaceholder'
+  | 'messageRequired'
+  | 'submitLoading'
   
   // Footer
   | 'companyDescription'
@@ -86,7 +96,6 @@ export type TranslationKey =
   | 'cookies'
   | 'allRightsReserved';
 
-// Define the type for translations
 export type Translations = {
   [key in TranslationKey]: string;
 };
@@ -167,6 +176,18 @@ export const es = {
   formErrorTitle: 'Error',
   formErrorDesc: 'Ha ocurrido un error al enviar el formulario. Por favor, inténtalo de nuevo.',
   backToHome: 'Volver al inicio',
+  // Form placeholders and validation messages
+  namePlaceholder: 'Su nombre',
+  nameRequired: 'Por favor, introduzca su nombre',
+  companyPlaceholder: 'Nombre de su empresa',
+  companyRequired: 'Por favor, introduzca el nombre de su empresa',
+  emailPlaceholder: 'Su correo electrónico',
+  emailRequired: 'Por favor, introduzca su correo electrónico',
+  emailInvalid: 'Por favor, introduzca un correo electrónico válido',
+  phonePlaceholder: 'Su número de teléfono (opcional)',
+  messagePlaceholder: 'Su mensaje',
+  messageRequired: 'Por favor, introduzca su mensaje',
+  submitLoading: 'Enviando...',
 
   // Footer
   companyDescription: 'Servicio especializado en valoración y venta de empresas con facturación de 2-10M€, enfocado en procesos confidenciales para propietarios próximos a la jubilación.',
@@ -255,6 +276,18 @@ export const en = {
   formErrorTitle: 'Error',
   formErrorDesc: 'An error occurred while submitting the form. Please try again.',
   backToHome: 'Back to Home',
+  // Form placeholders and validation messages
+  namePlaceholder: 'Your name',
+  nameRequired: 'Please enter your name',
+  companyPlaceholder: 'Your company name',
+  companyRequired: 'Please enter your company name',
+  emailPlaceholder: 'Your email address',
+  emailRequired: 'Please enter your email address',
+  emailInvalid: 'Please enter a valid email address',
+  phonePlaceholder: 'Your phone number (optional)',
+  messagePlaceholder: 'Your message',
+  messageRequired: 'Please enter your message',
+  submitLoading: 'Sending...',
   
   // Footer
   companyDescription: 'Specialized service in valuation and sale of companies with revenues of 2-10M€, focused on confidential processes for owners approaching retirement.',
@@ -343,6 +376,18 @@ export const ca = {
   formErrorTitle: 'Error',
   formErrorDesc: 'S\'ha produït un error en enviar el formulari. Si us plau, intenti-ho de nou.',
   backToHome: 'Tornar a l\'inici',
+  // Form placeholders and validation messages
+  namePlaceholder: 'El seu nom',
+  nameRequired: 'Si us plau, introduïu el vostre nom',
+  companyPlaceholder: 'Nom de la vostra empresa',
+  companyRequired: 'Si us plau, introduïu el nom de la vostra empresa',
+  emailPlaceholder: 'La vostra adreça de correu electrònic',
+  emailRequired: 'Si us plau, introduïu la vostra adreça de correu electrònic',
+  emailInvalid: 'Si us plau, introduïu una adreça de correu electrònic vàlida',
+  phonePlaceholder: 'El vostre número de telèfon (opcional)',
+  messagePlaceholder: 'El vostre missatge',
+  messageRequired: 'Si us plau, introduïu el vostre missatge',
+  submitLoading: 'Enviant...',
   
   // Footer
   companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 2-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
@@ -425,12 +470,24 @@ export const val = {
   messageLabel: 'Missatge',
   submitButton: 'Enviar missatge',
   submittingButton: 'Enviant...',
-  privacyNotice: 'En enviar aquest formulari, accepta la nostra política de privacitat i el tractament de les seues dades.',
+  privacyNotice: 'En enviar aquest formulari, accepta la nostra política de privacitat i el tractament de les seves dades.',
   formSuccessTitle: 'Formulari enviat',
   formSuccessDesc: 'Ens posarem en contacte amb vostè prompte.',
   formErrorTitle: 'Error',
   formErrorDesc: 'S\'ha produït un error en enviar el formulari. Si us plau, intente-ho de nou.',
   backToHome: 'Tornar a l\'inici',
+  // Form placeholders and validation messages
+  namePlaceholder: 'El seu nom',
+  nameRequired: 'Si us plau, introduïu el vostre nom',
+  companyPlaceholder: 'Nom de la vostra empresa',
+  companyRequired: 'Si us plau, introduïu el nom de la vostra empresa',
+  emailPlaceholder: 'La vostra adreça de correu electrònic',
+  emailRequired: 'Si us plau, introduïu la vostra adreça de correu electrònic',
+  emailInvalid: 'Si us plau, introduïu una adreça de correu electrònic vàlida',
+  phonePlaceholder: 'El vostre número de telèfon (opcional)',
+  messagePlaceholder: 'El vostre missatge',
+  messageRequired: 'Si us plau, introduïu el vostre missatge',
+  submitLoading: 'Enviant...',
   
   // Footer
   companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 2-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
@@ -454,7 +511,7 @@ export const gl = {
   
   // Hero
   heroTitle: 'Valoració confidencial para empresas de 2-10M€ de facturación anual',
-  heroSubtitle: 'Especialistas en asesorar propietaris que s\'acosten a la jubilació ou planegen la successió do seu negocio.',
+  heroSubtitle: 'Especialistas en asesorar propietarios que s\'acosten a la jubilación ou planegen la successió do seu negocio.',
   confidentialityNote: 'Garantimos 100% de confidencialidade en todo o proceso',
   requestValuation: 'Solicitar valoración',
   ourServices: 'Os nosos servizos',
@@ -491,7 +548,7 @@ export const gl = {
   discountedCashFlowDesc: 'Proxeccións axustadas a escenarios de transición por jubilación ou successión familiar.',
   qualitativeAnalysis: '4. Análise cualitativa',
   qualitativeAnalysisDesc: 'Avaliación de factores intanxibles e posicionamento para potenciais compradores.',
-  successionPlanning: '5. Planificació de successió',
+  successionPlanning: '5. Planificación de successió',
   successionPlanningDesc: 'Estratexias personalizadas para a transición do negocio, xa sexa a familiares ou mediante venda a terceiros.',
   
   // Testimonials section
@@ -519,9 +576,21 @@ export const gl = {
   formErrorTitle: 'Erro',
   formErrorDesc: 'Produciuse un erro ao enviar o formulario. Si us plau, intente-ho de novo.',
   backToHome: 'Volver ao inicio',
+  // Form placeholders and validation messages
+  namePlaceholder: 'O seu nome',
+  nameRequired: 'Por favor, introduza o seu nome',
+  companyPlaceholder: 'Nome da súa empresa',
+  companyRequired: 'Por favor, introduza o nome da súa empresa',
+  emailPlaceholder: 'O seu enderezo de correo electrónico',
+  emailRequired: 'Por favor, introduza o seu enderezo de correo electrónico',
+  emailInvalid: 'Por favor, introduza un enderezo de correo electrónico válido',
+  phonePlaceholder: 'O seu número de teléfono (opcional)',
+  messagePlaceholder: 'A súa mensaxe',
+  messageRequired: 'Por favor, introduza a súa mensaxe',
+  submitLoading: 'Enviando...',
   
   // Footer
-  companyDescription: 'Servici especializado en valoración e venda de empresas con facturación de 2-10M€, enfocado en processos confidenciais para propietarios próximos á jubilación.',
+  companyDescription: 'Servici especializado en valoración e venda de empresas con facturación de 2-10M€, enfocado en procesos confidenciais para propietarios próximos á jubilación.',
   servicesFooter: 'Servizos',
   quickLinks: 'Ligazóns rápidas',
   home: 'Inici',
@@ -607,9 +676,21 @@ export const eu = {
   formErrorTitle: 'Errorea',
   formErrorDesc: 'Errorea gertatu da inprimakia bidaltzean. Mesedez, saiatu berriro.',
   backToHome: 'Hasierara itzuli',
+  // Form placeholders and validation messages
+  namePlaceholder: 'Zure izena',
+  nameRequired: 'Mesedez, sartu zure izena',
+  companyPlaceholder: 'Zure enpresaren izena',
+  companyRequired: 'Mesedez, sartu zure enpresaren izena',
+  emailPlaceholder: 'Zure posta elektronikoa',
+  emailRequired: 'Mesedez, sartu zure posta elektronikoa',
+  emailInvalid: 'Mesedez, sartu baliozko posta elektroniko bat',
+  phonePlaceholder: 'Zure telefono zenbakia (aukerakoa)',
+  messagePlaceholder: 'Zure mezua',
+  messageRequired: 'Mesedez, sartu zure mezua',
+  submitLoading: 'Bidaltzen...',
   
   // Footer
-  companyDescription: 'Zerbitzu espezializatua 2-10M€-ko fakturazioa duten enpresen balorazioan eta salmentan, erretirora hurbiltzen ari diren jabeentzako prozesu konfidentzialetan zentratua.',
+  companyDescription: 'Zerbitzu espezializatua 2-10M€-ko fakturazioa duten enpresen balorazioan eta salmentan, erretirorako hurbiltzen ari diren jabeentzako prozesu konfidentzialetan zentratua.',
   servicesFooter: 'Zerbitzuak',
   quickLinks: 'Esteka azkarrak',
   home: 'Hasiera',
