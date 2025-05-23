@@ -2,6 +2,7 @@
 import { supabase } from "@/lib/supabase";
 import { AppointmentRequest, TimeSlot } from "@/types/appointment";
 import { format } from "date-fns";
+import { es } from "date-fns/locale";
 
 export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
   const { data, error } = await supabase
@@ -12,7 +13,7 @@ export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
     .order("time");
 
   if (error) {
-    console.error("Error fetching available time slots:", error);
+    console.error("Error al obtener horarios disponibles:", error);
     throw error;
   }
 
@@ -20,7 +21,7 @@ export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
 };
 
 export const submitAppointmentRequest = async (appointment: AppointmentRequest) => {
-  // Insert the appointment request
+  // Insertar la solicitud de cita
   const { data, error } = await supabase
     .from("appointment_requests")
     .insert({
@@ -34,11 +35,11 @@ export const submitAppointmentRequest = async (appointment: AppointmentRequest) 
     .select();
 
   if (error) {
-    console.error("Error submitting appointment request:", error);
+    console.error("Error al enviar la solicitud de cita:", error);
     throw error;
   }
 
-  // Update the time slot to mark it as not available
+  // Actualizar el horario para marcarlo como no disponible
   const { error: updateError } = await supabase
     .from("available_time_slots")
     .update({ is_available: false })
@@ -46,7 +47,7 @@ export const submitAppointmentRequest = async (appointment: AppointmentRequest) 
     .eq("time", appointment.time);
 
   if (updateError) {
-    console.error("Error updating time slot availability:", updateError);
+    console.error("Error al actualizar la disponibilidad del horario:", updateError);
     throw updateError;
   }
 
@@ -54,7 +55,7 @@ export const submitAppointmentRequest = async (appointment: AppointmentRequest) 
 };
 
 export const formatTimeSlot = (timeSlot: TimeSlot): string => {
-  // Format the date 
+  // Formatear la fecha usando locale español
   const dateParts = timeSlot.date.split('-');
   const dateObj = new Date(
     parseInt(dateParts[0]), 
@@ -62,7 +63,7 @@ export const formatTimeSlot = (timeSlot: TimeSlot): string => {
     parseInt(dateParts[2])
   );
   
-  const dateStr = format(dateObj, 'EEEE, MMMM d, yyyy');
+  const dateStr = format(dateObj, 'EEEE, d \'de\' MMMM \'de\' yyyy', { locale: es });
   
   return `${dateStr} · ${timeSlot.time}`;
 };

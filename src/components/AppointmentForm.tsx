@@ -16,18 +16,18 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-// Define the form schema with required fields matching AppointmentRequest
+// Definir el esquema del formulario con campos requeridos que coincidan con AppointmentRequest
 const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
+  name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
+  email: z.string().email("Dirección de correo electrónico inválida"),
   phone: z.string().optional(),
   message: z.string().optional(),
 });
 
-// Define the form values type from the schema
+// Definir el tipo de valores del formulario a partir del esquema
 type FormValues = z.infer<typeof formSchema>;
 
-// Define props excluding the fields that will be provided elsewhere
+// Definir props excluyendo los campos que se proporcionarán en otro lugar
 type AppointmentFormProps = {
   onSubmit: (data: Omit<AppointmentRequest, "date" | "time">) => void;
   isLoading: boolean;
@@ -48,7 +48,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
   });
 
   const handleSubmit = (values: FormValues) => {
-    // Pass the form values to the onSubmit handler
+    // Pasar los valores del formulario al controlador onSubmit
     onSubmit({
       name: values.name,
       email: values.email,
@@ -65,9 +65,9 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nombre</FormLabel>
               <FormControl>
-                <Input placeholder="Your name" {...field} />
+                <Input placeholder="Tu nombre" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -81,7 +81,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder="tu.email@ejemplo.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -93,9 +93,9 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone (optional)</FormLabel>
+              <FormLabel>Teléfono (opcional)</FormLabel>
               <FormControl>
-                <Input placeholder="Your phone number" {...field} />
+                <Input placeholder="Tu número de teléfono" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -107,10 +107,10 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message (optional)</FormLabel>
+              <FormLabel>Mensaje (opcional)</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Any additional information you'd like us to know"
+                  placeholder="Cualquier información adicional que quieras hacernos saber"
                   className="resize-none"
                   {...field}
                 />
@@ -121,7 +121,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
         />
 
         <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? "Submitting..." : "Book Appointment"}
+          {isLoading ? "Enviando..." : "Reservar cita"}
         </Button>
       </form>
     </Form>

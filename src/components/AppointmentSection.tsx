@@ -1,152 +1,151 @@
 
 import React, { useState, useEffect } from "react";
-import { useQuery, useMutation } from "@tanstack/react-query";
-import { TimeSlot, AppointmentRequest } from "@/types/appointment";
+import { useQuery } from "@tanstack/react-query";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchAvailableTimeSlots, submitAppointmentRequest } from "@/services/appointmentService";
-import TimeSlotSelector from "./TimeSlotSelector";
-import AppointmentForm from "./AppointmentForm";
-import { toast } from "sonner";
-import { cn } from "@/lib/utils";
-import { Loader2 } from "lucide-react";
+import { AppointmentRequest, TimeSlot } from "@/types/appointment";
+import TimeSlotSelector from "@/components/TimeSlotSelector";
+import AppointmentForm from "@/components/AppointmentForm";
+import { useToast } from "@/components/ui/use-toast";
+import CalendlyEmbed from "./CalendlyEmbed";
 
 const AppointmentSection = () => {
+  const { t, language } = useLanguage();
+  const { toast } = useToast();
   const [selectedTimeSlot, setSelectedTimeSlot] = useState<TimeSlot | null>(null);
-  const [step, setStep] = useState<"select-time" | "fill-form">("select-time");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Fetch available time slots
-  const { 
-    data: timeSlots = [], 
-    isLoading: isLoadingSlots,
-    isError: isSlotsError,
-    refetch: refetchTimeSlots 
-  } = useQuery({
-    queryKey: ["availableTimeSlots"],
-    queryFn: fetchAvailableTimeSlots
-  });
+  const usarCalendly = true; // Cambia a false para usar nuestro propio sistema
 
-  // Appointment submission mutation
-  const { mutate, isPending: isSubmitting } = useMutation({
-    mutationFn: submitAppointmentRequest,
-    onSuccess: () => {
-      toast.success("Appointment requested successfully! We'll be in touch soon.");
-      setSelectedTimeSlot(null);
-      setStep("select-time");
-      refetchTimeSlots();
-    },
-    onError: (error) => {
-      console.error("Error booking appointment:", error);
-      toast.error("Failed to book appointment. Please try again.");
+  // Calendly URL basada en el idioma actual
+  const getCalendlyUrl = () => {
+    switch (language) {
+      case 'en': 
+        return 'https://calendly.com/your-calendly-username/english';
+      case 'ca':
+      case 'val':
+        return 'https://calendly.com/your-calendly-username/catala';
+      case 'gl':
+        return 'https://calendly.com/your-calendly-username/galego';
+      case 'eu':
+        return 'https://calendly.com/your-calendly-username/euskara';
+      default: 
+        return 'https://calendly.com/your-calendly-username/espanol'; // Español por defecto
     }
-  });
-
-  // Go to form step when a time slot is selected
-  useEffect(() => {
-    if (selectedTimeSlot) {
-      setStep("fill-form");
-    }
-  }, [selectedTimeSlot]);
-
-  const handleSelectTimeSlot = (timeSlot: TimeSlot) => {
-    setSelectedTimeSlot(timeSlot);
-    setStep("fill-form");
   };
 
-  const handleFormSubmit = (formData: Omit<AppointmentRequest, "date" | "time">) => {
+  // Obtener slots de tiempo disponibles de la API
+  const { data: timeSlots = [], isLoading, error } = useQuery({
+    queryKey: ["availableTimeSlots"],
+    queryFn: fetchAvailableTimeSlots,
+  });
+
+  // Manejar el envío del formulario de cita
+  const handleSubmit = async (formData: Omit<AppointmentRequest, "date" | "time">) => {
     if (!selectedTimeSlot) {
-      toast.error("Please select a time slot first");
-      setStep("select-time");
+      toast({
+        title: "Error",
+        description: "Por favor, selecciona un horario disponible antes de enviar.",
+        variant: "destructive",
+      });
       return;
     }
 
-    const appointmentData: AppointmentRequest = {
-      ...formData,
-      date: selectedTimeSlot.date,
-      time: selectedTimeSlot.time
-    };
+    setIsSubmitting(true);
 
-    mutate(appointmentData);
+    try {
+      const appointmentData: AppointmentRequest = {
+        ...formData,
+        date: selectedTimeSlot.date,
+        time: selectedTimeSlot.time,
+      };
+
+      await submitAppointmentRequest(appointmentData);
+
+      toast({
+        title: "¡Cita solicitada!",
+        description: "Hemos recibido tu solicitud y nos pondremos en contacto contigo pronto.",
+      });
+
+      // Resetear el formulario
+      setSelectedTimeSlot(null);
+    } catch (error) {
+      console.error("Error al enviar la solicitud de cita:", error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar tu solicitud. Por favor, inténtalo de nuevo.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const handleBackToTimeSlots = () => {
-    setStep("select-time");
-  };
+  if (usarCalendly) {
+    return (
+      <section id="appointment" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-valoraBlue mb-4">Agenda una cita</h2>
+            <p className="text-lg max-w-3xl mx-auto text-gray-600">
+              Selecciona un horario conveniente para una consulta con nuestros asesores financieros a través de nuestro calendario en línea.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <CalendlyEmbed url={getCalendlyUrl()} />
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="appointment" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-valoraBlue mb-4">Schedule an Appointment</h2>
+          <h2 className="text-3xl font-bold text-valoraBlue mb-4">Agenda una cita</h2>
           <p className="text-lg max-w-3xl mx-auto text-gray-600">
-            Select a convenient time for a consultation with our financial advisors.
+            Selecciona un horario disponible y completa el formulario para programar una consulta con nuestros asesores financieros.
           </p>
         </div>
+        
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Selector de horarios */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Selecciona un horario</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {isLoading ? (
+                <p className="text-center text-gray-500">Cargando horarios disponibles...</p>
+              ) : error ? (
+                <p className="text-center text-red-500">
+                  Error al cargar los horarios. Por favor, intenta refrescar la página.
+                </p>
+              ) : (
+                <TimeSlotSelector
+                  timeSlots={timeSlots}
+                  selectedTimeSlot={selectedTimeSlot}
+                  onSelectTimeSlot={setSelectedTimeSlot}
+                />
+              )}
+            </CardContent>
+          </Card>
 
-        {isSlotsError ? (
-          <div className="text-center p-8 bg-white rounded-lg shadow">
-            <p className="text-red-500">
-              There was an error loading available time slots. Please refresh the page to try again.
-            </p>
-          </div>
-        ) : (
-          <div className="bg-white rounded-lg shadow-md p-6">
-            {/* Step indicators */}
-            <div className="flex mb-8">
-              <div 
-                className={cn(
-                  "flex-1 pb-2 border-b-2 text-center font-medium",
-                  step === "select-time" ? "border-primary text-primary" : "border-gray-200 text-gray-400"
-                )}
-              >
-                1. Select Time
-              </div>
-              <div 
-                className={cn(
-                  "flex-1 pb-2 border-b-2 text-center font-medium",
-                  step === "fill-form" ? "border-primary text-primary" : "border-gray-200 text-gray-400"
-                )}
-              >
-                2. Your Details
-              </div>
-            </div>
-
-            {isLoadingSlots ? (
-              <div className="flex justify-center items-center p-12">
-                <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                <span className="ml-2">Loading available time slots...</span>
-              </div>
-            ) : (
-              <>
-                <div className={cn("transition-opacity duration-300", step === "select-time" ? "block opacity-100" : "hidden opacity-0")}>
-                  <TimeSlotSelector 
-                    timeSlots={timeSlots} 
-                    selectedTimeSlot={selectedTimeSlot} 
-                    onSelectTimeSlot={handleSelectTimeSlot} 
-                  />
-                </div>
-                
-                <div className={cn("transition-opacity duration-300", step === "fill-form" ? "block opacity-100" : "hidden opacity-0")}>
-                  {selectedTimeSlot && (
-                    <>
-                      <button 
-                        onClick={handleBackToTimeSlots}
-                        className="mb-4 text-sm flex items-center text-gray-500 hover:text-primary transition-colors"
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
-                        </svg>
-                        Back to time selection
-                      </button>
-                      <AppointmentForm 
-                        onSubmit={handleFormSubmit} 
-                        isLoading={isSubmitting} 
-                      />
-                    </>
-                  )}
-                </div>
-              </>
-            )}
-          </div>
-        )}
+          {/* Formulario de información personal */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Información de contacto</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <AppointmentForm
+                onSubmit={handleSubmit}
+                isLoading={isSubmitting}
+              />
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );

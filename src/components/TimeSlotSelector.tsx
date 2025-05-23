@@ -22,7 +22,7 @@ const TimeSlotSelector: React.FC<TimeSlotSelectorProps> = ({
       <Card className="bg-gray-50">
         <CardContent className="pt-6">
           <p className="text-center text-gray-500">
-            No available time slots at the moment. Please check back later.
+            No hay horarios disponibles en este momento. Por favor, revisa más tarde.
           </p>
         </CardContent>
       </Card>
