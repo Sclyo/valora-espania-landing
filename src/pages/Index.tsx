@@ -7,6 +7,7 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Fallback component for loading states
 const LoadingFallback = () => (
@@ -38,6 +39,8 @@ class ErrorBoundary extends React.Component<
 }
 
 const Index = () => {
+  const isMobile = useIsMobile();
+
   return (
     <div className="min-h-screen flex flex-col">
       <ErrorBoundary>
@@ -49,6 +52,15 @@ const Index = () => {
       </ErrorBoundary>
       
       <Suspense fallback={<LoadingFallback />}>
+        {/* On mobile, show Contact form after Hero section */}
+        {isMobile && (
+          <ErrorBoundary>
+            <div className="bg-white py-6">
+              <Contact showCompactVersion={true} />
+            </div>
+          </ErrorBoundary>
+        )}
+        
         <ErrorBoundary>
           <Services />
         </ErrorBoundary>
@@ -61,9 +73,12 @@ const Index = () => {
           <FAQ />
         </ErrorBoundary>
         
-        <ErrorBoundary>
-          <Contact />
-        </ErrorBoundary>
+        {/* On desktop or when we need the full contact form */}
+        {!isMobile && (
+          <ErrorBoundary>
+            <Contact />
+          </ErrorBoundary>
+        )}
         
         <ErrorBoundary>
           <Footer />
