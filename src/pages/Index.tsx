@@ -7,7 +7,6 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
-import AppointmentSection from '@/components/AppointmentSection';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 // Fallback component for loading states
@@ -68,10 +67,6 @@ const Index = () => {
         
         <ErrorBoundary>
           <About />
-        </ErrorBoundary>
-        
-        <ErrorBoundary>
-          <AppointmentSection />
         </ErrorBoundary>
         
         <ErrorBoundary>
