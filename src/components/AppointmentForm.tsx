@@ -16,12 +16,16 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+// Define the form schema to match the required fields in AppointmentRequest
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
   phone: z.string().optional(),
   message: z.string().optional(),
 });
+
+// Use the actual type from the schema to ensure consistency
+type FormValues = z.infer<typeof formSchema>;
 
 interface AppointmentFormProps {
   onSubmit: (data: Omit<AppointmentRequest, "time_slot_id">) => void;
@@ -32,7 +36,7 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
   onSubmit,
   isLoading,
 }) => {
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -42,7 +46,8 @@ const AppointmentForm: React.FC<AppointmentFormProps> = ({
     },
   });
 
-  const handleSubmit = (values: z.infer<typeof formSchema>) => {
+  const handleSubmit = (values: FormValues) => {
+    // Now values will have the correct type with required name and email
     onSubmit(values);
   };
 
