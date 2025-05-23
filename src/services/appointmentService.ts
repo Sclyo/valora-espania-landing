@@ -2,7 +2,7 @@
 import { supabase } from "@/lib/supabase";
 import { AppointmentRequest, TimeSlot } from "@/types/appointment";
 import { format } from "date-fns";
-import { es } from "date-fns/locale/es";
+import { es } from "date-fns/locale";
 
 export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
   const { data, error } = await supabase
