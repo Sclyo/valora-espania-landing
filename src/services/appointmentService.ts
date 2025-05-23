@@ -1,6 +1,6 @@
 
 import { supabase } from "@/lib/supabase";
-import { AppointmentRequest, TimeSlot } from "@/types/appointment";
+import { TimeSlot } from "@/types/appointment";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
@@ -20,40 +20,6 @@ export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
   return data as TimeSlot[];
 };
 
-export const submitAppointmentRequest = async (appointment: AppointmentRequest) => {
-  // Insertar la solicitud de cita
-  const { data, error } = await supabase
-    .from("appointment_requests")
-    .insert({
-      date: appointment.date,
-      time: appointment.time,
-      name: appointment.name,
-      email: appointment.email,
-      phone: appointment.phone || null,
-      message: appointment.message || null
-    })
-    .select();
-
-  if (error) {
-    console.error("Error al enviar la solicitud de cita:", error);
-    throw error;
-  }
-
-  // Actualizar el horario para marcarlo como no disponible
-  const { error: updateError } = await supabase
-    .from("available_time_slots")
-    .update({ is_available: false })
-    .eq("date", appointment.date)
-    .eq("time", appointment.time);
-
-  if (updateError) {
-    console.error("Error al actualizar la disponibilidad del horario:", updateError);
-    throw updateError;
-  }
-
-  return data;
-};
-
 export const formatTimeSlot = (timeSlot: TimeSlot): string => {
   // Formatear la fecha usando locale español
   const dateParts = timeSlot.date.split('-');
@@ -63,7 +29,5 @@ export const formatTimeSlot = (timeSlot: TimeSlot): string => {
     parseInt(dateParts[2])
   );
   
-  const dateStr = format(dateObj, 'EEEE, d \'de\' MMMM \'de\' yyyy', { locale: es });
-  
-  return `${dateStr} · ${timeSlot.time}`;
+  return format(dateObj, 'EEEE, d \'de\' MMMM', { locale: es });
 };
