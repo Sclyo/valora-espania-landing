@@ -9,6 +9,71 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      appointment_requests: {
+        Row: {
+          created_at: string | null
+          email: string
+          id: string
+          message: string | null
+          name: string
+          phone: string | null
+          status: string | null
+          time_slot_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          id?: string
+          message?: string | null
+          name: string
+          phone?: string | null
+          status?: string | null
+          time_slot_id: string
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          id?: string
+          message?: string | null
+          name?: string
+          phone?: string | null
+          status?: string | null
+          time_slot_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "appointment_requests_time_slot_id_fkey"
+            columns: ["time_slot_id"]
+            isOneToOne: false
+            referencedRelation: "available_time_slots"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      available_time_slots: {
+        Row: {
+          created_at: string | null
+          end_time: string
+          id: string
+          is_booked: boolean | null
+          start_time: string
+        }
+        Insert: {
+          created_at?: string | null
+          end_time: string
+          id?: string
+          is_booked?: boolean | null
+          start_time: string
+        }
+        Update: {
+          created_at?: string | null
+          end_time?: string
+          id?: string
+          is_booked?: boolean | null
+          start_time?: string
+        }
+        Relationships: []
+      }
       contact_submissions: {
         Row: {
           company: string
