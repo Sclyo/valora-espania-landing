@@ -8,13 +8,13 @@ import { Label } from "@/components/ui/label";
 
 interface TimeSlotSelectorProps {
   timeSlots: TimeSlot[];
-  selectedTimeSlotId: string | null;
-  onSelectTimeSlot: (timeSlotId: string) => void;
+  selectedTimeSlot: TimeSlot | null;
+  onSelectTimeSlot: (timeSlot: TimeSlot) => void;
 }
 
 const TimeSlotSelector: React.FC<TimeSlotSelectorProps> = ({
   timeSlots,
-  selectedTimeSlotId,
+  selectedTimeSlot,
   onSelectTimeSlot,
 }) => {
   if (!timeSlots.length) {
@@ -33,19 +33,24 @@ const TimeSlotSelector: React.FC<TimeSlotSelectorProps> = ({
     <Card className="bg-white">
       <CardContent className="pt-6">
         <RadioGroup
-          value={selectedTimeSlotId || ""}
-          onValueChange={onSelectTimeSlot}
+          value={selectedTimeSlot?.id || ""}
+          onValueChange={(value) => {
+            const slot = timeSlots.find((slot) => slot.id === value);
+            if (slot) {
+              onSelectTimeSlot(slot);
+            }
+          }}
         >
           <div className="space-y-4">
             {timeSlots.map((slot) => (
               <div
                 key={slot.id}
                 className={`flex items-center space-x-3 p-3 rounded-md border ${
-                  selectedTimeSlotId === slot.id
+                  selectedTimeSlot?.id === slot.id
                     ? "border-primary bg-primary/10"
                     : "border-gray-200"
                 } cursor-pointer transition-all hover:border-primary/50`}
-                onClick={() => onSelectTimeSlot(slot.id)}
+                onClick={() => onSelectTimeSlot(slot)}
               >
                 <RadioGroupItem value={slot.id} id={slot.id} />
                 <Label

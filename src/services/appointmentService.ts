@@ -7,8 +7,9 @@ export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
   const { data, error } = await supabase
     .from("available_time_slots")
     .select("*")
-    .eq("is_booked", false)
-    .order("start_time");
+    .eq("is_available", true)
+    .order("date")
+    .order("time");
 
   if (error) {
     console.error("Error fetching available time slots:", error);
@@ -19,11 +20,12 @@ export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
 };
 
 export const submitAppointmentRequest = async (appointment: AppointmentRequest) => {
-  // First insert the appointment request
+  // Insert the appointment request
   const { data, error } = await supabase
     .from("appointment_requests")
     .insert({
-      time_slot_id: appointment.time_slot_id,
+      date: appointment.date,
+      time: appointment.time,
       name: appointment.name,
       email: appointment.email,
       phone: appointment.phone || null,
@@ -36,14 +38,15 @@ export const submitAppointmentRequest = async (appointment: AppointmentRequest) 
     throw error;
   }
 
-  // Then update the time slot to mark it as booked
+  // Update the time slot to mark it as not available
   const { error: updateError } = await supabase
     .from("available_time_slots")
-    .update({ is_booked: true })
-    .eq("id", appointment.time_slot_id);
+    .update({ is_available: false })
+    .eq("date", appointment.date)
+    .eq("time", appointment.time);
 
   if (updateError) {
-    console.error("Error updating time slot:", updateError);
+    console.error("Error updating time slot availability:", updateError);
     throw updateError;
   }
 
@@ -51,12 +54,15 @@ export const submitAppointmentRequest = async (appointment: AppointmentRequest) 
 };
 
 export const formatTimeSlot = (timeSlot: TimeSlot): string => {
-  const start = new Date(timeSlot.start_time);
-  const end = new Date(timeSlot.end_time);
+  // Format the date 
+  const dateParts = timeSlot.date.split('-');
+  const dateObj = new Date(
+    parseInt(dateParts[0]), 
+    parseInt(dateParts[1]) - 1, 
+    parseInt(dateParts[2])
+  );
   
-  const dateStr = format(start, 'EEEE, MMMM d, yyyy');
-  const startStr = format(start, 'h:mm a');
-  const endStr = format(end, 'h:mm a');
+  const dateStr = format(dateObj, 'EEEE, MMMM d, yyyy');
   
-  return `${dateStr} · ${startStr} - ${endStr}`;
+  return `${dateStr} · ${timeSlot.time}`;
 };

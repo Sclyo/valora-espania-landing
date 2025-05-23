@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 
 const AppointmentSection = () => {
-  const [selectedTimeSlotId, setSelectedTimeSlotId] = useState<string | null>(null);
+  const [selectedTimeSlot, setSelectedTimeSlot] = useState<TimeSlot | null>(null);
   const [step, setStep] = useState<"select-time" | "fill-form">("select-time");
 
   // Fetch available time slots
@@ -29,7 +29,7 @@ const AppointmentSection = () => {
     mutationFn: submitAppointmentRequest,
     onSuccess: () => {
       toast.success("Appointment requested successfully! We'll be in touch soon.");
-      setSelectedTimeSlotId(null);
+      setSelectedTimeSlot(null);
       setStep("select-time");
       refetchTimeSlots();
     },
@@ -41,18 +41,18 @@ const AppointmentSection = () => {
 
   // Go to form step when a time slot is selected
   useEffect(() => {
-    if (selectedTimeSlotId) {
+    if (selectedTimeSlot) {
       setStep("fill-form");
     }
-  }, [selectedTimeSlotId]);
+  }, [selectedTimeSlot]);
 
-  const handleSelectTimeSlot = (id: string) => {
-    setSelectedTimeSlotId(id);
+  const handleSelectTimeSlot = (timeSlot: TimeSlot) => {
+    setSelectedTimeSlot(timeSlot);
     setStep("fill-form");
   };
 
-  const handleFormSubmit = (formData: Omit<AppointmentRequest, "time_slot_id">) => {
-    if (!selectedTimeSlotId) {
+  const handleFormSubmit = (formData: Omit<AppointmentRequest, "date" | "time">) => {
+    if (!selectedTimeSlot) {
       toast.error("Please select a time slot first");
       setStep("select-time");
       return;
@@ -60,7 +60,8 @@ const AppointmentSection = () => {
 
     const appointmentData: AppointmentRequest = {
       ...formData,
-      time_slot_id: selectedTimeSlotId
+      date: selectedTimeSlot.date,
+      time: selectedTimeSlot.time
     };
 
     mutate(appointmentData);
@@ -118,13 +119,13 @@ const AppointmentSection = () => {
                 <div className={cn("transition-opacity duration-300", step === "select-time" ? "block opacity-100" : "hidden opacity-0")}>
                   <TimeSlotSelector 
                     timeSlots={timeSlots} 
-                    selectedTimeSlotId={selectedTimeSlotId} 
+                    selectedTimeSlot={selectedTimeSlot} 
                     onSelectTimeSlot={handleSelectTimeSlot} 
                   />
                 </div>
                 
                 <div className={cn("transition-opacity duration-300", step === "fill-form" ? "block opacity-100" : "hidden opacity-0")}>
-                  {selectedTimeSlotId && (
+                  {selectedTimeSlot && (
                     <>
                       <button 
                         onClick={handleBackToTimeSlots}

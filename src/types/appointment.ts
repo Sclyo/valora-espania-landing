@@ -1,9 +1,9 @@
 
 export interface TimeSlot {
   id: string;
-  start_time: string;
-  end_time: string;
-  is_booked: boolean;
+  date: string;
+  time: string;
+  is_available: boolean;
 }
 
 export interface AppointmentRequest {
@@ -11,5 +11,6 @@ export interface AppointmentRequest {
   email: string;
   phone?: string;
   message?: string;
-  time_slot_id: string;
+  date: string;
+  time: string;
 }

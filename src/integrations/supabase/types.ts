@@ -12,65 +12,66 @@ export type Database = {
       appointment_requests: {
         Row: {
           created_at: string | null
+          date: string
           email: string
           id: string
           message: string | null
           name: string
           phone: string | null
           status: string | null
-          time_slot_id: string
+          time: string
+          updated_at: string | null
         }
         Insert: {
           created_at?: string | null
+          date: string
           email: string
           id?: string
           message?: string | null
           name: string
           phone?: string | null
           status?: string | null
-          time_slot_id: string
+          time: string
+          updated_at?: string | null
         }
         Update: {
           created_at?: string | null
+          date?: string
           email?: string
           id?: string
           message?: string | null
           name?: string
           phone?: string | null
           status?: string | null
-          time_slot_id?: string
+          time?: string
+          updated_at?: string | null
         }
-        Relationships: [
-          {
-            foreignKeyName: "appointment_requests_time_slot_id_fkey"
-            columns: ["time_slot_id"]
-            isOneToOne: false
-            referencedRelation: "available_time_slots"
-            referencedColumns: ["id"]
-          },
-        ]
+        Relationships: []
       }
       available_time_slots: {
         Row: {
           created_at: string | null
-          end_time: string
+          date: string
           id: string
-          is_booked: boolean | null
-          start_time: string
+          is_available: boolean | null
+          time: string
+          updated_at: string | null
         }
         Insert: {
           created_at?: string | null
-          end_time: string
+          date: string
           id?: string
-          is_booked?: boolean | null
-          start_time: string
+          is_available?: boolean | null
+          time: string
+          updated_at?: string | null
         }
         Update: {
           created_at?: string | null
-          end_time?: string
+          date?: string
           id?: string
-          is_booked?: boolean | null
-          start_time?: string
+          is_available?: boolean | null
+          time?: string
+          updated_at?: string | null
         }
         Relationships: []
       }
