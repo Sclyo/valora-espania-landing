@@ -13,6 +13,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import ContactFormSuccess from "./pages/ContactFormSuccess";
+import AdminCalendar from "./pages/AdminCalendar";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const AppRoutes = () => (
       <Route path="/terminos-servicio" element={<TermsOfService />} />
       <Route path="/politica-cookies" element={<CookiesPolicy />} />
       <Route path="/contacto-enviado" element={<ContactFormSuccess />} />
+      <Route path="/admin/calendar" element={<AdminCalendar />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
