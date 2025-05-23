@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
+import CalendarSection from '@/components/CalendarSection';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -67,6 +68,11 @@ const Index = () => {
         
         <ErrorBoundary>
           <About />
+        </ErrorBoundary>
+        
+        {/* Add Calendar Section before FAQ */}
+        <ErrorBoundary>
+          <CalendarSection />
         </ErrorBoundary>
         
         <ErrorBoundary>
