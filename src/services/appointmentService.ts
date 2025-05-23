@@ -21,7 +21,7 @@ export const fetchAvailableTimeSlots = async (): Promise<TimeSlot[]> => {
 };
 
 export const formatTimeSlot = (timeSlot: TimeSlot): string => {
-  // Formatear la fecha usando locale español
+  // Format the date using Spanish locale
   const dateParts = timeSlot.date.split('-');
   const dateObj = new Date(
     parseInt(dateParts[0]), 

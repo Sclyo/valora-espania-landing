@@ -1,11 +1,10 @@
 
 import React from "react";
 import { TimeSlot } from "@/types/appointment";
-import { format } from "date-fns";
-import { es } from "date-fns/locale";
 import { Card, CardContent } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
+import { formatTimeSlot } from "@/services/appointmentService";
 
 interface TimeSlotSelectorProps {
   timeSlots: TimeSlot[];
@@ -38,17 +37,6 @@ const TimeSlotSelector: React.FC<TimeSlotSelectorProps> = ({
     );
   }
 
-  const formatDate = (dateString: string): string => {
-    const dateParts = dateString.split('-');
-    const dateObj = new Date(
-      parseInt(dateParts[0]), 
-      parseInt(dateParts[1]) - 1, 
-      parseInt(dateParts[2])
-    );
-    
-    return format(dateObj, 'EEEE, d \'de\' MMMM', { locale: es });
-  };
-
   return (
     <Card className="bg-white">
       <CardContent className="pt-6">
@@ -77,7 +65,7 @@ const TimeSlotSelector: React.FC<TimeSlotSelectorProps> = ({
                   htmlFor={slot.id}
                   className="flex-1 cursor-pointer font-medium"
                 >
-                  {formatDate(slot.date)}
+                  {formatTimeSlot(slot)}
                 </Label>
               </div>
             ))}

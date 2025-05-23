@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { fetchAvailableTimeSlots } from "@/services/appointmentService";
+import { fetchAvailableTimeSlots, formatTimeSlot } from "@/services/appointmentService";
 import { TimeSlot } from "@/types/appointment";
 import TimeSlotSelector from "@/components/TimeSlotSelector";
 import { useToast } from "@/hooks/use-toast";
@@ -11,7 +11,7 @@ const AppointmentSection = () => {
   const { toast } = useToast();
   const [selectedTimeSlot, setSelectedTimeSlot] = useState<TimeSlot | null>(null);
 
-  // Obtener slots de tiempo disponibles de la API
+  // Fetch available time slots
   const { data: timeSlots = [], isLoading, error } = useQuery({
     queryKey: ["availableTimeSlots"],
     queryFn: fetchAvailableTimeSlots,
@@ -21,7 +21,7 @@ const AppointmentSection = () => {
     setSelectedTimeSlot(timeSlot);
     toast({
       title: "Día seleccionado",
-      description: "Has seleccionado el día correctamente.",
+      description: `Has seleccionado: ${formatTimeSlot(timeSlot)}`,
     });
   };
 
@@ -36,7 +36,6 @@ const AppointmentSection = () => {
         </div>
         
         <div className="max-w-3xl mx-auto">
-          {/* Selector de horarios */}
           <Card>
             <CardHeader>
               <CardTitle>Selecciona un día</CardTitle>
