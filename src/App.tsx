@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { useEffect } from "react";
 import Index from "./pages/Index";
@@ -34,23 +34,9 @@ const RouteTracker = () => {
   return null;
 };
 
-const AdminLink = () => {
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <Link 
-        to="/admin/calendar" 
-        className="bg-valoraBlue text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors flex items-center"
-      >
-        Admin Calendar
-      </Link>
-    </div>
-  );
-};
-
 const AppRoutes = () => (
   <>
     <RouteTracker />
-    <AdminLink />
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/stock-tracker" element={<StockTracker />} />
