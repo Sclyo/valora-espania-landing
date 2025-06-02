@@ -1,4 +1,3 @@
-
 export type TranslationKey = 
   // Navbar
   | 'services' 
@@ -448,7 +447,7 @@ export const val = {
   discountedCashFlow: '3. Descompte de fluxos',
   discountedCashFlowDesc: 'Projeccions ajustades a escenaris de transició per jubilació o successió familiar.',
   qualitativeAnalysis: '4. Anàlisi qualitativa',
-  qualitativeAnalysisDesc: 'Avaluació de factors intangibles i posicionament per a potencials compradors.',
+  qualitativeAnalysisDesc: 'Avaluació de factors intanxibles i posicionament per a potencials compradors.',
   successionPlanning: '5. Planificació de successió',
   successionPlanningDesc: 'Estratègies personalitzades per a la transició del negoci, ja sigui a familiars o mitjançant venda a tercers.',
   
@@ -524,11 +523,11 @@ export const gl = {
   businessValuation: 'Valoración confidencial',
   businessValuationDesc: 'Análise exhaustiva do valor da súa empresa con total confidencialidade, especialmente para propietarios próximos á jubilació.',
   financialDueDiligence: 'Due diligence financeira',
-  financialDueDiligenceDesc: 'Revisión completa da situación financeira para preparar a súa empresa para un proceso de venda exitoso e discret.',
+  financialDueDiligenceDesc: 'Revisión completa da situació financeira para preparar a súa empresa para un proceso de venda exitoso e discret.',
   financialAnalysis: 'Análise de successió',
   financialAnalysisDesc: 'Avaliación detallada das opcións de successió familiar ou venda a terceiros, priorizando a confidencialidade total.',
   strategicAdvisory: 'Assesoramento en venda',
-  strategicAdvisoryDesc: 'Consultoria especializada para optimizar o valor de venda da súa empresa nun proceso totalmente confidencial.',
+  strategicAdvisoryDesc: 'Consultoria especializada para optimizar o valor de venda da súa empresa nun proceso totalment confidencial.',
   
   // About section
   whyChooseUs: 'Por que escoller Valor España?',
@@ -547,7 +546,7 @@ export const gl = {
   multipleValuationDesc: 'Comparativas específicas para empresas de 1-10M€ en processos de successió ou venda.',
   discountedCashFlow: '3. Desconto de fluxos',
   discountedCashFlowDesc: 'Proxeccións axustadas a escenarios de transición por jubilación ou successión familiar.',
-  qualitativeAnalysis: '4. Análise cualitativa',
+  qualitativeAnalysis: '4. Análise qualitativa',
   qualitativeAnalysisDesc: 'Avaliación de factores intanxibles e posicionamento para potenciais compradores.',
   successionPlanning: '5. Planificación de successió',
   successionPlanningDesc: 'Estratexias personalizadas para a transición do negocio, xa sexa a familiares ou mediante venda a terceiros.',
@@ -563,23 +562,23 @@ export const gl = {
   phone: '644116796',
   email: 'info@instituto-valor-espana.com',
   address: 'Terra Alta, Premia de Mar. 08330 Barcelona',
-  requestInfoTitle: 'Solicite información',
+  requestInfoTitle: 'Sol·licite informació',
   nameLabel: 'Nome',
   companyLabel: 'Empresa',
   emailLabel: 'Email',
   phoneLabel: 'Teléfono',
-  messageLabel: 'Mensaxe',
+  messageLabel: 'Missatge',
   submitButton: 'Enviar mensaxe',
   submittingButton: 'Enviando...',
-  privacyNotice: 'Ao enviar este formulario, acepta a nosa política de privacidade e o tratamento dos seus datos.',
-  formSuccessTitle: 'Formulario enviado',
+  privacyNotice: 'En enviar aquest formulari, accepta a nosa política de privacidade e o tratamento dos seus datos.',
+  formSuccessTitle: 'Formulari enviat',
   formSuccessDesc: 'Poñerémonos en contacto con vostede pronto.',
   formErrorTitle: 'Erro',
   formErrorDesc: 'Produciuse un erro ao enviar o formulario. Si us plau, intente-ho de novo.',
   backToHome: 'Volver ao inicio',
   // Form placeholders and validation messages
   namePlaceholder: 'O seu nome',
-  nameRequired: 'Por favor, introduza o seu nome',
+  nameRequired: 'Por favor, introduzca o seu nome',
   companyPlaceholder: 'Nome da súa empresa',
   companyRequired: 'Por favor, introduza o nome da súa empresa',
   emailPlaceholder: 'O seu enderezo de correo electrónico',
@@ -591,7 +590,7 @@ export const gl = {
   submitLoading: 'Enviando...',
   
   // Footer
-  companyDescription: 'Servici especializado en valoración e venda de empresas con facturación de 1-10M€, enfocado en procesos confidenciais para propietarios próximos á jubilación.',
+  companyDescription: 'Servei especializado en valoración e venda d\'empreses amb facturació de 1-10M€, enfocat en processos confidencials para propietarios próximos á jubilación.',
   servicesFooter: 'Servizos',
   quickLinks: 'Ligazóns rápidas',
   home: 'Inici',
