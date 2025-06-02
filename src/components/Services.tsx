@@ -51,7 +51,7 @@ const Services = () => {
     <section id="servicios" className="section-padding bg-gray-50">
       <div className="container-fluid">
         <div className="text-center mb-12 md:mb-16">
-          <h1 className="heading-lg text-valoraBlue mb-4">Venta garantizada & Valoración confidencial para empresas de 2-10M€ de facturación anual</h1>
+          <h1 className="heading-lg text-valoraBlue mb-4">Venta garantizada & Valoración confidencial para empresas de 1-10M€ de facturación anual</h1>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
