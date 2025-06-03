@@ -1,5 +1,5 @@
 
-export { TranslationKey, Translations } from './types';
+export type { TranslationKey, Translations } from './types';
 export { es } from './es';
 export { en } from './en';
 export { ca } from './ca';

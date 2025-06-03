@@ -166,7 +166,7 @@ const Hero = () => {
     <div className="flex flex-col md:flex-row md:gap-8 md:justify-between">
       <div className="max-w-2xl animate-fade-in">
         <h1 className="heading-xl text-valoraBlue mb-4" data-lov-id>
-          Venta garantizada & Valoración confidencial para empresas de 2-10M€ de facturación anual
+          Venta garantizada & Valoración confidencial para empresas de 1-10M€ de facturación anual
         </h1>
         <p className="text-lg md:text-xl text-gray-700 mb-4">
           {t('heroSubtitle')}
