@@ -1,3 +1,4 @@
+
 import { Translations } from './types';
 
 export const es: Translations = {
@@ -10,7 +11,7 @@ export const es: Translations = {
   
   // Hero
   heroTitle: 'Valoración confidencial para empresas de 1-10M€ de facturación anual',
-  heroSubtitle: 'Especialistas en asesorar a propietarios que se acercan a la jubilación o planean la sucesión de su negocio.',
+  heroSubtitle: 'Expertos en guiar a compradores de negocios en la adquisición y optimización rentable de empresas desde el primer día',
   confidentialityNote: 'Garantizamos 100% de confidencialidad en todo el proceso',
   requestValuation: 'Solicitar valoración',
   ourServices: 'Nuestros servicios',
