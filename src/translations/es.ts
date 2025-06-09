@@ -1,4 +1,3 @@
-
 import { Translations } from './types';
 
 export const es: Translations = {
@@ -15,7 +14,7 @@ export const es: Translations = {
   confidentialityNote: 'Garantizamos 100% de confidencialidad en todo el proceso',
   requestValuation: 'Solicitar valoración',
   ourServices: 'Nuestros servicios',
-  specialOffer: 'Ofrecemos la valoración sin coste si contamos con un contrato de exclusividad. Garantizamos la venta de su empresa en menos de 6 meses. Si no conseguimos una oferta que quieras aceptar en ese plazo, la exclusividad termina y puedes decidir cómo seguir.',
+  specialOffer: 'Le acompañamos durante todo el proceso: desde la valoración y la financiación hasta la optimización de procesos y recursos de la empresa que adquieras, maximizando su rentabilidad desde el primer día.',
   
   // Services section
   servicesTitle: 'Nuestros Servicios',
