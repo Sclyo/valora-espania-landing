@@ -39,6 +39,7 @@ const AppRoutes = () => (
     <RouteTracker />
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/compradores" element={<Compradores />} />
       <Route path="/stock-tracker" element={<StockTracker />} />
       <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
       <Route path="/terminos-servicio" element={<TermsOfService />} />
