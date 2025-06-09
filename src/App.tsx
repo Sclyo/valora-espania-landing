@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { useEffect } from "react";
 import Index from "./pages/Index";
-import Compradores from "./pages/Compradores";
 import NotFound from "./pages/NotFound";
 import StockTracker from "./pages/StockTracker";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -39,7 +38,6 @@ const AppRoutes = () => (
     <RouteTracker />
     <Routes>
       <Route path="/" element={<Index />} />
-      <Route path="/compradores" element={<Compradores />} />
       <Route path="/stock-tracker" element={<StockTracker />} />
       <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
       <Route path="/terminos-servicio" element={<TermsOfService />} />
