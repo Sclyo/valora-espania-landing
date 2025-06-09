@@ -1,6 +1,6 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { translationsSync, TranslationKey, Translations } from '@/translations';
+import { translations, TranslationKey, Translations } from '@/translations';
 
 type Language = 'es' | 'en' | 'ca' | 'val' | 'gl' | 'eu';
 
@@ -38,7 +38,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   // Function to get translation for a key
   const t = (key: TranslationKey): string => {
     // Get the current language translations
-    const currentTranslations = translationsSync[language] as Translations;
+    const currentTranslations = translations[language] as Translations;
     
     // If the key exists in the current language, return it
     if (currentTranslations && currentTranslations[key]) {
@@ -46,7 +46,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
     
     // Fallback to Spanish if translation is missing
-    return translationsSync.es[key];
+    return translations.es[key];
   };
 
   return (
