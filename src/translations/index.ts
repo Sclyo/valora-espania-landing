@@ -110,7 +110,7 @@ export const es = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoración confidencial para empresas de 2-10M€ de facturación anual',
+  heroTitle: 'Valoración confidencial para empresas de 1-10M€ de facturación anual',
   heroSubtitle: 'Especialistas en asesorar a propietarios que se acercan a la jubilación o planean la sucesión de su negocio.',
   confidentialityNote: 'Garantizamos 100% de confidencialidad en todo el proceso',
   requestValuation: 'Solicitar valoración',
@@ -119,7 +119,7 @@ export const es = {
   
   // Services section
   servicesTitle: 'Nuestros Servicios',
-  servicesSubtitle: 'Servicios especializados para empresas con facturación entre 2 y 10 millones de euros, enfocados en procesos de venta por jubilación o sucesión.',
+  servicesSubtitle: 'Servicios especializados para empresas con facturación entre 1 y 10 millones de euros, enfocados en procesos de venta por jubilación o sucesión.',
   businessValuation: 'Valoración confidencial',
   businessValuationDesc: 'Análisis exhaustivo del valor de su empresa con total confidencialidad, especialmente para propietarios próximos a la jubilación.',
   financialDueDiligence: 'Due diligence financiera',
@@ -131,19 +131,19 @@ export const es = {
   
   // About section
   whyChooseUs: '¿Por qué elegir Valor España?',
-  aboutUsDescription: 'En Valor España nos especializamos en empresas con facturación entre 2 y 10 millones de euros, cuyos propietarios están considerando una venta por jubilación o planificación de sucesión. Nuestro proceso garantiza total confidencialidad en cada etapa.',
+  aboutUsDescription: 'En Valor España nos especializamos en empresas con facturación entre 1 y 10 millones de euros, cuyos propietarios están considerando una venta por jubilación o planificación de sucesión. Nuestro proceso garantiza total confidencialidad en cada etapa.',
   experienceAndTrust: 'Experiencia y confianza',
   experienceAndTrustDesc: 'Más de 15 años asesorando empresas familiares en procesos de venta confidenciales por jubilación.',
-  customizedApproach: 'Enfoque para PYMES de 2-10M€ de facturación',
-  customizedApproachDesc: 'Soluciones específicas para negocios con facturación entre 2 y 10 millones, adaptadas a cada sector y circunstancia.',
+  customizedApproach: 'Enfoque para PYMES de 1-10M€ de facturación',
+  customizedApproachDesc: 'Soluciones específicas para negocios con facturación entre 1 y 10 millones, adaptadas a cada sector y circunstancia.',
   confidentiality: 'Confidencialidad absoluta',
   confidentialityDesc: 'Garantizamos total discreción y estrictos protocolos de confidencialidad en todo el proceso de valoración y asesoramiento.',
   ourMethodology: 'Nuestra metodología',
   methodologyDescription: 'Proceso especializado para empresas en fase de sucesión o venta por jubilación:',
   fundamentalAnalysis: '1. Análisis confidencial',
   fundamentalAnalysisDesc: 'Evaluación discreta de estados financieros e indicadores clave sin alertar al mercado ni empleados.',
-  multipleValuation: '2. Valoración por múltiplos',
-  multipleValuationDesc: 'Comparativas específicas para empresas de 2-10M€ en procesos de sucesión o venta.',
+  multipleValuation: '1. Valoración por múltiplos',
+  multipleValuationDesc: 'Comparativas específicas para empresas de 1-10M€ en procesos de sucesión o venta.',
   discountedCashFlow: '3. Descuento de flujos',
   discountedCashFlowDesc: 'Proyecciones ajustadas a escenarios de transición por jubilación o sucesión familiar.',
   qualitativeAnalysis: '4. Análisis cualitativo',
@@ -190,7 +190,7 @@ export const es = {
   submitLoading: 'Enviando...',
 
   // Footer
-  companyDescription: 'Servicio especializado en valoración y venta de empresas con facturación de 2-10M€, enfocado en procesos confidenciales para propietarios próximos a la jubilación.',
+  companyDescription: 'Servicio especializado en valoración y venta de empresas con facturación de 1-10M€, enfocado en procesos confidenciales para propietarios próximos a la jubilación.',
   servicesFooter: 'Servicios',
   quickLinks: 'Enlaces rápidos',
   home: 'Inicio',
@@ -210,7 +210,7 @@ export const en = {
   contactButton: 'Contact Us',
   
   // Hero
-  heroTitle: 'Confidential Valuation for 2-10M€ Annual Revenue Companies',
+  heroTitle: 'Confidential Valuation for 1-10M€ Annual Revenue Companies',
   heroSubtitle: 'Specialists in advising business owners approaching retirement or planning business succession.',
   confidentialityNote: 'We guarantee 100% confidentiality throughout the entire process',
   requestValuation: 'Request Valuation',
@@ -219,7 +219,7 @@ export const en = {
   
   // Services section
   servicesTitle: 'Our Services',
-  servicesSubtitle: 'Specialized services for companies with revenues between 2 and 10 million euros, focused on sale processes due to retirement or succession.',
+  servicesSubtitle: 'Specialized services for companies with revenues between 1 and 10 million euros, focused on sale processes due to retirement or succession.',
   businessValuation: 'Confidential Valuation',
   businessValuationDesc: 'Comprehensive analysis of your company\'s value with complete confidentiality, especially for owners approaching retirement.',
   financialDueDiligence: 'Financial Due Diligence',
@@ -231,19 +231,19 @@ export const en = {
   
   // About section
   whyChooseUs: 'Why Choose Valor España?',
-  aboutUsDescription: 'At Valor España, we specialize in companies with revenues between 2 and 10 million euros, whose owners are considering a sale due to retirement or succession planning. Our process guarantees complete confidentiality at every stage.',
+  aboutUsDescription: 'At Valor España, we specialize in companies with revenues between 1 and 10 million euros, whose owners are considering a sale due to retirement or succession planning. Our process guarantees complete confidentiality at every stage.',
   experienceAndTrust: 'Experience and Trust',
   experienceAndTrustDesc: 'Over 15 years advising family businesses in confidential sale processes due to retirement.',
-  customizedApproach: 'Focus on 2-10M€ revenue SMEs',
-  customizedApproachDesc: 'Specific solutions for businesses with revenues between 2 and 10 million, adapted to each sector and circumstance.',
+  customizedApproach: 'Focus on 1-10M€ revenue SMEs',
+  customizedApproachDesc: 'Specific solutions for businesses with revenues between 1 and 10 million, adapted to each sector and circumstance.',
   confidentiality: 'Absolute Confidentiality',
   confidentialityDesc: 'We guarantee total discretion and strict confidentiality protocols throughout the valuation and advisory process.',
   ourMethodology: 'Our Methodology',
   methodologyDescription: 'Specialized process for companies in succession phase or sale due to retirement:',
   fundamentalAnalysis: '1. Confidential Analysis',
   fundamentalAnalysisDesc: 'Discreet evaluation of financial statements and key indicators without alerting the market or employees.',
-  multipleValuation: '2. Multiple Valuation',
-  multipleValuationDesc: 'Specific comparisons for 2-10M€ companies in succession or sale processes.',
+  multipleValuation: '1. Multiple Valuation',
+  multipleValuationDesc: 'Specific comparisons for 1-10M€ companies in succession or sale processes.',
   discountedCashFlow: '3. Discounted Cash Flow',
   discountedCashFlowDesc: 'Projections adjusted to transition scenarios due to retirement or family succession.',
   qualitativeAnalysis: '4. Qualitative Analysis',
@@ -290,7 +290,7 @@ export const en = {
   submitLoading: 'Sending...',
   
   // Footer
-  companyDescription: 'Specialized service in valuation and sale of companies with revenues of 2-10M€, focused on confidential processes for owners approaching retirement.',
+  companyDescription: 'Specialized service in valuation and sale of companies with revenues of 1-10M€, focused on confidential processes for owners approaching retirement.',
   servicesFooter: 'Services',
   quickLinks: 'Quick Links',
   home: 'Home',
@@ -310,7 +310,7 @@ export const ca = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoració confidencial per a empreses de 2-10M€ de facturació anual',
+  heroTitle: 'Valoració confidencial per a empreses de 1-10M€ de facturació anual',
   heroSubtitle: 'Especialistes en assessorar propietaris que s\'acosten a la jubilació o planegen la successió del seu negoci.',
   confidentialityNote: 'Garantim 100% de confidencialitat en tot el procés',
   requestValuation: 'Sol·licitar valoració',
@@ -319,7 +319,7 @@ export const ca = {
   
   // Services section
   servicesTitle: 'Els nostres serveis',
-  servicesSubtitle: 'Serveis especialitzats per a empreses amb facturació entre 2 i 10 milions d\'euros, enfocats en processos de venda per jubilació o successió.',
+  servicesSubtitle: 'Serveis especialitzats per a empreses amb facturació entre 1 i 10 milions d\'euros, enfocats en processos de venda per jubilació o successió.',
   businessValuation: 'Valoració confidencial',
   businessValuationDesc: 'Anàlisi exhaustiu del valor de la seua empresa amb total confidencialitat, especialment per a propietaris propers a la jubilació.',
   financialDueDiligence: 'Due diligence financera',
@@ -331,19 +331,19 @@ export const ca = {
   
   // About section
   whyChooseUs: 'Per què escollir Valor España?',
-  aboutUsDescription: 'A Valor España ens especialitzem en empreses amb facturació entre 2 i 10 milions d\'euros, els propietaris de les quals estan considerant una venda per jubilació o planificació de successió. El nostre procés garanteix total confidencialitat en cada etapa.',
+  aboutUsDescription: 'A Valor España ens especialitzem en empreses amb facturació entre 1 i 10 milions d\'euros, els propietaris de les quals estan considerant una venda per jubilació o planificació de successió. El nostre procés garanteix total confidencialitat en cada etapa.',
   experienceAndTrust: 'Experiència i confiança',
   experienceAndTrustDesc: 'Més de 15 anys assessorant empreses familiars en processos de venda confidencials per jubilació.',
-  customizedApproach: 'Enfocament per a PIMES de 2-10M€ de facturació',
-  customizedApproachDesc: 'Solucions específiques per a negocis amb facturació entre 2 i 10 milions, adaptades a cada sector i circumstància.',
+  customizedApproach: 'Enfocament per a PIMES de 1-10M€ de facturació',
+  customizedApproachDesc: 'Solucions específiques per a negocis amb facturació entre 1 i 10 milions, adaptades a cada sector i circumstància.',
   confidentiality: 'Confidencialitat absoluta',
   confidentialityDesc: 'Garantim total discreció i estrictes protocols de confidencialitat en tot el procés de valoració i assessorament.',
   ourMethodology: 'La nostra metodologia',
   methodologyDescription: 'Procés especialitzat per a empreses en fase de successió o venda per jubilació:',
   fundamentalAnalysis: '1. Anàlisi confidencial',
   fundamentalAnalysisDesc: 'Avaluació discreta d\'estats financers i indicadors clau sense alertar al mercat ni empregats.',
-  multipleValuation: '2. Valoració per múltiples',
-  multipleValuationDesc: 'Comparatives específiques per a empreses de 2-10M€ en processos de successió o venda.',
+  multipleValuation: '1. Valoració per múltiples',
+  multipleValuationDesc: 'Comparatives específiques per a empreses de 1-10M€ en processos de successió o venda.',
   discountedCashFlow: '3. Descompte de fluxos',
   discountedCashFlowDesc: 'Projeccions ajustades a escenaris de transició per jubilació o successió familiar.',
   qualitativeAnalysis: '4. Anàlisi qualitativa',
@@ -390,7 +390,7 @@ export const ca = {
   submitLoading: 'Enviant...',
   
   // Footer
-  companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 2-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
+  companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 1-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
   servicesFooter: 'Serveis',
   quickLinks: 'Enllaços ràpids',
   home: 'Inici',
@@ -410,7 +410,7 @@ export const val = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoració confidencial per a empreses de 2-10M€ de facturació anual',
+  heroTitle: 'Valoració confidencial per a empreses de 1-10M€ de facturació anual',
   heroSubtitle: 'Especialistes en assessorar propietaris que s\'acosten a la jubilació o planegen la successió del seu negoci.',
   confidentialityNote: 'Garantim 100% de confidencialitat en tot el procés',
   requestValuation: 'Sol·licitar valoració',
@@ -419,7 +419,7 @@ export const val = {
   
   // Services section
   servicesTitle: 'Els nostres servicis',
-  servicesSubtitle: 'Servicis especialitzats per a empreses amb facturació entre 2 i 10 milions d\'euros, enfocats en processos de venda per jubilació o successió.',
+  servicesSubtitle: 'Servicis especialitzats per a empreses amb facturació entre 1 i 10 milions d\'euros, enfocats en processos de venda per jubilació o successió.',
   businessValuation: 'Valoració confidencial',
   businessValuationDesc: 'Anàlisi exhaustiu del valor de la seua empresa amb total confidencialitat, especialment per a propietaris propers a la jubilació.',
   financialDueDiligence: 'Due diligence financeira',
@@ -431,19 +431,19 @@ export const val = {
   
   // About section
   whyChooseUs: 'Per què triar Valor España?',
-  aboutUsDescription: 'En Valor España ens especialitzem en empreses amb facturació entre 2 i 10 milions d\'euros, els propietaris de les quals estan considerant una venda per jubilació o planificació de successió. El nostre procés garanteix total confidencialitat en cada etapa.',
+  aboutUsDescription: 'En Valor España ens especialitzem en empreses amb facturació entre 1 i 10 milions d\'euros, els propietaris de les quals estan considerant una venda per jubilació o planificació de successió. El nostre procés garanteix total confidencialitat en cada etapa.',
   experienceAndTrust: 'Experiència i confiança',
   experienceAndTrustDesc: 'Més de 15 anys assessorant empreses familiars en processos de venda confidencials per jubilació.',
-  customizedApproach: 'Enfocament per a PIMES de 2-10M€ de facturació',
-  customizedApproachDesc: 'Solucions específiques per a negocis amb facturació entre 2 i 10 milions, adaptades a cada sector i circumstància.',
+  customizedApproach: 'Enfocament per a PIMES de 1-10M€ de facturació',
+  customizedApproachDesc: 'Solucions específiques per a negocis amb facturació entre 1 i 10 milions, adaptades a cada sector i circumstància.',
   confidentiality: 'Confidencialitat absoluta',
   confidentialityDesc: 'Garantim total discreció i estrictes protocols de confidencialitat en tot el procés de valoració i assessorament.',
   ourMethodology: 'La nostra metodologia',
   methodologyDescription: 'Procés especialitzat per a empreses en fase de successió o venda per jubilació:',
   fundamentalAnalysis: '1. Anàlisi confidencial',
   fundamentalAnalysisDesc: 'Avaluació discreta d\'estats financers i indicadors clau sense alertar al mercat ni empregats.',
-  multipleValuation: '2. Valoració per múltiples',
-  multipleValuationDesc: 'Comparatives específiques per a empreses de 2-10M€ en processos de successió o venda.',
+  multipleValuation: '1. Valoració per múltiples',
+  multipleValuationDesc: 'Comparatives específiques per a empreses de 1-10M€ en processos de successió o venda.',
   discountedCashFlow: '3. Descompte de fluxos',
   discountedCashFlowDesc: 'Projeccions ajustades a escenaris de transició per jubilació o successió familiar.',
   qualitativeAnalysis: '4. Anàlisi qualitativa',
@@ -490,7 +490,7 @@ export const val = {
   submitLoading: 'Enviant...',
   
   // Footer
-  companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 2-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
+  companyDescription: 'Servei especialitzat en valoració i venda d\'empreses amb facturació de 1-10M€, enfocat en processos confidencials per a propietaris propers a la jubilació.',
   servicesFooter: 'Servicis',
   quickLinks: 'Enllaços ràpids',
   home: 'Inici',
@@ -510,8 +510,8 @@ export const gl = {
   contactButton: 'Contactar',
   
   // Hero
-  heroTitle: 'Valoració confidencial para empresas de 2-10M€ de facturación anual',
-  heroSubtitle: 'Especialistas en asesorar propietarios que s\'acosten a la jubilación ou planegen la successió do seu negocio.',
+  heroTitle: 'Valoração confidencial para empresas de 1-10M€ de facturación anual',
+  heroSubtitle: 'Especialistas en asesorar propietarios que s\'acosten a la jubilación ou planegen la successão do seu negocio.',
   confidentialityNote: 'Garantimos 100% de confidencialidade en todo o proceso',
   requestValuation: 'Solicitar valoración',
   ourServices: 'Os nosos servizos',
@@ -519,36 +519,36 @@ export const gl = {
   
   // Services section
   servicesTitle: 'Os nosos servizos',
-  servicesSubtitle: 'Servizos especializados para empresas con facturación entre 2 e 10 millóns de euros, enfocados en processos de venda por jubilació ou successió.',
+  servicesSubtitle: 'Servizos especializados para empresas con facturación entre 1 e 10 millóns de euros, enfocados en processos de venda por jubilació ou successão.',
   businessValuation: 'Valoración confidencial',
-  businessValuationDesc: 'Análise exhaustiva do valor da súa empresa con total confidencialidade, especialmente para propietarios próximos á jubilació.',
+  businessValuationDesc: 'Análise exhaustiva do valor da súa empresa con total confidencialidade, especialmente para propietarios próximos á jubilação.',
   financialDueDiligence: 'Due diligence financeira',
   financialDueDiligenceDesc: 'Revisión completa da situación financeira para preparar a súa empresa para un proceso de venda exitoso e discret.',
-  financialAnalysis: 'Análise de successió',
-  financialAnalysisDesc: 'Avaliación detallada das opcións de successió familiar ou venda a terceiros, priorizando a confidencialidade total.',
+  financialAnalysis: 'Análise de successão',
+  financialAnalysisDesc: 'Avaliación detallada das opcións de successão familiar ou venda a terceiros, priorizando a confidencialidade total.',
   strategicAdvisory: 'Assesoramento en venda',
   strategicAdvisoryDesc: 'Consultoria especializada para optimizar o valor de venda da súa empresa nun proceso totalmente confidencial.',
   
   // About section
   whyChooseUs: 'Por que escoller Valor España?',
-  aboutUsDescription: 'En Valor España especializámonos en empresas con facturación entre 2 e 10 millóns de euros, cuxos propietarios están a considerar unha venda por jubilació ou planificación de successió. O noso proceso garante total confidencialidade en cada etapa.',
+  aboutUsDescription: 'En Valor España especializámonos en empresas con facturación entre 1 e 10 millóns de euros, cuxos propietarios están a considerar unha venda por jubilación ou planificación de successão. O noso proceso garante total confidencialidade en cada etapa.',
   experienceAndTrust: 'Experiencia e confianza',
   experienceAndTrustDesc: 'Máis de 15 anos asesorando empresas familiares en processos de venda confidenciais por jubilación.',
-  customizedApproach: 'Enfoque para PEMES de 2-10M€ de facturación',
-  customizedApproachDesc: 'Solucións específicas para negocios con facturación entre 2 e 10 millóns, adaptadas a cada sector e circunstancia.',
+  customizedApproach: 'Enfoque para PEMES de 1-10M€ de facturación',
+  customizedApproachDesc: 'Solucións específicas para negocios con facturación entre 1 e 10 millóns, adaptadas a cada sector e circunstancia.',
   confidentiality: 'Confidencialidade absoluta',
   confidentialityDesc: 'Garantimos total discreción e estritos protocolos de confidencialidade en todo o proceso de valoración e asesoramento.',
   ourMethodology: 'A nosa metodoloxía',
-  methodologyDescription: 'Proceso especializado para empresas en fase de successió ou venda por jubilación:',
+  methodologyDescription: 'Proceso especializado para empresas en fase de successão ou venda por jubilación:',
   fundamentalAnalysis: '1. Análise confidencial',
   fundamentalAnalysisDesc: 'Avaliación discreta de estados financeiros e indicadores clave sen alertar ao mercado nin empregados.',
-  multipleValuation: '2. Valoración por múltiples',
-  multipleValuationDesc: 'Comparativas específicas para empresas de 2-10M€ en processos de successió ou venda.',
+  multipleValuation: '1. Valoración por múltiples',
+  multipleValuationDesc: 'Comparativas específicas para empresas de 1-10M€ en processos de successão ou venda.',
   discountedCashFlow: '3. Desconto de fluxos',
   discountedCashFlowDesc: 'Proxeccións axustadas a escenarios de transición por jubilación ou successión familiar.',
   qualitativeAnalysis: '4. Análise cualitativa',
   qualitativeAnalysisDesc: 'Avaliación de factores intanxibles e posicionamento para potenciais compradores.',
-  successionPlanning: '5. Planificación de successió',
+  successionPlanning: '5. Planificación de successão',
   successionPlanningDesc: 'Estratexias personalizadas para a transición do negocio, xa sexa a familiares ou mediante venda a terceiros.',
   
   // Testimonials section
@@ -590,7 +590,7 @@ export const gl = {
   submitLoading: 'Enviando...',
   
   // Footer
-  companyDescription: 'Servici especializado en valoración e venda de empresas con facturación de 2-10M€, enfocado en procesos confidenciais para propietarios próximos á jubilación.',
+  companyDescription: 'Servici especializado en valoración e venda de empresas con facturación de 1-10M€, enfocado en procesos confidenciais para propietarios próximos á jubilación.',
   servicesFooter: 'Servizos',
   quickLinks: 'Ligazóns rápidas',
   home: 'Inici',
@@ -610,7 +610,7 @@ export const eu = {
   contactButton: 'Kontaktatu',
   
   // Hero
-  heroTitle: '2-10M€-ko urteko fakturazioa duten enpresentzako balorazio konfidentziala',
+  heroTitle: '1-10M€-ko urteko fakturazioa duten enpresentzako balorazio konfidentziala',
   heroSubtitle: 'Jubilatzera hurbiltzen ari diren edo negozioaren ondorengotza planifikatzen ari diren enpresaburuei aholkuak ematen espezialistak.',
   confidentialityNote: 'Prozesu osoan %100eko konfidentzialtasuna bermatzen dugu',
   requestValuation: 'Balorazioa eskatu',
@@ -619,7 +619,7 @@ export const eu = {
   
   // Services section
   servicesTitle: 'Gure zerbitzuak',
-  servicesSubtitle: '2 eta 10 milioi euro arteko diru-sarrerak dituzten enpresentzako zerbitzu espezializatuak, erretiroagatik edo ondorengotzagatik salmenta-prozesuetan zentratuta.',
+  servicesSubtitle: '1 eta 10 milioi euro arteko diru-sarrerak dituzten enpresentzako zerbitzu espezializatuak, erretiroagatik edo ondorengotzagatik salmenta-prozesuetan zentratuta.',
   businessValuation: 'Balorazio konfidentziala',
   businessValuationDesc: 'Zure enpresaren balioaren analisi sakona, konfidentzialtasun osoz, batez ere jubilatzera hurbiltzen ari diren jabeentzat.',
   financialDueDiligence: 'Finantza due diligence',
@@ -631,19 +631,19 @@ export const eu = {
   
   // About section
   whyChooseUs: 'Zergatik aukeratu Valor España?',
-  aboutUsDescription: 'Valor España-n, 2 eta 10 milioi euro arteko fakturazioa duten enpresetan espezializatzen gara, jabeak erretiroarengatik edo ondorengotza-plangintzagatik salmenta bat kontuan hartzen ari direnak. Gure prozesuak konfidentzialtasun osoa bermatzen du etapa guztietan.',
+  aboutUsDescription: 'Valor España-n, 1 eta 10 milioi euro arteko fakturazioa duten enpresetan espezializatzen gara, jabeak erretiroarengatik edo ondorengotza-plangintzagatik salmenta bat kontuan hartzen ari direnak. Gure prozesuak konfidentzialtasun osoa bermatzen du etapa guztietan.',
   experienceAndTrust: 'Esperientzia eta konfiantza',
   experienceAndTrustDesc: '15 urte baino gehiago familia-enpresei aholkuak ematen erretiroagatiko salmenta-prozesu konfidentzialetan.',
-  customizedApproach: '2-10M€ fakturatzen duten ETEentzako ikuspegia',
-  customizedApproachDesc: '2 eta 10 milioi arteko fakturazioa duten negozioetarako berariazko konponbideak, sektore eta egoera bakoitzera egokituta.',
+  customizedApproach: '1-10M€ fakturatzen duten ETEentzako ikuspegia',
+  customizedApproachDesc: '1 eta 10 milioi arteko fakturazioa duten negozioetarako berariazko konponbideak, sektore eta egoera bakoitzera egokituta.',
   confidentiality: 'Erabateko konfidentzialtasuna',
   confidentialityDesc: 'Diskrezio osoa eta konfidentzialtasun-protokolo zorrotzak bermatzen ditugu balorazio- eta aholkularitza-prozesu osoan.',
   ourMethodology: 'Gure metodologia',
   methodologyDescription: 'Ondorengotza fasean dauden edo erretiroagatik saltzen ari diren enpresentzako prozesu espezializatua:',
   fundamentalAnalysis: '1. Analisi konfidentziala',
   fundamentalAnalysisDesc: 'Finantza-egoeren eta adierazle gakoen ebaluazio diskretua, merkatua edo langileak ohartarazi gabe.',
-  multipleValuation: '2. Multiplo bidezko balorazioa',
-  multipleValuationDesc: 'Konparazio espezifikoak ondorengotza edo salmenta prozesuetan dauden 2-10M€-ko enpresentzat.',
+  multipleValuation: '1. Multiplo bidezko balorazioa',
+  multipleValuationDesc: 'Konparazio espezifikoak ondorengotza edo salmenta prozesuetan dauden 1-10M€-ko enpresentzat.',
   discountedCashFlow: '3. Fluxu-deskontua',
   discountedCashFlowDesc: 'Erretiroarengatik edo familia-ondorengotzagatik trantsizio-egoerei egokitutako proiekzioak.',
   qualitativeAnalysis: '4. Analisi kualitatiboa',
@@ -690,7 +690,7 @@ export const eu = {
   submitLoading: 'Bidaltzen...',
   
   // Footer
-  companyDescription: 'Zerbitzu espezializatua 2-10M€-ko fakturazioa duten enpresen balorazioan eta salmentan, erretirorako hurbiltzen ari diren jabeentzako prozesu konfidentzialetan zentratua.',
+  companyDescription: 'Zerbitzu espezializatua 1-10M€-ko fakturazioa duten enpresen balorazioan eta salmentan, erretirorako hurbiltzen ari diren jabeentzako prozesu konfidentzialetan zentratua.',
   servicesFooter: 'Zerbitzuak',
   quickLinks: 'Esteka azkarrak',
   home: 'Hasiera',
