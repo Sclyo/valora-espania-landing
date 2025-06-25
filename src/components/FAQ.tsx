@@ -30,7 +30,7 @@ const FAQ = () => {
     },
     {
       question: "¿Qué pasa si no se encuentra comprador en seis meses?",
-      answer: "No tendrás ningún coste. Si no conseguimos una oferta que quieras aceptar en ese plazo, la exclusividad termina y podés decidir cómo seguir."
+      answer: "No tendrás ningún coste. Si no conseguimos una oferta que quieras aceptar en ese plazo, la exclusividad termina y puedes decidir como seguir."
     },
     {
       question: "¿El proceso es confidencial?",
